@@ -10,6 +10,8 @@ a:hover {
     text-decoration: none;
 }
 
+/*====== header ======*/
+
 header {
     background-color: #0C83E0;
 }
@@ -149,6 +151,8 @@ header a.carrito:hover {
     }
 }
 
+/*====== home ======*/
+
 section.diapositivas {
     display: flex;
     justify-content: center;
@@ -157,10 +161,6 @@ section.diapositivas {
 
 section.diapositivas div.carousel {
     width: 100%;
-}
-
-section.diapositivas div.carousel .carousel-inner img {
-
 }
 
 section.productos div.container h2 {
@@ -203,6 +203,48 @@ section.productos div.container div.row article div.producto div.texto div.preci
     color: green;
 }
 
+/*====== formulario de registracion ======*/
+
+section.registracion {}
+
+section.registracion div.formRegistracionPersonal, section.registracion div.formRegistracionVendedor {
+    border: 2px solid lightslategray;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+section.registracion div.formRegistracionPersonal form div.contenedorForm {}
+
+section.registracion div.formRegistracionPersonal form div.contenedorForm, section.registracion div.formRegistracionVendedor form div.contenedorForm, section.registracion div.formRegistracionPersonal form div.submit, section.registracion div.formRegistracionVendedor form div.submit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section.registracion div.formRegistracionPersonal form div.contenedorForm div.labelInput, section.registracion div.formRegistracionVendedor form div.contenedorForm div.labelInput {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+section.registracion div.formRegistracionPersonal form div.contenedorForm div.labelInput input, section.registracion div.formRegistracionVendedor form div.contenedorForm div.labelInput input {
+    width: 100%;
+}
+
+section.registracion div.formRegistracionPersonal form div.submit div, section.registracion div.formRegistracionVendedor form div.submit div {
+    width: 50%;
+}
+
+section.registracion div.formRegistracionPersonal form div.contenedorForm {}
+
+@media (min-width: 1024px) {
+    section.registracion div.formRegistracionPersonal form div.contenedorForm div.labelInput, section.registracion div.formRegistracionVendedor form div.contenedorForm div.labelInput, section.registracion div.formRegistracionPersonal form div.submit div, section.registracion div.formRegistracionVendedor form div.submit div {
+        width: 45%;
+    }
+}
+
+/*====== footer ======*/
+ 
 footer {
     background-color: lightslategray;
 }
