@@ -156,7 +156,7 @@ section.diapositivas {
 }
 
 section.diapositivas div.carousel {
-    width: 80%;
+    width: 100%;
 }
 
 section.diapositivas div.carousel .carousel-inner img {
