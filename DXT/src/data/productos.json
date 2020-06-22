@@ -1,0 +1,50 @@
+[
+    {
+        "nombre": "futbol",
+        "precio": "100",
+        "horarios": "martes y jueves de 8 a 10pm",
+        "img": "placeholder1.jpg"
+    },
+    {
+        "nombre": "tenis",
+        "precio": "200",
+        "horarios": "lunes y jueves de 6 a 8pm",
+        "img": "placeholder2.jpg"
+    },
+    {
+        "nombre": "yoga",
+        "precio": "300",
+        "horarios": "jueves de 5 a 8pm",
+        "img": "placeholder3.jpg"
+    },
+    {
+        "nombre": "natacion",
+        "precio": "400",
+        "horarios": "martes y sabados de 9 a 11am",
+        "img": "placeholder4.jpg"
+    },
+    {
+        "nombre": "aikido",
+        "precio": "500",
+        "horarios": "martes y viernes de 7:15 a 9pm",
+        "img": "placeholder5.jpg"
+    },
+    {
+        "nombre": "esgrima",
+        "precio": "600",
+        "horarios": "martes y jueves de 7 a 9pm",
+        "img": "placeholder6.jpg"
+    },
+    {
+        "nombre": "lacrosse",
+        "precio": "700",
+        "horarios": "lunes y viernes de 10 a 12am",
+        "img": "placeholder7.jpg"
+    },
+    {
+        "nombre": "maraton",
+        "precio": "800",
+        "horarios": "sabados de 4 a 7pm",
+        "img": "placeholder8.jpg"
+    }
+]
