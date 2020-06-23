@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Error 404</title>
-    <link rel="stylesheet" href="css/errorcss/main.css">
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/errorcss/error.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 </head>
-<body>   
-    <div class="flex-container">
-        <div class="game-board">
-            <br>
-                <table id="board"></table>
+
+<body>
+
+    <div class="tateti">
+        <div class="container">
+            <div class="tatetiTitulo">
+                <div class=containerTitulo>
+                    <h1>Ta </h1> <small> 404 </small> <h1> Te </h1> <small> 404 </small> <h1> Ti </h1>
+                </div>
+            </div>
+            <div class="play-area">
+    
+            </div>
+            <h2 id="winner"></h2>
+            <div class="buttons">
+                <button onclick="reset_board()">RESET</button>
+                <a href="/"><button >Volver</button></a>
+            </div>
         </div>
     </div>
+
+    <div class='buscaErrores'>
+        <div class="flex-container">
+            <div class="game-board">
+                <br>
+                <table id="board"></table>
+            </div>
+        </div>
         <section id="footer">
             <div id="start"><img src="img/errorimg/start.png"></div>
             <div id="size-btns">
-                <div id="size-btns"><button id="size-9"><img src="img/errorimg/easy.png"> Fácil</button></div> 
-                <div id="size-btns"><button id="size-16"><img src="img/errorimg/medium.png"> Intermedio</button></div> 
+                <div id="size-btns"><button id="size-9"><img src="img/errorimg/easy.png"> Fácil</button></div>
+                <div id="size-btns"><button id="size-16"><img src="img/errorimg/medium.png"> Intermedio</button></div>
                 <div id="size-btns"><button id="size-30"><img src="img/errorimg/hard.png"> Difícil</button></div>
             </div>
             <div id="clock"><em>"Shift + Click"</em></strong> para poner <img src="img/errorimg/flag.png"></div>
         </section>
+    </div>
     <script src="js/errorjs/cell.js"></script>
     <script src="js/errorjs/main.js"></script>
+    <script src="js/errorjs/tateti.js"></script>
 </body>
+
 </html>
