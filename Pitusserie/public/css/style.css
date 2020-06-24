@@ -54,7 +54,7 @@ header div.container a.logo {
 header div.container a.logo img {
     height: 30px;
     align-self: center;
-    border-radius: 3px;
+    border-radius: 50%;
 }
 
 header div.container div.busqueda {
