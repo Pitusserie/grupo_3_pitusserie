@@ -152,17 +152,6 @@ body {
         justify-content: center;
         align-items: center;
       }
-
-      div.tatetiTitulo div.containerTitulo h1 {
-        margin: 0;
-        display: inline;
-        font-size: 70px;
-      }
-
-      div.tatetiTitulo div.containerTitulo small {
-        border: 2px solid black;
-        padding: 0 4px;
-      }
 }
 
 @media (min-width: 1024px) {

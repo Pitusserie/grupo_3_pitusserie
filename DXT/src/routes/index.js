@@ -14,4 +14,8 @@ router.post('/login', function(req, res) {
     res.redirect('/login')
 });
 
+router.get('/error', function(req, res) {
+    res.render('error')
+})
+
 module.exports = router;

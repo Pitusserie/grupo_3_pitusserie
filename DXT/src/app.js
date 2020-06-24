@@ -24,5 +24,6 @@ app.use((err, req, res, next) => {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   res.status(err.status || 500);
-  res.render('error');
+  // Puse redirect porque si ponia render habian algunos problemas cargando el css y el js
+  res.redirect('/error');
 });
