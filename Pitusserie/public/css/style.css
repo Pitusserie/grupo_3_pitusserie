@@ -155,7 +155,7 @@ header.general a.carrito:hover {
 
 header.home {
     background-color: pink;
-    height: 30vh;
+    height: 35vh;
 }
 
 header.home div.container {
@@ -200,13 +200,14 @@ header.home div.container div.hamburguesa div.collapse {
     position: absolute;
     left: 0px;
     top: 0px;
-    height: 30vh;
+    height: 100vh;
     width: 70%;
 }
 
 header.home div.container div.hamburguesa div.collapse div.card {
-    height: 30vh;
+    height: 100vh;
     padding-top: 10px;
+    z-index: 50;
 }
 
 header.home div.container div.hamburguesa div.collapse div.card button.buttonX {
@@ -222,6 +223,7 @@ header.home div.container div.hamburguesa div.collapse div.card ul {
 header.home div.container div.hamburguesa div.collapse div.card ul li {
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 header.home div.container div.hamburguesa div.collapse div.card ul li img {
@@ -326,16 +328,7 @@ header.home div.container div.redes i:hover {
     }
 
     header.home div.container div.hamburguesa div.collapse {
-        height: 100vh;
         width: 40%;
-    }
-    
-    header.home div.container div.hamburguesa div.collapse div.card {
-        height: 100vh;
-    }
-
-    header.home div.container div.hamburguesa div.collapse div.card ul li {
-        margin-bottom: 40px;
     }
     
     header.home div.container div.hamburguesa div.collapse div.card ul li img {
@@ -398,13 +391,26 @@ header.home div.container div.redes i:hover {
 /*====== home ======*/
 
 section.diapositivas {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    -webkit-box-sizing: border-box;
+    margin: 30px 0;
+}
+  
+section.diapositivas div.carrusel { font-family: sans-serif; }
+  
+section.diapositivas div.carrusel div.gallery {
+    background: #EEE;
+}
+  
+section.diapositivas div.carrusel div.gallery div.gallery-cell {
+    width: 40%;
+    height: 40vh;
+    margin-right: 10px;
+    background: #8C8;
 }
 
-section.diapositivas div.carousel {
+section.diapositivas div.carrusel div.gallery div.gallery-cell img {
     width: 100%;
+    height: 100%;
 }
 
 section.productos div.container h2 {
@@ -421,6 +427,7 @@ section.productos div.container div.row article {
 section.productos div.container div.row article div.producto {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     border: 2px solid rgb(0, 118, 197);
     border-radius: 4px;
     background-color: rgba(0, 118, 197, 0.15);
@@ -435,11 +442,16 @@ section.productos div.container div.row article div.producto div.productoImagen 
     width: 100%;
 }
 
+section.productos div.container div.row article div.producto div.texto {
+    width: 100%;
+}
+
 section.productos div.container div.row article div.producto div.texto div.precioCarrito {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 5px;
+    width: 100%;
 }
 
 section.productos div.container div.row article div.producto div.texto div.precioCarrito span.carritoMas i {
@@ -538,6 +550,25 @@ section.login div.formLogin form div.submitRegister {
  
 footer {
     background-color: lightslategray;
+}
+
+footer p {
+    text-align: center;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 1);
+    transition: color 0.1s ease-in-out;
+}
+
+footer p.redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+footer p.redes a i {
+    margin-bottom: 5px;
+    color: black;
 }
 
 footer div.container a.arriba div{
