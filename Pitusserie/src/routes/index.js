@@ -13,7 +13,7 @@ router.get('/login', userController.login);
 router.post('/login', function(req, res) {
     res.redirect('/login')
 });
-
+router.get('/detailProducts', userController.detail);
 router.get('/error', function(req, res) {
     res.render('error')
 })

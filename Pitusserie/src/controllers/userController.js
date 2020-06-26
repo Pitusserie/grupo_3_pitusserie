@@ -15,5 +15,8 @@ module.exports = {
     },
     login: function(req, res) {
         res.render('login')
+    },
+    detail: function(req, res) {
+        res.render('detailProducts')
     }
 }

@@ -6,9 +6,9 @@
     <%- include('./partials/header') %>
 
       <section class="registracion">
-        <div class="container">
-            <h2>Cliente</h2>
-            <div class="formRegistracionPersonal">
+        <div class="container" id="reg">
+            <h2 class="title">Registracion de Clientes</h2>
+            <div class="formRegistracion>
                 <form action="" method="POST">
                     <div class="contenedorForm">
                         <div class="labelInput">
@@ -25,7 +25,7 @@
                         </div>
                         <div class="labelInput">
                             <label for="telefono">Telefono</label>
-                            <input type="number" id="telefono" name="telefono">
+                            <input type="tel" id="telefono" name="telefono">
                         </div>
                         <div class="labelInput">
                             <label for="email">Email</label>
@@ -37,34 +37,7 @@
                         </div>
                     </div>
                     <div class="submit">
-                        <div><button class="btn btn-success" type="submit">Crear cuenta</button></div>
-                        <div></div>
-                    </div>
-                </form>
-            </div>
-            <h2>Vendedor</h2>
-            <div class="formRegistracionVendedor">
-                <form action="" method="POST">
-                    <div class="contenedorForm">
-                        <div class="labelInput">
-                            <label for="cuitCuil">CUIT/CUIL</label>
-                            <input type="number" id="cuit" name="cuit">
-                        </div>
-                        <div class="labelInput">
-                            <label for="razonSocial">Razon Social</label>
-                            <input type="text" id="razonSocial" name="razonSocial">
-                        </div>
-                        <div class="labelInput">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                        <div class="labelInput">
-                            <label for="contrasena">Contraseña</label>
-                            <input type="password" id="contrasena1" name="contrasena">
-                        </div>
-                    </div>
-                    <div class="submit">
-                        <div><button class="btn btn-success" type="submit">Crear cuenta</button></div>
+                        <div><button class="btn btn-primary" type="submit">Crear cuenta</button></div>
                         <div></div>
                     </div>
                 </form>
