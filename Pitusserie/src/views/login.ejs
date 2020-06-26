@@ -7,7 +7,7 @@
 
       <section class="login">
         <div class="container">
-            <h2>Ingresa con tu usario</h2>
+            <h2>Ingresá</h2>
             <div class="formLogin">
                 <form action="" method="POST">
                     <div class="contenedorForm">
@@ -21,19 +21,18 @@
                         </div>
                     </div>
                     <div class="submitRegister">
-                        <div class="submit" tabindex="0" data-toggle="tooltip" title="Este boton no esta en funcionamiento actualmente"><button class="btn btn-success" type="submit">Ingresá</button></div>
-                        <div class="register"><a href="/register" class="btn btn-primary">Creá una cuenta</a></div>
+                        <div class="submit" tabindex="0" data-toggle="tooltip" title="Este boton no esta en funcionamiento actualmente"><button type="submit">Ingresá</button></div>
+                        <a href="/register"><div class="register">Creá una cuenta</div></a>
                     </div>
                 </form>
             </div>
         </div>
       </section>
 
-      <footer>
-        <div class="container">
-          <small class="copyright">Copyright © 1999-2020 DXT S.R.L.</small>
-        </div>
-      </footer>
+      <%- include('./partials/whatsappLogo') %>
+
+      <%- include('./partials/footer') %>
+
   </div>
   <%- include('./partials/scripts') %>
 </body>

@@ -13,141 +13,244 @@ a:hover {
 /*====== header ======*/
 
 header.general {
-    background-color: #0C83E0;
+    background-color: pink;
+    height: 25vh;
 }
 
 header.general div.container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
 }
 
 header.general div.container div.hamburguesa {
     display: flex;
-    align-self: center;
-    border: solid 1px lightslategray;
-    border-radius: 3px;
-    background-color: lightblue;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     justify-content: center;
     align-content: center;
-}
-
-header.general div.container div.hamburguesa i {
-    font-size: 25px;
-    margin-top: 2px;
-    color: rgba(0, 0, 0, 1);
     transition: color 0.1s ease-in-out;
 }
 
-header.general div.container div.hamburguesa i:hover {
+header.general div.container div.hamburguesa button.buttonHamburguesa, header.general div.container div.hamburguesa div.collapse div.card button.buttonX {
+    background-color: transparent;
+    border: none;
+}
+
+header.general div.container div.hamburguesa button.buttonHamburguesa:focus, header.general div.container div.hamburguesa div.collapse div.card button.buttonX:focus {
+    outline: none;
+}
+
+header.general div.container div.hamburguesa button.buttonHamburguesa i.barras {
+    font-size: 30px;
+    margin-top: 2px;
+    color: black;
+    transition: color 0.1s ease-in-out;
+}
+
+header.general div.container div.hamburguesa button.buttonHamburguesa i.barras:hover {
+    font-size: 29px;
+    color: rgb(79, 79, 255);
+}
+
+header.general div.container div.hamburguesa div.collapse {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 70%;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card {
+    height: 100vh;
+    padding-top: 10px;
+    z-index: 50;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card button.buttonX {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card ul {
+    padding: 0;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card ul a li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: black;
+    transition: color 0.1s ease-in-out;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card ul a li:hover {
     color: rgba(0, 0, 0, 0.7);
 }
 
-header.general div.container a.logo {
-    display: flex;
-    align-content: center;
+header.general div.container div.hamburguesa div.collapse div.card ul a li img {
+    width: 100px;
+    margin: 0 auto;
 }
 
-header.general div.container a.logo img {
-    height: 30px;
-    align-self: center;
+.fa-shopping-cart:before {
+    display: none;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card ul a li .fa-shopping-cart:before {
+    display: inline-block;
+    color: black;
+    font-size: 30px;
+}
+
+header.general div.container div.shopSale {
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+    transition: color 0.1s ease-in-out;
+}
+
+header.general div.container div.shopSale:hover {
+    font-size: 19px;
+    color: white;
+}
+
+header.general div.container div.divLogo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    order: 50;
+    margin-top: 30px;
+}
+
+header.general div.container div.divLogo a.logo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+}
+
+header.general div.container div.divLogo a.logo img {
+    height: 100px;
     border-radius: 50%;
 }
 
-header.general div.container div.busqueda {
-    order: 50;
-    width: 100%;
-    align-self: center;
-    margin-top: 10px;
+header.general div.container div.divLogo a.logo img:hover {
+    height: 95px
 }
 
-header.general div.container div.busqueda form {
-    display: flex;
-    flex-wrap: wrap;
+header.general div.container a.carrito {
+    width: 30px;
     height: 30px;
-}
-
-header.general div.container div.busqueda form select.filtro {
-    border: none;
-    background-color: red;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-}
-
-header.general div.container div.busqueda form select.filtro:focus {
-    outline: none;
-}
-
-header.general div.container div.busqueda form input.barraDeBusqueda {
-    flex-grow: 1;
-    border: none;
-}
-
-header.general div.container div.busqueda form button.submit {
-    background-color: red;
-    border: none;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-}
-
-header.general div.container div.divIdioma {
-    display: flex;
-}
-
-header.general div.container div.divIdioma select.idioma {
-    height: 30px;
-    align-self: center;
-    border-color: #086fbd;
-    border-radius: 3px;
-}
-
-header.general div.container div.divIdioma select.idioma:focus {
-    outline: none;
-}
-
-header.general div.container a.login {
     text-align: center;
-    align-self: center;
-    font-size: 18px;
-    background-color: lightblue;
-    border-radius: 5px;
-    padding: 0 2px;
-    color: rgba(0, 0, 0, 1);
+}
+
+header.general div.container a.carrito i {
+    font-size: 25px;
+    color: black;
     transition: color 0.1s ease-in-out;
 }
 
-header.general div.container a.login:hover {
-    color: rgba(0, 0, 0, 0.7);
+header.general div.container a.carrito i.fa-shopping-cart:before {
+    display: inline-block;
 }
 
-header.general a.carrito {
-    text-align: center;
-    align-self: center;
-    font-size: 22px;
-    color: rgba(0, 0, 0, 1);
+header.general  div.container a.carrito i:hover {
+    font-size: 24px;
+    color: green;
+}
+
+header.general div.container div.redes i {
+    margin-right: 8px;
     transition: color 0.1s ease-in-out;
 }
 
-header.general a.carrito:hover {
-    color: rgba(0, 0, 0, 0.7);
+header.general div.container div.redes i:last-child {
+    margin-right: 0;
 }
 
-@media (min-width: 1024px){
 
+header.general div.container div.redes i:hover {
+    color: rgba(255, 0, 0, 0.7);
+}
+
+@media (min-width: 768px){
+
+    header.general {
+        height: 30vh;
+    }
+    
     header.general div.container {
-        padding-bottom: 0;
-        height: 5vh;
+        padding-top: 25px;
+    }
+    
+    header.general div.container div.hamburguesa button.buttonHamburguesa i.barras:hover {
+        font-size: 31px;
     }
 
-    header.general div.container div.busqueda {
+    header.general div.container div.hamburguesa div.collapse {
+        width: 40%;
+    }
+    
+    header.general div.container div.hamburguesa div.collapse div.card ul a li img {
+        width: 210px;
+    }
+
+    header.general div.container div.shopSale {
+        width: 120px;
+        font-size: 25px;
+    }
+    
+    header.general div.container div.shopSale:hover {
+        font-size: 26px;
+    }
+
+    header.general div.container  div.divLogo {
         order: 0;
-        flex-grow: 0.9;
         width: auto;
-        align-self: center;
-        margin-top: 0;
+    }
+    
+    header.general div.container  div.divLogo a.logo {
+        height: 160px;
+        width: 160px;
+    }
+    
+    header.general div.container  div.divLogo a.logo img {
+        height: 150px;
+    }
+    
+    header.general div.container  div.divLogo a.logo img:hover {
+        height: 155px
+    }
+    
+    header.general div.container a.carrito {
+        width: 58px;
+        height: 38px;
+        text-align: center;
+    }
+    
+    header.general div.container a.carrito i {
+        font-size: 30px;
+    }
+
+    header.general  div.container a.carrito i:hover {
+        font-size: 31px;
+    }
+    
+    header.general div.container div.redes i {
+        margin-right: 8px;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    header.general div.container div.hamburguesa div.collapse {
+        width: 30%;
     }
 }
 
@@ -306,6 +409,10 @@ header.home  div.container a.carrito i:hover {
     color: green;
 }
 
+header.home div.container div.redes {
+    font-size: 20px;
+}
+
 header.home div.container div.redes i {
     margin-right: 8px;
     transition: color 0.1s ease-in-out;
@@ -343,7 +450,7 @@ header.home div.container div.redes i:hover {
     }
 
     header.home div.container div.shopSale {
-        width: 138px;
+        width: 120px;
         font-size: 25px;
     }
     
@@ -370,7 +477,7 @@ header.home div.container div.redes i:hover {
     }
     
     header.home div.container a.carrito {
-        width: 38px;
+        width: 58px;
         height: 38px;
         text-align: center;
     }
@@ -394,6 +501,115 @@ header.home div.container div.redes i:hover {
         width: 30%;
     }
 }
+
+/*====== header movil ======*/
+
+div.headerMovil {
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    z-index: 100;
+    display: none;
+}
+
+div.headerMovil.visible {
+    display: block;
+    position: fixed;
+    top: 0;
+}
+
+div.headerMovil div.container div.hamburguesa {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-content: center;
+    transition: color 0.1s ease-in-out;
+}
+
+div.headerMovil div.container div.hamburguesa div.collapse {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 70%;
+}
+
+/*
+
+header.home div.container div.hamburguesa button.buttonHamburguesa, header.home div.container div.hamburguesa div.collapse div.card button.buttonX {
+    background-color: transparent;
+    border: none;
+}
+
+header.home div.container div.hamburguesa button.buttonHamburguesa:focus, header.home div.container div.hamburguesa div.collapse div.card button.buttonX:focus {
+    outline: none;
+}
+
+header.home div.container div.hamburguesa button.buttonHamburguesa i.barras {
+    font-size: 30px;
+    margin-top: 2px;
+    color: black;
+    transition: color 0.1s ease-in-out;
+}
+
+header.home div.container div.hamburguesa button.buttonHamburguesa i.barras:hover {
+    font-size: 29px;
+    color: rgb(79, 79, 255);
+}
+
+header.home div.container div.hamburguesa div.collapse {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 70%;
+}
+
+header.home div.container div.hamburguesa div.collapse div.card {
+    height: 100vh;
+    padding-top: 10px;
+    z-index: 50;
+}
+
+header.home div.container div.hamburguesa div.collapse div.card button.buttonX {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+header.home div.container div.hamburguesa div.collapse div.card ul {
+    padding: 0;
+}
+
+header.home div.container div.hamburguesa div.collapse div.card ul a li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: black;
+    transition: color 0.1s ease-in-out;
+}
+
+header.home div.container div.hamburguesa div.collapse div.card ul a li:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+header.home div.container div.hamburguesa div.collapse div.card ul a li img {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.fa-shopping-cart:before {
+    display: none;
+}
+
+header.home div.container div.hamburguesa div.collapse div.card ul a li .fa-shopping-cart:before {
+    display: inline-block;
+    color: black;
+    font-size: 30px;
+}
+*/
+
 
 /*====== home ======*/
 
@@ -502,18 +718,28 @@ section.registracion div.formRegistracionPersonal form div.submit div, section.r
 
 /*====== login ======*/
 
+section.login {
+    margin: 50px 0;
+}
+
 section.login div.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+section.login h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 section.login div.formLogin {
-    border: 2px solid lightslategray;
+    /* border: 2px solid lightslategray; */
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
     width: 100%;
+    height: 300px;
 }
 
 section.login div.formLogin form div.contenedorForm {
@@ -529,6 +755,15 @@ section.login div.formLogin form div.contenedorForm div.labelInput {
 
 section.login div.formLogin form div.contenedorForm div.labelInput input {
     width: 100%;
+    border: none;
+    border-bottom: 1px solid lightblue;
+    margin-bottom: 48px;
+}
+
+section.login div.formLogin form div.contenedorForm div.labelInput input:focus {
+    outline: none;
+    border-bottom: 1px solid blue;
+    border-radius: 8px;
 }
 
 section.login div.formLogin form div.submitRegister {
@@ -538,6 +773,49 @@ section.login div.formLogin form div.submitRegister {
     margin-top: 10px;
 }
 
+section.login div.formLogin form div.submitRegister div.submit button {
+    background-color: rgba(0, 255, 0, 0.7);
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 35px;
+    padding: 5px 0;
+}
+
+section.login div.formLogin form div.submitRegister div.submit button:hover {
+    background: none;
+    border-bottom: 2px solid green;
+    border-radius: 2px;
+}
+
+section.login div.formLogin form div.submitRegister div.submit button:focus {
+    outline: none;
+}
+
+section.login div.formLogin form div.submitRegister div.register {
+    background-color: rgba(0, 17, 255, 0.7);
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+section.login div.formLogin form div.submitRegister div.register:hover {
+    background: none;
+    border-bottom: 2px solid blue;
+    border-radius: 2px;
+}
+
+section.login div.formLogin form div.submitRegister a div.register {
+    color: white;
+}
+
+section.login div.formLogin form div.submitRegister a div.register:hover {
+    color: black;
+}
+
 @media (min-width: 1024px) {
     section.login div.container h2 {
         width: 100%;
@@ -545,10 +823,6 @@ section.login div.formLogin form div.submitRegister {
     }
     
     section.login div.formLogin {
-        border: 2px solid lightslategray;
-        border-radius: 5px;
-        padding: 10px;
-        margin-bottom: 20px;
         width: 50%;
     }
 }
