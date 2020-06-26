@@ -220,13 +220,19 @@ header.home div.container div.hamburguesa div.collapse div.card ul {
     padding: 0;
 }
 
-header.home div.container div.hamburguesa div.collapse div.card ul li {
+header.home div.container div.hamburguesa div.collapse div.card ul a li {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    color: black;
+    transition: color 0.1s ease-in-out;
 }
 
-header.home div.container div.hamburguesa div.collapse div.card ul li img {
+header.home div.container div.hamburguesa div.collapse div.card ul a li:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+header.home div.container div.hamburguesa div.collapse div.card ul a li img {
     width: 100px;
     margin: 0 auto;
 }
@@ -235,9 +241,10 @@ header.home div.container div.hamburguesa div.collapse div.card ul li img {
     display: none;
 }
 
-header.home div.container div.hamburguesa div.collapse div.card ul li .fa-shopping-cart:before {
+header.home div.container div.hamburguesa div.collapse div.card ul a li .fa-shopping-cart:before {
     display: inline-block;
     color: black;
+    font-size: 30px;
 }
 
 header.home div.container div.shopSale {
@@ -331,7 +338,7 @@ header.home div.container div.redes i:hover {
         width: 40%;
     }
     
-    header.home div.container div.hamburguesa div.collapse div.card ul li img {
+    header.home div.container div.hamburguesa div.collapse div.card ul a li img {
         width: 210px;
     }
 
@@ -580,4 +587,75 @@ footer div.container a.arriba div{
 
 footer div.container a.arriba div:hover {
     color: rgba(0, 0, 0, 0.7);
+}
+
+/*====== whatsapp logo ======*/
+
+div.containerWhatsappLogo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+div.containerWhatsappLogo div.cartelitoWhatsapp {
+    position: relative;
+    display: inline-block;
+}
+  
+div.containerWhatsappLogo div.cartelitoWhatsapp span.cartelito {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgb(83, 212, 83);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 12px;
+    
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    right: 90%;
+    
+}
+  
+div.containerWhatsappLogo div.cartelitoWhatsapp:hover span.cartelito {
+    visibility: visible;
+}
+  
+div.containerWhatsappLogo img {
+    width: 30px;
+}
+
+@media (min-width: 768px) {
+    div.containerWhatsappLogo {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    div.containerWhatsappLogo div.cartelitoWhatsapp span.cartelito {
+        font-size: 14px;
+        top: 6px
+    }
+
+    div.containerWhatsappLogo img {
+        width: 45px;
+    }
+}
+
+@media (min-width: 1024px) {
+    div.containerWhatsappLogo {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    div.containerWhatsappLogo div.cartelitoWhatsapp span.cartelito {
+        width: 120px;
+        font-size: 16px;
+        top: 12px
+    }
+
+    div.containerWhatsappLogo img {
+        width: 60px;
+    }
 }
