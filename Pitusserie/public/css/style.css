@@ -6,6 +6,10 @@
     list-style-type: none;
 }
 
+a {
+    color: black;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -106,14 +110,14 @@ header.general div.container div.hamburguesa div.collapse div.card ul a li .fa-s
     font-size: 30px;
 }
 
-header.general div.container div.shopSale {
+header.general div.container div.productsHeader {
     width: 100px;
     text-align: center;
     font-size: 20px;
     transition: color 0.1s ease-in-out;
 }
 
-header.general div.container div.shopSale:hover {
+header.general div.container div.productsHeader:hover {
     font-size: 19px;
     color: white;
 }
@@ -201,12 +205,12 @@ header.general div.container div.redes i:hover {
         width: 210px;
     }
 
-    header.general div.container div.shopSale {
+    header.general div.container div.productsHeader {
         width: 120px;
         font-size: 25px;
     }
     
-    header.general div.container div.shopSale:hover {
+    header.general div.container div.productsHeader:hover {
         font-size: 26px;
     }
 
@@ -244,6 +248,7 @@ header.general div.container div.redes i:hover {
     
     header.general div.container div.redes i {
         margin-right: 8px;
+        font-size: 20px;
     }
     
 }
@@ -350,14 +355,14 @@ header.home div.container div.hamburguesa div.collapse div.card ul a li .fa-shop
     font-size: 30px;
 }
 
-header.home div.container div.shopSale {
+header.home div.container div.productsHeader {
     width: 100px;
     text-align: center;
     font-size: 20px;
     transition: color 0.1s ease-in-out;
 }
 
-header.home div.container div.shopSale:hover {
+header.home div.container div.productsHeader:hover {
     font-size: 19px;
     color: white;
 }
@@ -449,12 +454,12 @@ header.home div.container div.redes i:hover {
         width: 210px;
     }
 
-    header.home div.container div.shopSale {
+    header.home div.container div.productsHeader {
         width: 120px;
         font-size: 25px;
     }
     
-    header.home div.container div.shopSale:hover {
+    header.home div.container div.productsHeader:hover {
         font-size: 26px;
     }
 
@@ -607,14 +612,14 @@ div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.c
     font-size: 30px;
 }
 
-div.headerMovil div.container div.recontainer div.shopSale {
+div.headerMovil div.container div.recontainer div.productsHeader {
     width: 100px;
     text-align: center;
     font-size: 20px;
     transition: color 0.1s ease-in-out;
 }
 
-div.headerMovil div.container div.recontainer div.shopSale:hover {
+div.headerMovil div.container div.recontainer div.productsHeader:hover {
     font-size: 19px;
     color: white;
 }
@@ -705,12 +710,12 @@ div.headerMovil div.container div.recontainer div.redes i:hover {
         width: 210px;
     }
 
-    div.headerMovil div.container div.recontainer div.shopSale {
+    div.headerMovil div.container div.recontainer div.productsHeader {
         width: 120px;
         font-size: 25px;
     }
     
-    div.headerMovil div.container div.recontainer div.shopSale:hover {
+    div.headerMovil div.container div.recontainer div.productsHeader:hover {
         font-size: 26px;
     }
 
@@ -828,18 +833,6 @@ section.productos div.container div.row article div.producto div.texto div.preci
     color: green;
 }
 
-/*====== Register======*/
-section.registracion {
-
-}
-
-.title {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-}
-
-
 /*====== login ======*/
 
 section.login {
@@ -858,7 +851,6 @@ section.login h2 {
 }
 
 section.login div.formLogin {
-    /* border: 2px solid lightslategray; */
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
@@ -898,7 +890,7 @@ section.login div.formLogin form div.submitRegister {
 }
 
 section.login div.formLogin form div.submitRegister div.submit button {
-    background-color: rgba(0, 255, 0, 0.7);
+    background-color: rgba(82, 207, 82, 0.7);
     border: none;
     border-radius: 8px;
     width: 100px;
@@ -917,7 +909,7 @@ section.login div.formLogin form div.submitRegister div.submit button:focus {
 }
 
 section.login div.formLogin form div.submitRegister div.register {
-    background-color: rgba(0, 17, 255, 0.7);
+    background-color: rgba(206, 195, 42, 0.7);
     border: none;
     border-radius: 8px;
     width: 150px;
@@ -928,12 +920,12 @@ section.login div.formLogin form div.submitRegister div.register {
 
 section.login div.formLogin form div.submitRegister div.register:hover {
     background: none;
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid yellow;
     border-radius: 2px;
 }
 
 section.login div.formLogin form div.submitRegister a div.register {
-    color: white;
+    color: black;
 }
 
 section.login div.formLogin form div.submitRegister a div.register:hover {
@@ -951,84 +943,95 @@ section.login div.formLogin form div.submitRegister a div.register:hover {
     }
 }
 
+/*====== Register======*/
+
+section.registracion {}
+
+.title {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
 /*========Detail=======*/
+
 .body-detail{
     background-color: #fff8f8ce;
 }
+
 .products-title{
     margin-top: 10px;
     position:bottom
 }
-.product-detail {
 
-    
+.product-detail {
     background-color:rgba(235, 235, 235, 0.945);
     border-radius: 8px;
     overflow: hidden;
     padding: 15px;
-  }
+}
   
-  .product-detail-img {
+.product-detail-img {
     width: 70%;
     display: block;
     margin: auto;
-  }
+}
   
-  .product-detail-info {
+.product-detail-info {
     border-left: 1px solid ;
     padding: 15px;
     height: 100%;
-  }
+}
   
-  .product-detail-title {
+.product-detail-title {
     font-weight: 400;
     font-size: 2em;
-  }
-  
-  .product-detail-description {
+}
+
+.product-detail-description {
     padding: 1px;
     font-size: 2em;
     line-height: 1.5;
-  }
+}
   
-  .product-detail-price {
+.product-detail-price {
     font-size: 2em;
     margin: 10px 0;
-  }
+}
   
-  .small {
+.small {
     font-size: 2em;
     color: var(--green);
-  }
+}
   
-  .small span {
+.small span {
     text-decoration: line-through;
-  }
+}
   
-  .actions-list {
+.actions-list {
     margin-bottom: 50px;
-  }
+}
   
-  .actions-list li {
+.actions-list li {
     display: flex;
     align-items: center;
     margin: 20px 0;
     padding: 20px 0;
-  }
+}
   
-  .actions-list i {
+.actions-list i {
     color: var(--green);
     font-size: 2em;
     margin-right: 15px;
-  }
+}
   
-  .actions-list p {
+.actions-list p {
     color: black;
     font-size: 1.7em;
     margin: 0;
-  }
+}
   
-  .buy-now-button {
+.buy-now-button {
     background-color: blue;
     font-size: 1.6em;
     color:white;
@@ -1039,9 +1042,9 @@ section.login div.formLogin form div.submitRegister a div.register:hover {
     border-radius: 8px;
     border: none;
     margin-bottom: 15px;
-  }
+}
   
-  .action-button {
+.action-button {
     background-color: blue;
     border: none;
     border-radius: 8px;
@@ -1052,31 +1055,36 @@ section.login div.formLogin form div.submitRegister a div.register:hover {
     justify-content: center;
     padding: 15px 30px;
     margin-top: 15px;
-  }
+}
   
-  .action-button.edit {
+.action-button.edit {
     background-color: chocolate;
-  }
-  .action-button.delete {
+}
+
+.action-button.delete {
     background-color: rgb(248, 69, 37);
-  }
-  .agregar-productos-title{
-      display:inline-block;
-  }
-  .agregar-productos-img{
-      display:flex;
-      justify-content: space-between;
-  }
-  .foto-agregar1{
-      
-      width: 30%;
-      height: 250px;
-  }
-  .foto-agregar2{
+}
+
+.agregar-productos-title{
+    display:inline-block;
+}
+
+.agregar-productos-img{
+    display:flex;
+    justify-content: space-between;
+}
+
+.foto-agregar1{
     width: 30%;
     height: 250px;
 }
- .foto-agregar3{
+
+.foto-agregar2{
+    width: 30%;
+    height: 250px;
+}
+
+.foto-agregar3{
     width: 30%;
     height: 250px;
 }
