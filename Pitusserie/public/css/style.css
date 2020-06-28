@@ -6,6 +6,10 @@
     list-style-type: none;
 }
 
+body {
+    background-image: url('../img/fondoGeneral.jpg');
+}
+
 a {
     color: black;
 }
@@ -262,8 +266,9 @@ header.general div.container div.redes i:hover {
 /*====== header index ======*/
 
 header.home {
-    background-color: pink;
-    height: 35vh;
+    background-image: url('../img/fondoHeader.jpg');
+    background-size: cover;
+    height: 180px
 }
 
 header.home div.container {
@@ -805,11 +810,12 @@ section.login h2 {
 }
 
 section.login div.formLogin {
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px;
     margin-bottom: 20px;
     width: 100%;
     height: 300px;
+    background-color: rgba(255, 255, 255, 0.55);
 }
 
 section.login div.formLogin form div.contenedorForm {
