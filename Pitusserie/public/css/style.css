@@ -18,7 +18,7 @@ a:hover {
 
 header.general {
     background-color: pink;
-    height: 25vh;
+    height: 180px;
 }
 
 header.general div.container {
@@ -186,7 +186,7 @@ header.general div.container div.redes i:hover {
 @media (min-width: 768px){
 
     header.general {
-        height: 30vh;
+        height: 220px;
     }
     
     header.general div.container {
@@ -787,52 +787,6 @@ section.diapositivas div.carrusel div.gallery div.gallery-cell img {
     height: 100%;
 }
 
-section.productos div.container h2 {
-    margin: 10px 0;
-    border: 1px solid rgb(0, 255, 0);
-    background-color: rgba(0, 255, 21, 0.2);
-}
-
-section.productos div.container div.row article {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-section.productos div.container div.row article div.producto {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: 2px solid rgb(0, 118, 197);
-    border-radius: 4px;
-    background-color: rgba(0, 118, 197, 0.15);
-    padding: 0 15px;
-}
-
-section.productos div.container div.row article div.producto h3 {
-    width: 100%;
-}
-
-section.productos div.container div.row article div.producto div.productoImagen img {
-    width: 100%;
-}
-
-section.productos div.container div.row article div.producto div.texto {
-    width: 100%;
-}
-
-section.productos div.container div.row article div.producto div.texto div.precioCarrito {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 5px;
-    width: 100%;
-}
-
-section.productos div.container div.row article div.producto div.texto div.precioCarrito span.carritoMas i {
-    font-size: 30px;
-    color: green;
-}
-
 /*====== login ======*/
 
 section.login {
@@ -862,6 +816,12 @@ section.login div.formLogin form div.contenedorForm {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+section.login div.formLogin form div.contenedorForm p {
+    width: 100%;
+    color: red;
+    font-size: 12px;
 }
 
 section.login div.formLogin form div.contenedorForm div.labelInput {
@@ -1089,11 +1049,94 @@ section.registracion {}
     height: 250px;
 }
 
+/*====== products ======*/
+
+section.barraDeBusqueda {
+    margin: 15px 0;
+}
+
+section.barraDeBusqueda div.container div.divForm {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+}
+
+section.barraDeBusqueda div.container div.divForm form {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30px;
+    width: 100%;
+}
+
+section.barraDeBusqueda div.container div.divForm form select.filtro {
+    border: 1px solid black;
+    border-right: none;
+    background-color: rgb(101, 200, 207);
+    border-top-left-radius: 6px;
+    flex-grow: 1;
+}
+
+section.barraDeBusqueda div.container div.divForm form select.filtro:focus {
+    outline: none;
+}
+
+section.barraDeBusqueda div.container div.divForm form input.barraDeBusqueda {
+    order: 50;
+    width: 100%;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+section.barraDeBusqueda div.container div.divForm form input.barraDeBusqueda:focus {
+    outline: none;
+}
+
+section.barraDeBusqueda div.container div.divForm form button.submit {
+    border: 1px solid black;
+    border-left: none;
+    background-color: rgb(223, 212, 58);
+    border-top-right-radius: 6px;
+    width: 40px;
+}
+
+section.barraDeBusqueda div.container div.divForm form button.submit:focus {
+    outline: none;
+}
+
+@media (min-width: 426px) {
+
+    section.barraDeBusqueda div.container div.divForm {
+        height: auto;
+    }
+
+    section.barraDeBusqueda div.container div.divForm form select.filtro {
+        border-bottom-left-radius: 6px;
+        flex-grow: unset;
+    }
+
+    section.barraDeBusqueda div.container div.divForm form input.barraDeBusqueda {
+        width: auto;
+        order: 0;
+        flex-grow: 1;
+        border-radius: 0;
+        border-top: 1px solid black;
+        border-right: none;
+        border-left: none;
+    }
+
+    section.barraDeBusqueda div.container div.divForm form button.submit {
+        border-bottom-right-radius: 6px;
+    }
+
+}
 
 /*====== footer ======*/
  
 footer {
-    background-color: lightslategray;
+    background-color: pink;
+    font-size: 20px;
 }
 
 footer p {
@@ -1195,4 +1238,58 @@ div.containerWhatsappLogo img {
     div.containerWhatsappLogo img {
         width: 60px;
     }
+}
+
+/*====== productos (en products e index) ======*/
+
+section.productos div.container h2 {
+    margin: 10px 0;
+    border: 1px solid black;
+    background-color: rgba(0, 118, 197, 0.15);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+section.productos div.container div.row article {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+section.productos div.container div.row article a {
+    color: black;
+}
+
+section.productos div.container div.row article div.producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: rgba(0, 118, 197, 0.15);
+    padding: 0 15px;
+}
+
+section.productos div.container div.row article div.producto h3 {
+    width: 100%;
+}
+
+section.productos div.container div.row article div.producto div.productoImagen img {
+    width: 100%;
+}
+
+section.productos div.container div.row article div.producto div.texto {
+    width: 100%;
+}
+
+section.productos div.container div.row article div.producto div.texto div.precioCarrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 100%;
+}
+
+section.productos div.container div.row article div.producto div.texto div.precioCarrito span.carritoMas i {
+    font-size: 30px;
+    color: rgb(41, 128, 41);
 }

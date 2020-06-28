@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController')
+const productsController = require('../controllers/productsController')
   
-router.get('/', userController.index);
+router.get('/', productsController.index);
 
 router.get('/login', userController.login);
 router.post('/login', function(req, res) {
@@ -14,7 +15,9 @@ router.post('/register', function(req, res) {
     res.redirect('/register')
 });
 
-router.get('/detailProducts', userController.detail);
+router.get('/products', productsController.products)
+
+router.get('/detailProducts', productsController.detail);
 
 router.get('/error', function(req, res) {
     res.render('error')

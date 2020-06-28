@@ -1,50 +1,58 @@
 [
     {
-        "nombre": "futbol",
+        "id": 1,
+        "nombre": "Torta1",
         "precio": "100",
-        "horarios": "martes y jueves de 8 a 10pm",
+        "miniDesc": "Ingrediente-ingrediente-ingrediente",
         "img": "placeholder1.jpg"
     },
     {
-        "nombre": "tenis",
+        "id": 2,
+        "nombre": "Torta2",
         "precio": "200",
-        "horarios": "lunes y jueves de 6 a 8pm",
+        "miniDesc": "Ingrediente-ingrediente-ingrediente",
         "img": "placeholder2.jpg"
     },
     {
-        "nombre": "yoga",
+        "id": 3,
+        "nombre": "Torta3",
         "precio": "300",
-        "horarios": "jueves de 5 a 8pm",
+        "miniDesc": "Ingrediente-ingrediente-ingrediente",
         "img": "placeholder3.jpg"
     },
     {
-        "nombre": "natacion",
+        "id": 4,
+        "nombre": "Torta4",
         "precio": "400",
-        "horarios": "martes y sabados de 9 a 11am",
+        "miniDesc": "Ingrediente-ingrediente-ingrediente",
         "img": "placeholder4.jpg"
     },
     {
-        "nombre": "aikido",
+        "id": 5,
+        "nombre": "Torta5",
         "precio": "500",
-        "horarios": "martes y viernes de 7:15 a 9pm",
+        "miniDesc": "Ingrediente-ingrediente-ingrediente",
         "img": "placeholder5.jpg"
     },
     {
-        "nombre": "esgrima",
+        "id": 6,
+        "nombre": "Torta6",
         "precio": "600",
-        "horarios": "martes y jueves de 7 a 9pm",
+        "miniDesc": "Ingrediente-ingrediente-ingrediente",
         "img": "placeholder6.jpg"
     },
     {
-        "nombre": "lacrosse",
+        "id": 7,
+        "nombre": "Torta7",
         "precio": "700",
-        "horarios": "lunes y viernes de 10 a 12am",
+        "miniDesc": "Ingrediente-ingrediente-ingrediente",
         "img": "placeholder7.jpg"
     },
     {
-        "nombre": "maraton",
+        "id": 8,
+        "nombre": "Torta8",
         "precio": "800",
-        "horarios": "sabados de 4 a 7pm",
+        "miniDesc": "Ingrediente-ingrediente-ingrediente",
         "img": "placeholder8.jpg"
     }
 ]

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+<body>
+
+    <%- include('./partials/header') %>
+
+    <section class="barraDeBusqueda">
+        <div class="container">
+            <div class="divForm">
+                <form action="" method="get">
+                    <select class="filtro" name="filtro">
+                        <option value="Todos">Todos</option>
+                        <option value="A-Z">A-Z</option>
+                        <option value="Z-A">Z-A</option>
+                        <option value="Precio - A +">Precio - A +</option>
+                        <option value="Precio + A -">Precio + A -</option>
+                    </select>
+                    <input class="barraDeBusqueda" name="busqueda" type="text" placeholder="Buscar delicias">
+                    <button class="submit" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="productos">
+        <div class="container">
+          <h2>Productos</h2>
+          <div class="row">
+
+            <% for(i = 0; i < productos.length; i++) { %> 
+                    <article class="col-12 col-md-6 col-lg-3">
+                        <a href="">
+                            <div class="producto">
+                                <h3><%= productos[i].nombre %></h3>
+                                <div class="productoImagen">
+                                <img src="img/<%= productos[i].img %>" alt="">
+                                </div>
+                                <div class="texto">
+                                <div class="precioCarrito">
+                                    <h4>$<%= productos[i].precio %></h4>
+                                    <a href="#"><span class="carritoMas"><i class="fas fa-cart-plus"></i></span></a>
+                                </div>
+                                <h5><%= productos[i].miniDesc %></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+              <% } %> 
+
+          </div>
+        </div>
+      </section>
+
+    <%- include('./partials/whatsappLogo') %>
+
+    <%- include('./partials/footer') %>
+
+    <%- include('./partials/scripts') %>
+
+</body>
+</html>
