@@ -12,6 +12,7 @@ a {
 
 a:hover {
     text-decoration: none;
+    color: black;
 }
 
 img {
@@ -1001,9 +1002,6 @@ section.registracion div.formRegistracion form div.divsubmit a div.register:hove
 }
 
 /*========Detail=======*/
-.body-detail{
-    background-color: #fff8f8ce;
-}
 
 .products-title{
     margin-top: 10px;
@@ -1024,7 +1022,7 @@ section.registracion div.formRegistracion form div.divsubmit a div.register:hove
 }
   
 .product-detail-info {
-    
+    border-left: 1px solid ;
     padding: 15px;
     height: 100%;
 }
@@ -1077,7 +1075,7 @@ section.registracion div.formRegistracion form div.divsubmit a div.register:hove
     margin: 0;
 }
   
-.buy-now-button {
+.botonComprar{
     background-color: rgb(153, 230, 218);
     font-size: 1.6em;
     color:white;
@@ -1087,22 +1085,24 @@ section.registracion div.formRegistracion form div.divsubmit a div.register:hove
     padding: 15px;
     border-radius: 8px;
     border: none;
-    margin-bottom: 15px;
+    margin-top: 15px;
     width: 200px;
+    height: 80px;
 }
   
-.action-button {
+.botonCarrito {
     background-color: rgb(153, 230, 218);
     border: none;
     border-radius: 8px;
-    font-size: 1.2em;
+    font-size: 48px;
     color: #ffffff;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 30px;
+    padding: 15px ;
     margin-top: 15px;
     width: 200px;
+    height: 80px;
 }
   
 
@@ -1148,13 +1148,27 @@ section.registracion div.formRegistracion form div.divsubmit a div.register:hove
  #agregar{
      margin-top: 100px;
  }
- @media (min-width: 1024px) {
+ @media (max-width: 768px) {
     .product-detail-info {
-        border-left: 1px solid ;
-        padding: 15px;
-        height: 100%;
+        border-left:none ;
     }
+    #botonera{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        }
  }
+ @media (max-width: 320px){
+    .product-detail-title {
+        text-align: center;
+    }
+    .products-title{
+        text-align: center;
+    }
+}
+
 /*====== products ======*/
 
 section.barraDeBusqueda {
@@ -1247,14 +1261,72 @@ div.carrito {
 }
 
 div.carrito section.cart {
-    background-color: red;
-    height: 100px;
-    width: 75%;
+    width: 73%;
+    margin-right: 2%;
 }
 div.carrito aside.subtotal {
-    background-color: blue;
     height: 100px;
     width: 25%;
+}
+
+article.productos {
+    height: 250px;
+    margin-bottom: 40px;
+}
+
+article.productos:last-child {
+    margin-bottom: 0;
+}
+
+article.productos div.producto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article.productos div.producto div.productoImagen {
+    width: 27%;
+    margin-right: 3%;
+}
+
+article.productos div.producto div.productoImagen img {
+    height: 250px;
+}
+
+article.productos div.producto div.texto {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article.productos div.producto div.texto div.qtyDelete span.cantidad {
+    background: rgb(153, 230, 218);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 20px;
+    padding: 2px;
+}
+
+article.productos div.producto div.texto div.qtyDelete select.qty {
+    border: none;
+    background: rgb(153, 230, 218);
+    height: 26px;
+    padding: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+article.productos div.producto div.texto div.qtyDelete select.qty:focus, article.productos div.producto div.texto div.qtyDelete button.delete:focus {
+    outline: none;
+}
+
+article.productos div.producto div.texto div.qtyDelete button.delete {
+    border: none;
+    background: red;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-left: 20px;
 }
 
 /*====== footer ======*/

@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('./partials/head') %>
+<%- include('./partials/head') %>
+
 <body>
     <%- include('./partials/header') %>
 
     <div class="container">
         <div class="carrito">
             <section class="cart">
+                <% for(i = 0; i < 3; i++) { %> 
                 <article class="productos">
-                    <a href="">
-                        <div class="producto">
-                            <div class="productoImagen">
-                            <img src="/img/placeholder1.jpg" alt="">
-                            </div>
-                            <div class="texto">
-                            <h3>hola</h3>
-                            <h4>$</h4>
-                            <h5>hola</h5>
+                    <div class="producto">
+                        <div class="productoImagen">
+                            <a href=""><img src="/img/placeholder1.jpg" alt=""></a>
+                        </div>
+                        <div class="texto">
+                            <a href=""><h3>Titulo del producto</h3></a>
+                            <h4>$ precio</h4>
+                            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum soluta vel
+                                        debitis dignissimos perspiciatis autem, doloremque optio aspernatur amet tempora
+                                        delectus esse assumenda, quo, corporis ea. </h5>
+                            <div class="qtyDelete">
+                                <form action="">
+                                    <span class="cantidad">Cantidad</span><select class="qty" name="qty">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <button class="delete">Delete</button>
+                                </form>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </article>
+            <% } %> 
             </section>
             <aside class="subtotal">
                 <div class="sub">
@@ -29,12 +44,13 @@
             </aside>
         </div>
     </div>
-    
-    
+
+
     <%- include('./partials/whatsappLogo') %>
 
     <%- include('./partials/footer') %>
 
     <%- include('./partials/scripts') %>
 </body>
+
 </html>

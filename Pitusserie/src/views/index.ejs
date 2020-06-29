@@ -26,7 +26,8 @@
               <a href="/register"><li>Creá una cuenta</li></a>
               <a href="/products"><li>Productos</li></a>
               <a href="#footer"><li>Contacto</li></a>
-              <a href=""><li><i class="fas fa-shopping-cart"></i></li></a>
+              <a href="/cart"><li><i class="fas fa-shopping-cart"></i></li></a>
+              <a href="/cargaProducts"><li>Carga de productos (solo visible para administradores)</li></a>
             </ul>
           </div>
         </div>
@@ -36,7 +37,7 @@
       <div class="divLogo">
         <a href="/" class="logo"><img src="img/logo.jpeg" alt="logo"></a>
       </div>
-      <a href="#"class="carrito"><i class="fas fa-shopping-cart"></i></a>
+      <a href="/cart"class="carrito"><i class="fas fa-shopping-cart"></i></a>
       <div class="redes"> <a href=""><i class="fab fa-instagram"></i></a> <a href=""><i class="fab fa-facebook"></i></a> <a href=""><i class="fab fa-pinterest"></i></a> <a href=""><i class="fab fa-linkedin-in"></i></a> </div>
     </div>
   </header>
@@ -57,7 +58,7 @@
 
         <section class="productos">
           <div class="container">
-            <h2>Productos</h2>
+            <h2>En oferta</h2>
             <div class="row">
   
               <% for(i = 0; i < productos.length; i++) { %> 
