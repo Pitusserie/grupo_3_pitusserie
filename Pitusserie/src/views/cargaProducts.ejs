@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./partials/head') %>
+<body>
+
+    <%- include('./partials/header') %>
+
+      <section class="registracion">
+        <div class="container">
+            <h2>Carga Producto</h2>
+            <div class="formRegistracion">
+                <form action="" method="POST">
+                    <div class="contenedorForm">
+                        <div class="labelInput">
+                            <label for="categorias">Categorias</label>
+                            <input type="text" id="categorias" name="categorias">
+                        </div>
+                        <div class="labelInput">
+                            <label for="titulo">Titulo</label>
+                            <input type="text" id="titulo" name="titulo">
+                        </div>
+                        <div class="labelInput">        
+                            <label for="descripcion">Descripcion</label>
+                            <input type="number" id="descripcion" name="descripcion">
+                        </div>
+                        <div class="labelInput">
+                            <label for="precio">Precio</label>
+                            <input type="number" id="precio" name="precio">
+                        </div>
+                        <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+                            <label for="imagenes">Agregar imagenes</label>
+                            <input type="file" name="imagen" />
+                            </form>
+                        <!--<div class="labelInput">
+                            
+                            <input type="image" id="imagenes" name="imagenes">
+                            
+                        </div>-->
+                        <div class="labelInput">
+                            <label for="porciones">Porciones</label>
+                            <input type="number" id="porciones" name="porciones">
+                            
+                        
+                    </div>
+                    <div class="divsubmit">
+                        <div class="submit"><button type="submit">Crear producto</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </section>
+
+    <%- include('./partials/whatsappLogo') %>
+          
+    <%- include('./partials/footer') %>
+
+    <%- include('./partials/scripts') %>
+</body>
+</html>

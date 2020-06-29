@@ -17,7 +17,9 @@ router.post('/register', function(req, res) {
 
 router.get('/products', productsController.products)
 
-router.get('/detailProducts', productsController.detail);
+router.get('/detailProducts/:id', productsController.detail);
+router.get('/cargaProducts', productsController.carga);
+router.get('/cart', productsController.cart);
 
 router.get('/error', function(req, res) {
     res.render('error')

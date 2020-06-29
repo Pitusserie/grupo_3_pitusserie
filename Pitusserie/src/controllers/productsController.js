@@ -12,10 +12,23 @@ module.exports = {
     },
     products: function(req, res) {
         res.render('products', {
-            productos: productos
+            productos:productos,
+            id:req.params.id
         });
     },
     detail: function(req, res) {
-        res.render('detailProducts')
+        res.render('detailProducts',{
+            productos:productos,
+            id:req.params.id
+        });
+    },
+    cart: function(req, res) {
+        res.render('cart', {
+            productos:productos,
+            id:req.params.id
+        });
+    },
+    carga: function(req, res) {
+        res.render('cargaProducts');
     }
 }

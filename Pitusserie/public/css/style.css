@@ -18,6 +18,10 @@ img {
     border-radius: 4%;
 }
 
+.fa-shopping-cart:before {
+    display: none;
+}
+
 /*====== header ======*/
 
 header.general {
@@ -103,10 +107,6 @@ header.general div.container div.hamburguesa div.collapse div.card ul a li:hover
 header.general div.container div.hamburguesa div.collapse div.card ul a li img {
     width: 100px;
     margin: 0 auto;
-}
-
-.fa-shopping-cart:before {
-    display: none;
 }
 
 header.general div.container div.hamburguesa div.collapse div.card ul a li .fa-shopping-cart:before {
@@ -795,10 +795,6 @@ section.diapositivas div.carrusel div.gallery div.gallery-cell img {
 
 /*====== login ======*/
 
-section.login {
-    height: 430px;
-}
-
 section.login div.container {
     display: flex;
     flex-wrap: wrap;
@@ -815,7 +811,6 @@ section.login div.formLogin {
     padding: 10px;
     margin-bottom: 20px;
     width: 100%;
-    height: 300px;
     background-color: rgba(255, 255, 255, 0.55);
 }
 
@@ -840,7 +835,7 @@ section.login div.formLogin form div.contenedorForm div.labelInput input {
     width: 100%;
     border: none;
     border-bottom: 1px solid lightblue;
-    margin-bottom: 48px;
+    margin-bottom: 20px;
 }
 
 section.login div.formLogin form div.contenedorForm div.labelInput input:focus {
@@ -852,7 +847,7 @@ section.login div.formLogin form div.contenedorForm div.labelInput input:focus {
 section.login div.formLogin form div.submitRegister {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 10px;
 }
 
@@ -912,30 +907,97 @@ section.login div.formLogin form div.submitRegister a div.register:hover {
 
 /*====== formulario de registracion ======*/
 
-section.registracion div.formRegistracionPersonal, section.registracion div.formRegistracionVendedor {
-    border: 2px solid lightslategray;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 20px;
+section.registracion div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-section.registracion div.formRegistracionPersonal form div.contenedorForm, section.registracion div.formRegistracionVendedor form div.contenedorForm, section.registracion div.formRegistracionPersonal form div.submit, section.registracion div.formRegistracionVendedor form div.submit {
+section.registracion h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section.registracion div.formRegistracion {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+section.registracion div.formRegistracion form div.contenedorForm {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-section.registracion div.formRegistracionPersonal form div.contenedorForm div.labelInput, section.registracion div.formRegistracionVendedor form div.contenedorForm div.labelInput {
+section.registracion div.formRegistracion form div.contenedorForm p {
+    width: 100%;
+    color: red;
+    font-size: 12px;
+}
+
+section.registracion div.formRegistracion form div.contenedorForm div.labelInput {
     width: 100%;
     margin-bottom: 10px;
 }
 
-section.registracion div.formRegistracionPersonal form div.contenedorForm div.labelInput input, section.registracion div.formRegistracionVendedor form div.contenedorForm div.labelInput input {
+section.registracion div.formRegistracion form div.contenedorForm div.labelInput input {
     width: 100%;
+    border: none;
+    border-bottom: 1px solid lightblue;
+    margin-bottom: 20px;
 }
 
-section.registracion div.formRegistracionPersonal form div.submit div, section.registracion div.formRegistracionVendedor form div.submit div {
-    width: 50%;
+section.registracion div.formRegistracion form div.contenedorForm div.labelInput input:focus {
+    outline: none;
+    border-bottom: 1px solid black;
+    border-radius: 8px;
+}
+
+section.registracion div.formRegistracion form div.divsubmit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.submit button {
+    background-color: rgba(153, 230, 218, 0.7);
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: auto;
+    padding: 5px 0;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.submit button:hover {
+    background: none;
+    border-bottom: 3px solid rgba(153, 230, 218, 1);
+    border-radius: 0;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.submit button:focus {
+    outline: none;
+}
+
+section.registracion div.formRegistracion form div.divsubmit a div.register {
+    color: black;
+}
+
+section.registracion div.formRegistracion form div.divsubmit a div.register:hover {
+    color: black;
+}
+
+@media (min-width: 1024px) {
+    section.registracion div.container h2 {
+        width: 100%;
+        padding: 0 25%;
+    }
+    
+    section.registracion div.formRegistracion {
+        width: 50%;
+    }
 }
 
 /*========Detail=======*/
@@ -949,7 +1011,7 @@ section.registracion div.formRegistracionPersonal form div.submit div, section.r
 }
 
 .product-detail {
-    background-image: url('../img/fondoGeneral.jpg');
+    
     border-radius: 8px;
     overflow: hidden;
     padding: 15px;
@@ -1016,7 +1078,7 @@ section.registracion div.formRegistracionPersonal form div.submit div, section.r
 }
   
 .buy-now-button {
-    background-color: blue;
+    background-color: rgb(153, 230, 218);
     font-size: 1.6em;
     color:white;
     display: flex;
@@ -1030,7 +1092,7 @@ section.registracion div.formRegistracionPersonal form div.submit div, section.r
 }
   
 .action-button {
-    background-color: blue;
+    background-color: rgb(153, 230, 218);
     border: none;
     border-radius: 8px;
     font-size: 1.2em;
@@ -1040,16 +1102,11 @@ section.registracion div.formRegistracionPersonal form div.submit div, section.r
     justify-content: center;
     padding: 15px 30px;
     margin-top: 15px;
-    width: 90px;
+    width: 200px;
 }
   
-.action-button.edit {
-    background-color: chocolate;
-}
 
-.action-button.delete {
-    background-color: rgb(248, 69, 37);
-}
+
 
 .agregar-productos-title{
     display:inline-block;
@@ -1058,11 +1115,18 @@ section.registracion div.formRegistracionPersonal form div.submit div, section.r
     display: flex;
     justify-content: space-between;
 }
+.productos-similares-img img{
+    width: 33%;
+    height: auto;
+}
 .agregar-productos-img{
     display:flex;
     justify-content: space-between;
 }
-
+.agregar-productos-img img{
+    width: 33%;
+    height: auto;
+}
 .foto-agregar1{
     width: 30%;
     height: 250px;
@@ -1111,9 +1175,9 @@ section.barraDeBusqueda div.container div.divForm form {
 }
 
 section.barraDeBusqueda div.container div.divForm form select.filtro {
-    border: 1px solid black;
+    border: none;
     border-right: none;
-    background-color: rgb(101, 200, 207);
+    background-color: rgb(253, 217, 217);
     border-top-left-radius: 6px;
     flex-grow: 1;
 }
@@ -1125,10 +1189,11 @@ section.barraDeBusqueda div.container div.divForm form select.filtro:focus {
 section.barraDeBusqueda div.container div.divForm form input.barraDeBusqueda {
     order: 50;
     width: 100%;
-    border: 1px solid black;
+    border: none;
     border-top: none;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+    background-color: rgb(248, 248, 224);
 }
 
 section.barraDeBusqueda div.container div.divForm form input.barraDeBusqueda:focus {
@@ -1136,9 +1201,9 @@ section.barraDeBusqueda div.container div.divForm form input.barraDeBusqueda:foc
 }
 
 section.barraDeBusqueda div.container div.divForm form button.submit {
-    border: 1px solid black;
+    border: none;
     border-left: none;
-    background-color: rgb(223, 212, 58);
+    background-color: rgb(253, 226, 204);
     border-top-right-radius: 6px;
     width: 40px;
 }
@@ -1163,7 +1228,7 @@ section.barraDeBusqueda div.container div.divForm form button.submit:focus {
         order: 0;
         flex-grow: 1;
         border-radius: 0;
-        border-top: 1px solid black;
+        border-top: none;
         border-right: none;
         border-left: none;
     }
@@ -1172,6 +1237,24 @@ section.barraDeBusqueda div.container div.divForm form button.submit:focus {
         border-bottom-right-radius: 6px;
     }
 
+}
+
+/*====== Carrito ======*/
+
+div.carrito {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.carrito section.cart {
+    background-color: red;
+    height: 100px;
+    width: 75%;
+}
+div.carrito aside.subtotal {
+    background-color: blue;
+    height: 100px;
+    width: 25%;
 }
 
 /*====== footer ======*/
@@ -1288,8 +1371,7 @@ div.containerWhatsappLogo img {
 
 section.productos div.container h2 {
     margin: 10px 0;
-    border: 1px solid black;
-    background-color: rgba(0, 118, 197, 0.15);
+    background-color: rgba(101, 200, 207, 0.3);
     border-radius: 5px;
     padding: 0 5px;
 }
@@ -1307,10 +1389,10 @@ section.productos div.container div.row article div.producto {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid black;
     border-radius: 4px;
-    background-color: rgba(0, 118, 197, 0.15);
+    background-color: rgba(101, 200, 207, 0.3);
     padding: 0 15px;
+    margin: 15px 0;
 }
 
 section.productos div.container div.row article div.producto h3 {

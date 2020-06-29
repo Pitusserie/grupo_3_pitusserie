@@ -2,6 +2,7 @@
     -Comenzar a buscar un horario en el que podamos trabajar los 3 al mismo tiempo para poder sacarnos dudas entre nosotros y ayudarnos mutuamente.(Juntarnos los lunes a las 11:00 y los miércoles tipo 13:00)
     - Trabajar en el Sitio E-commerce sin esperar un nuevo sprint.  
     - Imaginar y visualizar que funcionalidades queremos meterle al sitio. Durante el desarrollo del curso averiguar como se hace y aprender como.     
+    - Nomenclatura de carpetas de img (y para todo el sitio ordenar bien)
 # 2. Hacer más:      
     - Mas comunicacion y proactividad. 
     - Avanzar.

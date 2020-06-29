@@ -6,7 +6,10 @@
 <body class="body-detail">
 
 	<%- include('./partials/header') %>
+	<% for(i = 0; i < productos.length; i++) { %>
+		<%if(id==productos[i].id){%>
 
+		
 	<div class="container products-wrapper" id="detaill">
 		<div class="row">
 			<div class="col-12">
@@ -16,34 +19,35 @@
 		<div class="product-detail">
 			<div class="row">
 				<div class="col-12 col-lg-8">
-					<img src="img/placeholder1.jpg" alt="product image" class="product-detail-img">
+					<img src="/img/<%= productos[i].img %>" alt="product image" class="product-detail-img">
 				</div>
 				<div class="col-12 col-lg-4">
 					<article class="product-detail-info">
-						<h2 class="product-detail-title">Torta</h2>
+						<h2 class="product-detail-title"><%= productos[i].nombre %></h2>
 
 						<p class="product-detail-price small">
-							Precio: $123213
+							Precio: $<%= productos[i].precio %>
 						</p>
 						
 						<ul class="actions-list">
 							<li>
 								<p class="product-detail-description">
-									Detalle: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error sed
-									similique aliquid ipsum tempora ratione!
+									<%= productos[i].miniDesc %>
 								</p>
 							</li>
-
+	
 						</ul>
 						<div>
-							<div class="botones1"><a href="#" class="buy-now-button">COMPRAR AHORA</a></div>
-								
+							<div class="botones1"><a href="#" class="buy-now-button">Comprar</a></div>
+						</div>	
 							<div class="botones2">
-								<a href="#" class="action-button edit">Agregar carrito </a>
-								<button type="submit" class="action-button edit">Guardar</button>
+								<div><a href="#" class="action-button edit"><i class="fas fa-cart-plus" id="cart"></i></a></div>
+								<div><button type="submit" class="action-button edit">Guardar</button></div>
+								
 							</div>
-							
-						</div>
+							<%}%>
+							<% } %>
+						
 						
 					</article>
 				</div>
@@ -54,20 +58,24 @@
 	<div class="container agregar-productos" id="agregar">
 		<h2>Agregar Productos</h2>
 		<div class="agregar-productos-img">
-			<img src="img/velas.jpg" alt="" class="foto-agregar1">
-			<img src="img/giftcard.jpg" alt="" class="foto-agregar2">
-			<img src="img/globos.jpg" alt="" class="foto-agregar3">
+			<img src="/img/velas.jpg" alt="" class="foto-agregar1">
+			<img src="/img/giftcard.jpg" alt="" class="foto-agregar2">
+			<img src="/img/globos.jpg" alt="" class="foto-agregar3">
 		</div>
 	</div>
 	</div>
 
 	<div class="container productos-similares" id="similares">
 		<h2>Productos Similares</h2>
+		
+
+		
 		<div class="productos-similares-img">
-			<img src="img/placeholder2.jpg" alt="" class="foto-agregar1">
-			<img src="img/placeholder3.jpg" alt="" class="foto-agregar2">
-			<img src="img/placeholder4.jpg" alt="" class="foto-agregar3">
+			<img src="/img/placeholder2.jpg" alt="" class="foto-agregar1">
+			<img src="/img/placeholder3.jpg" alt="" class="foto-agregar2">
+			<img src="/img/placeholder4.jpg" alt="" class="foto-agregar3">
 		</div>
+		
 	</div>
 	</div>
 

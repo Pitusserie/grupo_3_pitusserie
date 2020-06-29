@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <%- include('./partials/head') %>
 <body>
 
@@ -7,8 +7,8 @@
 
       <section class="registracion">
         <div class="container">
-            <h2>Cliente</h2>
-            <div class="formRegistracionPersonal">
+            <h2>Registrate</h2>
+            <div class="formRegistracion">
                 <form action="" method="POST">
                     <div class="contenedorForm">
                         <div class="labelInput">
@@ -22,23 +22,41 @@
                         <div class="labelInput">        
                             <label for="dni">DNI</label>
                             <input type="number" id="dni" name="dni">
+                            <% if(true) { %>
+                                <p>Introduzca un DNI válido</p>
+                            <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="telefono">Telefono</label>
                             <input type="number" id="telefono" name="telefono">
+                            <% if(true) { %>
+                                <p>Introduzca un telefono válido</p>
+                            <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email">
+                            <% if(true) { %>
+                                <p>Introduzca un email válido</p>
+                            <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="contrasena">Contraseña</label>
-                            <input type="password" id="contrasena1" name="contrasena">
+                            <input type="password" id="contrasena" placeholder="Entre 6 y 20 caracteres" name="contrasena">
+                            <% if(true) { %>
+                                <p>Introduzca una contraseña que contenga entre 6 y 20 caracteres</p>
+                            <% } %>
+                        </div>
+                        <div class="labelInput">
+                            <label for="contrasena">Repita su contraseña</label>
+                            <input type="password" id="contrasena" name="contrasena">
+                            <% if(true) { %>
+                                <p>Sus dos contraseñas no coinciden</p>
+                            <% } %>
                         </div>
                     </div>
-                    <div class="submit">
-                        <div><button class="btn btn-success" type="submit">Crear cuenta</button></div>
-                        <div></div>
+                    <div class="divsubmit">
+                        <div class="submit"><button type="submit">Crear cuenta</button></div>
                     </div>
                 </form>
             </div>
