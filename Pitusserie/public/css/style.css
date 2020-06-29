@@ -6,10 +6,6 @@
     list-style-type: none;
 }
 
-body { 
-    background-image: url('../img/fondoGeneral.jpg');
-}
-
 a {
     color: black;
 }
@@ -18,11 +14,16 @@ a:hover {
     text-decoration: none;
 }
 
+img {
+    border-radius: 4%;
+}
+
 /*====== header ======*/
 
 header.general {
-    background-color: pink;
-    height: 180px;
+    background-image: url('../img/fondoGeneral.jpg');
+    height: 140px;
+    margin-bottom: 70px;
 }
 
 header.general div.container {
@@ -190,7 +191,7 @@ header.general div.container div.redes i:hover {
 @media (min-width: 768px){
 
     header.general {
-        height: 220px;
+        height: 160px;
     }
     
     header.general div.container {
@@ -517,7 +518,7 @@ header.home div.container div.redes i:hover {
 div.headerMovil {
     width: 100%;
     height: 85px;
-    background-color: pink;
+    background-image: url('../img/fondoGeneral.jpg');
     z-index: 100;
     display: none;
 }
@@ -795,7 +796,7 @@ section.diapositivas div.carrusel div.gallery div.gallery-cell img {
 /*====== login ======*/
 
 section.login {
-    margin: 50px 0;
+    height: 430px;
 }
 
 section.login div.container {
@@ -856,7 +857,7 @@ section.login div.formLogin form div.submitRegister {
 }
 
 section.login div.formLogin form div.submitRegister div.submit button {
-    background-color: rgba(82, 207, 82, 0.7);
+    background-color: rgba(153, 230, 218, 0.7);
     border: none;
     border-radius: 8px;
     width: 100px;
@@ -866,8 +867,8 @@ section.login div.formLogin form div.submitRegister div.submit button {
 
 section.login div.formLogin form div.submitRegister div.submit button:hover {
     background: none;
-    border-bottom: 2px solid green;
-    border-radius: 2px;
+    border-bottom: 3px solid rgba(153, 230, 218, 1);
+    border-radius: 0;
 }
 
 section.login div.formLogin form div.submitRegister div.submit button:focus {
@@ -909,18 +910,35 @@ section.login div.formLogin form div.submitRegister a div.register:hover {
     }
 }
 
-/*====== Register======*/
+/*====== formulario de registracion ======*/
 
-section.registracion {}
+section.registracion div.formRegistracionPersonal, section.registracion div.formRegistracionVendedor {
+    border: 2px solid lightslategray;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
 
-.title {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
+section.registracion div.formRegistracionPersonal form div.contenedorForm, section.registracion div.formRegistracionVendedor form div.contenedorForm, section.registracion div.formRegistracionPersonal form div.submit, section.registracion div.formRegistracionVendedor form div.submit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section.registracion div.formRegistracionPersonal form div.contenedorForm div.labelInput, section.registracion div.formRegistracionVendedor form div.contenedorForm div.labelInput {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+section.registracion div.formRegistracionPersonal form div.contenedorForm div.labelInput input, section.registracion div.formRegistracionVendedor form div.contenedorForm div.labelInput input {
+    width: 100%;
+}
+
+section.registracion div.formRegistracionPersonal form div.submit div, section.registracion div.formRegistracionVendedor form div.submit div {
+    width: 50%;
 }
 
 /*========Detail=======*/
-
 .body-detail{
     background-color: #fff8f8ce;
 }
@@ -931,7 +949,7 @@ section.registracion {}
 }
 
 .product-detail {
-    background-color:rgba(235, 235, 235, 0.945);
+    background-image: url('../img/fondoGeneral.jpg');
     border-radius: 8px;
     overflow: hidden;
     padding: 15px;
@@ -944,7 +962,7 @@ section.registracion {}
 }
   
 .product-detail-info {
-    border-left: 1px solid ;
+    
     padding: 15px;
     height: 100%;
 }
@@ -1008,6 +1026,7 @@ section.registracion {}
     border-radius: 8px;
     border: none;
     margin-bottom: 15px;
+    width: 200px;
 }
   
 .action-button {
@@ -1021,6 +1040,7 @@ section.registracion {}
     justify-content: center;
     padding: 15px 30px;
     margin-top: 15px;
+    width: 90px;
 }
   
 .action-button.edit {
@@ -1034,7 +1054,10 @@ section.registracion {}
 .agregar-productos-title{
     display:inline-block;
 }
-
+.productos-similares-img{
+    display: flex;
+    justify-content: space-between;
+}
 .agregar-productos-img{
     display:flex;
     justify-content: space-between;
@@ -1054,7 +1077,20 @@ section.registracion {}
     width: 30%;
     height: 250px;
 }
-
+ #similares { 
+     margin-top: 100px;
+     padding-bottom: 100px;
+  }
+ #agregar{
+     margin-top: 100px;
+ }
+ @media (min-width: 1024px) {
+    .product-detail-info {
+        border-left: 1px solid ;
+        padding: 15px;
+        height: 100%;
+    }
+ }
 /*====== products ======*/
 
 section.barraDeBusqueda {
@@ -1141,8 +1177,10 @@ section.barraDeBusqueda div.container div.divForm form button.submit:focus {
 /*====== footer ======*/
  
 footer {
-    background-color: pink;
+    background-image: url('../img/fondoGeneral.jpg');
     font-size: 20px;
+    padding-top: 10px;
+    margin-top: 60px;
 }
 
 footer p {
