@@ -6,7 +6,7 @@
     list-style-type: none;
 }
 
-body {
+body { 
     background-image: url('../img/fondoGeneral.jpg');
 }
 
@@ -844,7 +844,7 @@ section.login div.formLogin form div.contenedorForm div.labelInput input {
 
 section.login div.formLogin form div.contenedorForm div.labelInput input:focus {
     outline: none;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
     border-radius: 8px;
 }
 
