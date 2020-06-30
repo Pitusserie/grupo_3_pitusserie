@@ -5,42 +5,52 @@
 <body>
     <%- include('./partials/header') %>
 
-    <div class="container">
+    <div class="container carritoCelular">
         <div class="carrito">
             <section class="cart">
                 <% for(i = 0; i < 3; i++) { %> 
                 <article class="productos">
                     <div class="producto">
                         <div class="productoImagen">
-                            <a href=""><img src="/img/placeholder1.jpg" alt=""></a>
+                            <a href=""><img src="/img/<%= productos[i].img %>" alt=""></a>
                         </div>
                         <div class="texto">
-                            <a href=""><h3>Titulo del producto</h3></a>
-                            <h4>$ precio</h4>
-                            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum soluta vel
-                                        debitis dignissimos perspiciatis autem, doloremque optio aspernatur amet tempora
-                                        delectus esse assumenda, quo, corporis ea. </h5>
+                            <a href=""><h3><%= productos[i].nombre %></h3></a>
+                            <h4>$ <%= productos[i].precio %></h4>
+                            <h5>Lorem ipsum dolor sit amet consectetur</h5>
                             <div class="qtyDelete">
                                 <form action="">
-                                    <span class="cantidad">Cantidad</span><select class="qty" name="qty">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                    </select>
-                                    <button class="delete">Delete</button>
+                                    <div class="cantidad">
+                                        <span>Cantidad</span>
+                                        <select class="qty" name="qty">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <button class="delete">Borrar</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </article>
-            <% } %> 
+                <% } %> 
             </section>
             <aside class="subtotal">
-                <div class="sub">
-                    <h2>subtotal</h2>
-                </div>
+                <article class="sub">
+                    <div class="sub">
+                        <div class="texto">
+                            <a href=""><h3>SubTotal</h3></a>
+                            <h4>$ 600</h4>
+                            <h5>3 Items</h5>
+                            <div class="botonCompra">
+                                <button class="botonComprar">Continuar Compra</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </aside>
         </div>
     </div>

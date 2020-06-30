@@ -3,56 +3,56 @@
         "id": 1,
         "nombre": "Torta1",
         "precio": "100",
-        "miniDesc": "Ingrediente-ingrediente-ingrediente",
+        "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder1.jpg"
     },
     {
         "id": 2,
         "nombre": "Torta2",
         "precio": "200",
-        "miniDesc": "Ingrediente-ingrediente-ingrediente",
+        "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder2.jpg"
     },
     {
         "id": 3,
         "nombre": "Torta3",
         "precio": "300",
-        "miniDesc": "Ingrediente-ingrediente-ingrediente",
+        "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder3.jpg"
     },
     {
         "id": 4,
         "nombre": "Torta4",
         "precio": "400",
-        "miniDesc": "Ingrediente-ingrediente-ingrediente",
+        "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder4.jpg"
     },
     {
         "id": 5,
         "nombre": "Torta5",
         "precio": "500",
-        "miniDesc": "Ingrediente-ingrediente-ingrediente",
+        "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder5.jpg"
     },
     {
         "id": 6,
         "nombre": "Torta6",
         "precio": "600",
-        "miniDesc": "Ingrediente-ingrediente-ingrediente",
+        "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder6.jpg"
     },
     {
         "id": 7,
         "nombre": "Torta7",
         "precio": "700",
-        "miniDesc": "Ingrediente-ingrediente-ingrediente",
+        "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder7.jpg"
     },
     {
         "id": 8,
         "nombre": "Torta8",
         "precio": "800",
-        "miniDesc": "Ingrediente-ingrediente-ingrediente",
+        "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder8.jpg"
     }
 ]
