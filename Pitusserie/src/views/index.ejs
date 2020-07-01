@@ -37,10 +37,13 @@
         <a href="/" class="logo"><img src="img/logo.jpeg" alt="logo"></a>
       </div>
       <a href="/cart"class="carrito"><i class="fas fa-shopping-cart"></i></a>
-      <div class="redes"> <a href=""><i class="fab fa-instagram"></i></a> <a href=""><i class="fab fa-facebook"></i></a> </div>
+      <div class="redes"> <a href="https://www.instagram.com/pitusserietortas/"><i class="fab fa-instagram"></i></a> <a href="https://www.facebook.com/pitusserietortas/"><i class="fab fa-facebook"></i></a> </div>
     </div>
   </header>
 
+  <h1>pitusserie</h1>
+
+  <% for(i = 0; i < 2; i++) { %>
         <section class="diapositivas">
           <div class="carrusel">
             <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
@@ -54,35 +57,15 @@
             </div>
           </div>
         </section>
+      <% } %> 
 
-        <section class="productos">
-          <div class="container">
-            <h2>En oferta</h2>
-            <div class="row">
-  
-              <% for(i = 0; i < productos.length; i++) { %> 
-                <article class="col-12 col-md-6 col-lg-3">
-                    <a href="/detailproducts/<%= productos[i].id %> ">
-                        <div class="producto">
-                            <h3><%= productos[i].nombre %></h3>
-                            <div class="productoImagen">
-                            <img src="img/<%= productos[i].img %>" alt="">
-                            </div>
-                            <div class="texto">
-                            <div class="precioCarrito">
-                                <h4>$<%= productos[i].precio %></h4>
-                                <a href="#"><span class="carritoMas"><i class="fas fa-cart-plus"></i></span></a>
-                            </div>
-                            <h5><%= productos[i].miniDesc %></h5>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-          <% } %> 
-  
-            </div>
-          </div>
-        </section>
+  <section class="containerImgIndex">
+    <div class="sobreNosotros">
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, soluta! In impedit iste voluptas ipsa eius excepturi dolores debitis laborum, accusamus odio soluta, ratione deleniti ex incidunt esse consequuntur eos.</p>
+    </div>
+    <img class="imgIndex" src="/img/imgIndex.jpg" alt="">
+  </section>
 
     <%- include('./partials/whatsappLogo') %>
           

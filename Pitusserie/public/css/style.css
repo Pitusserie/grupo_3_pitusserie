@@ -1,9 +1,23 @@
+@font-face {
+    font-family: great-vibes;
+    src: url('../fonts/GreatVibes-Regular.ttf');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     list-style-type: none;
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    font-family: great-vibes;
+    font-size: 40px;
 }
 
 a {
@@ -106,7 +120,7 @@ header.general div.container div.hamburguesa div.collapse div.card ul a li:hover
 }
 
 header.general div.container div.hamburguesa div.collapse div.card ul a li img {
-    width: 100px;
+    width: 150px;
     margin: 0 auto;
 }
 
@@ -123,7 +137,7 @@ header.general div.container div.productsHeader {
 }
 
 header.general div.container div.productsHeader:hover {
-    border-bottom: 2px solid black;
+    color: rgb(200, 200, 200);
 }
 
 header.general div.container div.divLogo {
@@ -264,7 +278,7 @@ header.general div.container div.redes i:hover {
 
 @media (min-width: 1024px) {
     header.general div.container div.hamburguesa div.collapse {
-        width: 30%;
+        width: 25%;
     }
 }
 
@@ -351,7 +365,7 @@ header.home div.container div.hamburguesa div.collapse div.card ul a li:hover {
 }
 
 header.home div.container div.hamburguesa div.collapse div.card ul a li img {
-    width: 100px;
+    width: 150px;
     margin: 0 auto;
 }
 
@@ -368,12 +382,13 @@ header.home div.container div.hamburguesa div.collapse div.card ul a li .fa-shop
 header.home div.container div.productsHeader {
     width: 100px;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     transition: color 0.1s ease-in-out;
+    font-family: great-vibes;
 }
 
 header.home div.container div.productsHeader:hover {
-    border-bottom: 2px solid black;
+    color: rgb(200, 200, 200);
 }
 
 header.home div.container div.divLogo {
@@ -455,6 +470,7 @@ header.home div.container div.redes i:hover {
 
     header.home {
         height: 100vh;
+        background-image: url('../img/fondoHeader1024-768.jpg');
     }
     
     header.home div.container {
@@ -475,7 +491,7 @@ header.home div.container div.redes i:hover {
 
     header.home div.container div.productsHeader {
         width: 120px;
-        font-size: 25px;
+        font-size: 32px;
     }
 
     header.home div.container  div.divLogo {
@@ -518,7 +534,13 @@ header.home div.container div.redes i:hover {
 
 @media (min-width: 1024px) {
     header.home div.container div.hamburguesa div.collapse {
-        width: 30%;
+        width: 25%;
+    }
+}
+
+@media (min-width: 1440px) {
+    header.home {
+        background-image: url('../img/fondoHeader.jpg');
     }
 }
 
@@ -613,7 +635,7 @@ div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.c
 }
 
 div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card ul a li img {
-    width: 100px;
+    width: 150px;
     margin: 0 auto;
 }
 
@@ -635,7 +657,7 @@ div.headerMovil div.container div.recontainer div.productsHeader {
 }
 
 div.headerMovil div.container div.recontainer div.productsHeader:hover {
-    border-bottom: 2px solid black;
+    color: rgb(200, 200, 200);
 }
 
 div.headerMovil div.container div.recontainer div.divLogo {
@@ -679,8 +701,7 @@ div.headerMovil div.container div.recontainer a.carrito i.fa-shopping-cart:befor
     display: inline-block;
 }
 
-header.home  div.container a.carrito i:hover {
-    font-size: 24px;
+div.headerMovil div.container div.recontainer a.carrito i:hover {
     color: rgb(200, 200, 200);
 }
 
@@ -767,10 +788,6 @@ div.headerMovil div.container div.redes i.fa-instagram {
     div.headerMovil div.container div.recontainer a.carrito i {
         font-size: 30px;
     }
-
-    header.home  div.container a.carrito i:hover {
-        font-size: 31px;
-    }
     
     div.headerMovil div.container div.recontainer div.redes i {
         margin-right: 8px;
@@ -780,7 +797,7 @@ div.headerMovil div.container div.redes i.fa-instagram {
 
 @media (min-width: 1024px) {
     div.headerMovil div.container div.recontainer div.hamburguesa div.collapse {
-        width: 30%;
+        width: 25%;
     }
 }
 
@@ -806,6 +823,38 @@ section.diapositivas div.carrusel div.gallery div.gallery-cell {
 section.diapositivas div.carrusel div.gallery div.gallery-cell img {
     width: 100%;
     height: 100%;
+}
+
+section.containerImgIndex {
+    position: relative;
+}
+
+section.containerImgIndex div.sobreNosotros {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+section.containerImgIndex div.sobreNosotros p {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+section.containerImgIndex img.imgIndex {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+@media (min-width: 426px) {
+    section.containerImgIndex div.sobreNosotros p {
+        font-size: 16px;
+    }
 }
 
 /*====== login ======*/
@@ -981,8 +1030,8 @@ section.registracion div.formRegistracion form div.divsubmit div.submit button {
     background-color: rgba(153, 230, 218, 0.7);
     border: none;
     border-radius: 8px;
-    width: 100px;
-    height: auto;
+    width: 112px;
+    height: 35px;
     padding: 5px 0;
 }
 
@@ -1013,6 +1062,31 @@ section.registracion div.formRegistracion form div.divsubmit a div.register:hove
     section.registracion div.formRegistracion {
         width: 50%;
     }
+}
+
+/*====== formulario carga de producto(usa codigo de registracion) ======*/
+
+section.registracion div.formRegistracion form div.contenedorForm div.inputImg input, section.registracion div.formRegistracion form div.contenedorForm div.inputImg input:focus {
+    border-bottom: none;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.crearProducto button {
+    background-color: rgba(153, 230, 218, 0.7);
+    border: none;
+    border-radius: 8px;
+    width: 145px;
+    height: 35px;
+    padding: 5px 0;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.crearProducto button:hover {
+    background: none;
+    border-bottom: 3px solid rgba(153, 230, 218, 1);
+    border-radius: 0;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.crearProducto button:focus {
+    outline: none;
 }
 
 /*========Detail=======*/
@@ -1442,14 +1516,28 @@ footer p.redes {
     justify-content: space-around;
     font-size: 30px;
 }
+
+footer p.redes i {
+    transition: color 0.1s ease-in-out;
+    margin-bottom: 5px;
+    color: black;
+}
+
+footer p.redes i:hover {
+    color: rgba(255, 0, 0, 0.7);
+}
+
 footer div.copyright {
     text-align: center;
     font-size: 14px;
 }
 
-footer p.redes a i {
-    margin-bottom: 5px;
-    color: black;
+footer p.mail i {
+    transition: color 0.1s ease-in-out;
+}
+
+footer p.mail:hover i {
+    color: rgba(255, 0, 0, 0.7);
 }
 
 footer div.container a.arriba div{
@@ -1472,7 +1560,7 @@ div.containerWhatsappLogo div.cartelitoWhatsapp {
   
 div.containerWhatsappLogo div.cartelitoWhatsapp span.cartelito {
     visibility: hidden;
-    width: 100px;
+    width: 120px;
     background-color: rgb(83, 212, 83);
     color: #fff;
     text-align: center;
@@ -1518,7 +1606,7 @@ div.containerWhatsappLogo img {
     }
 
     div.containerWhatsappLogo div.cartelitoWhatsapp span.cartelito {
-        width: 120px;
+        width: 140px;
         font-size: 16px;
         top: 12px
     }
