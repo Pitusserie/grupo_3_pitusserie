@@ -47,7 +47,7 @@ div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHambu
 
 div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesa i.barras:hover {
     font-size: 29px;
-    color: rgba(211, 211, 211, 0.863);
+    color: var(--grisItemsHeader-ml);
 }
 
 div.headerMovil div.container div.recontainer div.hamburguesa div.collapse {
@@ -109,7 +109,7 @@ div.headerMovil div.container div.recontainer div.productsHeader {
 }
 
 div.headerMovil div.container div.recontainer div.productsHeader:hover {
-    color: rgb(200, 200, 200);
+    color: var(--grisItemsHeader-ml);
 }
 
 div.headerMovil div.container div.recontainer div.divLogo {
@@ -154,7 +154,7 @@ div.headerMovil div.container div.recontainer a.carrito i.fa-shopping-cart:befor
 }
 
 div.headerMovil div.container div.recontainer a.carrito i:hover {
-    color: rgb(200, 200, 200);
+    color: var(--grisItemsHeader-ml);
 }
 
 div.headerMovil div.container div.recontainer div.redes {
@@ -172,7 +172,7 @@ div.headerMovil div.container div.recontainer div.redes i:last-child {
 
 
 div.headerMovil div.container div.recontainer div.redes i:hover {
-    color: rgba(255, 0, 0, 0.7);
+    color: var(--redes-ml);
 }
 
 div.headerMovil div.container div.redes {

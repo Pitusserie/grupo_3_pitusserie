@@ -55,7 +55,7 @@ section.login div.formLogin form div.submitRegister {
 }
 
 section.login div.formLogin form div.submitRegister div.submit button {
-    background-color: var(--celesteFormulario-ml);
+    background-color: var(--celesteFormularioClaro-ml);
     border: none;
     border-radius: 8px;
     width: 125px;

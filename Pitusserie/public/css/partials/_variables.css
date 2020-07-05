@@ -1,7 +1,10 @@
 :root {
+    --celesteFormularioClaro-ml: rgba(153, 230, 218, 0.7);
     --celesteFormulario-ml: rgb(153, 230, 218);
     --celesteDetailHover-ml: rgb(153, 208, 230);
     --rosaFormulario-ml: rgb(253, 226, 204);
     --bordeFormulario-ml: lightblue;
     --bordeFormularioHover-ml: black;
+    --grisItemsHeader-ml: rgb(200, 200, 200);
+    --redes-ml: rgba(255, 0, 0, 0.7);
 }

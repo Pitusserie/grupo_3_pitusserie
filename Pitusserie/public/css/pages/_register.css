@@ -54,7 +54,7 @@ section.registracion div.formRegistracion form div.divsubmit {
 }
 
 section.registracion div.formRegistracion form div.divsubmit div.submit button {
-    background-color: var(--celesteFormulario-ml);
+    background-color: var(--celesteFormularioClaro-ml);
     border: none;
     border-radius: 8px;
     width: 112px;

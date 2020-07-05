@@ -24,8 +24,8 @@ footer p.redes i {
     color: black;
 }
 
-footer p.redes i:hover {
-    color: rgba(255, 0, 0, 0.7);
+footer p.redes i:hover, footer p.mail:hover i {
+    color: var(--redes-ml);
 }
 
 footer div.copyright {
@@ -35,10 +35,6 @@ footer div.copyright {
 
 footer p.mail i {
     transition: color 0.1s ease-in-out;
-}
-
-footer p.mail:hover i {
-    color: rgba(255, 0, 0, 0.7);
 }
 
 footer div.container a.arriba div{
