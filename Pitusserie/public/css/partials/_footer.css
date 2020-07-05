@@ -1,0 +1,47 @@
+footer {
+    background-image: url('../../img/fondoGeneral.jpg');
+    font-size: 20px;
+    padding: 10px 0;
+    margin-top: 60px;
+}
+
+footer p {
+    text-align: center;
+    color: black;
+    transition: color 0.1s ease-in-out;
+}
+
+footer p.redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+footer p.redes i {
+    transition: color 0.1s ease-in-out;
+    margin-bottom: 5px;
+    color: black;
+}
+
+footer p.redes i:hover {
+    color: rgba(255, 0, 0, 0.7);
+}
+
+footer div.copyright {
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p.mail i {
+    transition: color 0.1s ease-in-out;
+}
+
+footer p.mail:hover i {
+    color: rgba(255, 0, 0, 0.7);
+}
+
+footer div.container a.arriba div{
+    text-align: center;
+    color: black;
+}

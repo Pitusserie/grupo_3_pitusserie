@@ -1,0 +1,140 @@
+div.carrito {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.carrito section.cart {
+    width: 73%;
+    margin-right: 2%;
+}
+
+article.productos {
+    height: 250px;
+    margin-bottom: 40px;
+}
+
+article.productos:last-child {
+    margin-bottom: 0;
+}
+
+article.productos div.producto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article.productos div.producto div.productoImagen {
+    width: 27%;
+    margin-right: 3%;
+}
+
+article.productos div.producto div.productoImagen img {
+    height: 250px;
+}
+
+article.productos div.producto div.texto {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article.productos div.producto div.texto div.qtyDelete form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article.productos div.producto div.texto div.qtyDelete div.cantidad {
+    background: rgba(153, 230, 218, 0.6);
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 2px;
+    width: fit-content;
+}
+
+article.productos div.producto div.texto div.qtyDelete select.qty {
+    border: none;
+    background: transparent;
+}
+
+article.productos div.producto div.texto div.qtyDelete select.qty:focus, article.productos div.producto div.texto div.qtyDelete button.delete:focus {
+    outline: none;
+}
+
+article.productos div.producto div.texto div.qtyDelete button.delete {
+    border: none;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+div.carrito aside.subtotal {
+    height: fit-content;
+    width: 25%;
+    padding: 10px;
+    border: 3px solid rgb(153, 230, 218);
+    text-align: right;
+    background-color: rgb(252, 255, 239);
+}
+
+div.carrito aside.subtotal article.sub div.sub div.texto div.botonCompra {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.carrito aside.subtotal article.sub div.sub div.texto div.botonCompra button.botonComprar {
+    height: fit-content;
+    width: 100%;
+    padding: 5px;
+}
+
+div.carrito aside.subtotal article.sub div.sub div.texto div.botonCompra button.botonComprar:hover {
+    font-size: 1.6em;
+}
+
+@media (max-width: 767px) {
+
+    article.productos {
+        height: fit-content;
+        margin-bottom: 60px;
+    }
+
+    article.productos div.producto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    article.productos div.producto div.productoImagen {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    article.productos div.producto div.texto {
+        text-align: center;
+    }
+
+    article.productos div.producto div.texto div.qtyDelete form {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    div.carrito aside.subtotal {
+        order: -1;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    div.carrito section.cart {
+        width: 100%;
+        margin-right: 0;
+    }
+}

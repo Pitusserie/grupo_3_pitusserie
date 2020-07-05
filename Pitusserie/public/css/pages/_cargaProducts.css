@@ -1,0 +1,22 @@
+section.registracion div.formRegistracion form div.contenedorForm div.inputImg input, section.registracion div.formRegistracion form div.contenedorForm div.inputImg input:focus {
+    border-bottom: none;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.crearProducto button {
+    background-color: var(--celesteFormulario-ml);
+    border: none;
+    border-radius: 8px;
+    width: 145px;
+    height: 35px;
+    padding: 5px 0;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.crearProducto button:hover {
+    background: none;
+    border-bottom: 3px solid var(--celesteFormulario-ml);
+    border-radius: 0;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.crearProducto button:focus {
+    outline: none;
+}

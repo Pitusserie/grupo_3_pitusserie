@@ -1,0 +1,92 @@
+section.registracion div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.registracion h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section.registracion div.formRegistracion {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+section.registracion div.formRegistracion form div.contenedorForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section.registracion div.formRegistracion form div.contenedorForm p {
+    width: 100%;
+    color: red;
+    font-size: 12px;
+}
+
+section.registracion div.formRegistracion form div.contenedorForm div.labelInput {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+section.registracion div.formRegistracion form div.contenedorForm div.labelInput input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--bordeFormulario-ml);
+    margin-bottom: 20px;
+}
+
+section.registracion div.formRegistracion form div.contenedorForm div.labelInput input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--bordeFormularioHover-ml);
+    border-radius: 8px;
+}
+
+section.registracion div.formRegistracion form div.divsubmit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.submit button {
+    background-color: var(--celesteFormulario-ml);
+    border: none;
+    border-radius: 8px;
+    width: 112px;
+    height: 35px;
+    padding: 5px 0;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.submit button:hover {
+    background: none;
+    border-bottom: 3px solid var(--celesteFormulario-ml);
+    border-radius: 0;
+}
+
+section.registracion div.formRegistracion form div.divsubmit div.submit button:focus {
+    outline: none;
+}
+
+section.registracion div.formRegistracion form div.divsubmit a div.register {
+    color: black;
+}
+
+section.registracion div.formRegistracion form div.divsubmit a div.register:hover {
+    color: black;
+}
+
+@media (min-width: 1024px) {
+    section.registracion div.container h2 {
+        width: 100%;
+        padding: 0 25%;
+    }
+    
+    section.registracion div.formRegistracion {
+        width: 50%;
+    }
+}

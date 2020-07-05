@@ -1,0 +1,68 @@
+div.containerWhatsappLogo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+div.containerWhatsappLogo div.cartelitoWhatsapp {
+    position: relative;
+    display: inline-block;
+}
+  
+div.containerWhatsappLogo div.cartelitoWhatsapp span.cartelito {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(83, 212, 83);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 12px;
+    
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    right: 90%;
+    
+}
+  
+div.containerWhatsappLogo div.cartelitoWhatsapp:hover span.cartelito {
+    visibility: visible;
+}
+  
+div.containerWhatsappLogo img {
+    width: 30px;
+}
+
+@media (min-width: 768px) {
+    div.containerWhatsappLogo {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    div.containerWhatsappLogo div.cartelitoWhatsapp span.cartelito {
+        font-size: 14px;
+        top: 6px
+    }
+
+    div.containerWhatsappLogo img {
+        width: 45px;
+    }
+}
+
+@media (min-width: 1024px) {
+    div.containerWhatsappLogo {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    div.containerWhatsappLogo div.cartelitoWhatsapp span.cartelito {
+        width: 140px;
+        font-size: 16px;
+        top: 12px
+    }
+
+    div.containerWhatsappLogo img {
+        width: 60px;
+    }
+}

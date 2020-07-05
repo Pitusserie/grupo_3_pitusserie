@@ -1,0 +1,132 @@
+section.barraDeBusqueda {
+    margin: 15px 0;
+}
+
+section.barraDeBusqueda div.container div.divForm {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+}
+
+section.barraDeBusqueda div.container div.divForm form {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30px;
+    width: 100%;
+}
+
+section.barraDeBusqueda div.container div.divForm form select.filtro {
+    border: none;
+    border-right: none;
+    background-color: rgb(253, 217, 217);
+    border-top-left-radius: 6px;
+    flex-grow: 1;
+}
+
+section.barraDeBusqueda div.container div.divForm form select.filtro:focus {
+    outline: none;
+}
+
+section.barraDeBusqueda div.container div.divForm form input.barraDeBusqueda {
+    order: 50;
+    width: 100%;
+    border: none;
+    border-top: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: rgb(248, 248, 224);
+}
+
+section.barraDeBusqueda div.container div.divForm form input.barraDeBusqueda:focus {
+    outline: none;
+}
+
+section.barraDeBusqueda div.container div.divForm form button.submit {
+    border: none;
+    border-left: none;
+    background-color: rgb(253, 226, 204);
+    border-top-right-radius: 6px;
+    width: 40px;
+}
+
+section.barraDeBusqueda div.container div.divForm form button.submit:focus {
+    outline: none;
+}
+
+section.productos div.container h2 {
+    margin: 10px 0;
+    background-color: rgba(101, 200, 207, 0.3);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+section.productos div.container div.row article {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+section.productos div.container div.row article a {
+    color: black;
+}
+
+section.productos div.container div.row article div.producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: rgba(101, 200, 207, 0.3);
+    padding: 0 15px;
+    margin: 15px 0;
+}
+
+section.productos div.container div.row article div.producto h3 {
+    width: 100%;
+}
+
+section.productos div.container div.row article div.producto div.productoImagen img {
+    width: 100%;
+}
+
+section.productos div.container div.row article div.producto div.texto {
+    width: 100%;
+}
+
+section.productos div.container div.row article div.producto div.texto div.precioCarrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 100%;
+}
+
+section.productos div.container div.row article div.producto div.texto div.precioCarrito span.carritoMas i {
+    font-size: 30px;
+    color: rgb(41, 128, 41);
+}
+
+@media (min-width: 426px) {
+
+    section.barraDeBusqueda div.container div.divForm {
+        height: auto;
+    }
+
+    section.barraDeBusqueda div.container div.divForm form select.filtro {
+        border-bottom-left-radius: 6px;
+        flex-grow: unset;
+    }
+
+    section.barraDeBusqueda div.container div.divForm form input.barraDeBusqueda {
+        width: auto;
+        order: 0;
+        flex-grow: 1;
+        border-radius: 0;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+
+    section.barraDeBusqueda div.container div.divForm form button.submit {
+        border-bottom-right-radius: 6px;
+    }
+
+}

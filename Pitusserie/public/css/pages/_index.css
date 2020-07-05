@@ -1,0 +1,53 @@
+section.diapositivas {
+    margin: 30px 0;
+}
+  
+section.diapositivas div.carrusel { font-family: sans-serif; }
+  
+section.diapositivas div.carrusel div.gallery {
+    background: #EEE;
+}
+  
+section.diapositivas div.carrusel div.gallery div.gallery-cell {
+    width: 300px;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+}
+
+section.diapositivas div.carrusel div.gallery div.gallery-cell img {
+    width: 100%;
+    height: 100%;
+}
+
+section.containerImgIndex {
+    position: relative;
+}
+
+section.containerImgIndex div.sobreNosotros {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+section.containerImgIndex div.sobreNosotros p {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+section.containerImgIndex img.imgIndex {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+@media (min-width: 426px) {
+    section.containerImgIndex div.sobreNosotros p {
+        font-size: 16px;
+    }
+}

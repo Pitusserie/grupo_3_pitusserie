@@ -1,0 +1,242 @@
+header.general {
+    background-image: url('../../img/fondoGeneral.jpg');
+    height: 140px;
+    margin-bottom: 70px;
+}
+
+header.general div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+header.general div.container div.hamburguesa {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-content: center;
+    transition: color 0.1s ease-in-out;
+}
+
+header.general div.container div.hamburguesa button.buttonHamburguesa, header.general div.container div.hamburguesa div.collapse div.card button.buttonX {
+    background-color: transparent;
+    border: none;
+}
+
+header.general div.container div.hamburguesa button.buttonHamburguesa:focus, header.general div.container div.hamburguesa div.collapse div.card button.buttonX:focus {
+    outline: none;
+}
+
+header.general div.container div.hamburguesa button.buttonHamburguesa i.barras {
+    font-size: 30px;
+    margin-top: 2px;
+    color: black;
+    transition: color 0.1s ease-in-out;
+}
+
+header.general div.container div.hamburguesa button.buttonHamburguesa i.barras:hover {
+    font-size: 29px;
+    color: rgba(211, 211, 211, 0.863);
+}
+
+header.general div.container div.hamburguesa div.collapse {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 70%;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card {
+    height: 100vh;
+    padding-top: 10px;
+    z-index: 50;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card button.buttonX {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card ul {
+    padding: 0;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card ul a li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: black;
+    transition: color 0.1s ease-in-out;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card ul a li:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+header.general div.container div.hamburguesa div.collapse div.card ul a li img {
+    width: 150px;
+    margin: 0 auto;
+}
+
+header.general div.container div.hamburguesa div.collapse div.card ul a li .fa-shopping-cart:before {
+    display: inline-block;
+    color: black;
+    font-size: 30px;
+}
+
+header.general div.container div.productsHeader {
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+header.general div.container div.productsHeader:hover {
+    color: rgb(200, 200, 200);
+}
+
+header.general div.container div.divLogo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    order: 50;
+    margin-top: 30px;
+}
+
+header.general div.container div.divLogo a.logo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+}
+
+header.general div.container div.divLogo a.logo img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+header.general div.container div.divLogo a.logo img:hover {
+    height: 95px
+}
+
+header.general div.container a.carrito {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+header.general div.container a.carrito i {
+    font-size: 25px;
+    color: black;
+    transition: color 0.1s ease-in-out;
+}
+
+header.general div.container a.carrito i.fa-shopping-cart:before {
+    display: inline-block;
+}
+
+header.general  div.container a.carrito i:hover {
+    font-size: 24px;
+    color: rgb(200, 200, 200);
+}
+
+header.general div.container div.redes {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header.general div.container div.redes i.fa-instagram {
+    margin-left: 30px;
+}
+
+header.general div.container div.redes i {
+    transition: color 0.1s ease-in-out;
+}
+
+header.general div.container div.redes i:last-child {
+    margin-right: 0;
+}
+
+
+header.general div.container div.redes i:hover {
+    color: rgba(255, 0, 0, 0.7);
+}
+
+@media (min-width: 768px){
+
+    header.general {
+        height: 160px;
+    }
+    
+    header.general div.container {
+        padding-top: 25px;
+    }
+    
+    header.general div.container div.hamburguesa button.buttonHamburguesa i.barras:hover {
+        font-size: 31px;
+    }
+
+    header.general div.container div.hamburguesa div.collapse {
+        width: 40%;
+    }
+    
+    header.general div.container div.hamburguesa div.collapse div.card ul a li img {
+        width: 210px;
+    }
+
+    header.general div.container div.productsHeader {
+        width: 120px;
+        font-size: 25px;
+    }
+
+    header.general div.container  div.divLogo {
+        order: 0;
+        width: auto;
+    }
+    
+    header.general div.container  div.divLogo a.logo {
+        height: 160px;
+        width: 160px;
+    }
+    
+    header.general div.container  div.divLogo a.logo img {
+        height: 150px;
+    }
+    
+    header.general div.container  div.divLogo a.logo img:hover {
+        height: 155px
+    }
+    
+    header.general div.container a.carrito {
+        width: 58px;
+        height: 38px;
+        text-align: center;
+    }
+    
+    header.general div.container a.carrito i {
+        font-size: 30px;
+    }
+
+    header.general  div.container a.carrito i:hover {
+        font-size: 31px;
+    }
+    
+    header.general div.container div.redes i {
+        margin-right: 8px;
+        font-size: 20px;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    header.general div.container div.hamburguesa div.collapse {
+        width: 25%;
+    }
+}
