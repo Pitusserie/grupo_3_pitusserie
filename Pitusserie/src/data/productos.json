@@ -1,58 +1,74 @@
 [
     {
         "id": 1,
-        "nombre": "Torta1",
+        "titulo": "Torta1",
         "precio": "100",
         "miniDesc": "ingrediente-ingrediente-ingrediente",
-        "img": "placeholder1.jpg"
+        "img": "placeholder1.jpg",
+        "porciones": "6",
+        "categorias": "fdsa"
     },
     {
         "id": 2,
-        "nombre": "Torta2",
+        "titulo": "Torta2",
         "precio": "200",
         "miniDesc": "ingrediente-ingrediente-ingrediente",
-        "img": "placeholder2.jpg"
+        "img": "placeholder2.jpg",
+        "porciones": "6",
+        "categorias": "fdsa"
     },
     {
         "id": 3,
-        "nombre": "Torta3",
-        "precio": "300",
+        "categorias": "fdsa",
+        "titulo": "Torta3",
         "miniDesc": "ingrediente-ingrediente-ingrediente",
-        "img": "placeholder3.jpg"
+        "precio": "300",
+        "img": "placeholder3.jpg",
+        "porciones": "6"
     },
     {
         "id": 4,
-        "nombre": "Torta4",
+        "titulo": "Torta4",
         "precio": "400",
         "miniDesc": "ingrediente-ingrediente-ingrediente",
-        "img": "placeholder4.jpg"
+        "img": "placeholder4.jpg",
+        "porciones": "6",
+        "categorias": "fdsa"
     },
     {
         "id": 5,
-        "nombre": "Torta5",
+        "titulo": "Torta5",
         "precio": "500",
         "miniDesc": "ingrediente-ingrediente-ingrediente",
-        "img": "placeholder5.jpg"
+        "img": "placeholder5.jpg",
+        "porciones": "6",
+        "categorias": "fdsa"
     },
     {
         "id": 6,
-        "nombre": "Torta6",
+        "titulo": "Torta6",
         "precio": "600",
         "miniDesc": "ingrediente-ingrediente-ingrediente",
-        "img": "placeholder6.jpg"
+        "img": "placeholder6.jpg",
+        "porciones": "6",
+        "categorias": "fdsa"
     },
     {
         "id": 7,
-        "nombre": "Torta7",
+        "titulo": "Torta7",
         "precio": "700",
         "miniDesc": "ingrediente-ingrediente-ingrediente",
-        "img": "placeholder7.jpg"
+        "img": "placeholder7.jpg",
+        "porciones": "6",
+        "categorias": "fdsa"
     },
     {
         "id": 8,
-        "nombre": "Torta8",
+        "titulo": "Torta8",
         "precio": "800",
         "miniDesc": "ingrediente-ingrediente-ingrediente",
-        "img": "placeholder8.jpg"
+        "img": "placeholder8.jpg",
+        "porciones": "6",
+        "categorias": "fdsa"
     }
 ]

@@ -16,7 +16,7 @@
 		<div class="product-detail">
 			<div class="row">
 				<div class="col-12 col-lg-8">
-					<img src="/img/<%= productos[i].img %>" alt="product image" class="product-detail-img">
+					<img src="/uploads/productos/<%= productos[i].img %>" alt="product image" class="product-detail-img">
 				</div>
 				<div class="col-12 col-lg-4">
 					<article class="product-detail-info">
@@ -40,6 +40,9 @@
 							</a>
 							<a href="">
 								<button class="botonCarrito"><i class="fas fa-cart-plus"></i></button>
+							</a>
+							<a href="/products/edit/<%= productos[i].id %> ">
+								<button class="botonComprar">Editar</button>
 							</a>
 						</div>
 							
@@ -68,9 +71,9 @@
 
 		
 		<div class="productos-similares-img">
-			<img src="/img/placeholder2.jpg" alt="" class="foto-agregar1">
-			<img src="/img/placeholder3.jpg" alt="" class="foto-agregar2">
-			<img src="/img/placeholder4.jpg" alt="" class="foto-agregar3">
+			<img src="/uploads/productos/placeholder2.jpg" alt="" class="foto-agregar1">
+			<img src="/uploads/productos/placeholder3.jpg" alt="" class="foto-agregar2">
+			<img src="/uploads/productos/placeholder4.jpg" alt="" class="foto-agregar3">
 		</div>
 		
 	</div>

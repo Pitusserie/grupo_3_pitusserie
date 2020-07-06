@@ -32,11 +32,11 @@
 
             <% for(i = 0; i < productos.length; i++) { %> 
                     <article class="col-12 col-md-6 col-lg-3">
-                        <a href="/detailProducts/<%= productos[i].id %>">
+                        <a href="/products/<%= productos[i].id %>">
                             <div class="producto">
-                                <h3><%= productos[i].nombre %></h3>
+                                <h3><%= productos[i].titulo %></h3>
                                 <div class="productoImagen">
-                                <img src="img/<%= productos[i].img %>" alt="">
+                                <img src="/uploads/productos/<%= productos[i].img %>" alt="">
                                 </div>
                                 <div class="texto">
                                 <div class="precioCarrito">

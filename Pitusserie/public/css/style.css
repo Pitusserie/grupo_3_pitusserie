@@ -46,6 +46,10 @@
 
 @import 'pages/_detailProducts.css';
 
+/*======== edit =======*/
+
+@import 'pages/_edit.css';
+
 /*====== Cart ======*/
 
 @import 'pages/_cart.css';

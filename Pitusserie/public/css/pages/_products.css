@@ -74,9 +74,12 @@ section.productos div.container div.row article div.producto {
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 4px;
-    background-color: rgba(101, 200, 207, 0.3);
     padding: 0 15px;
     margin: 15px 0;
+}
+
+section.productos div.container div.row article div.producto:hover {
+    border: 1px solid rgb(101, 200, 207);
 }
 
 section.productos div.container div.row article div.producto h3 {
