@@ -6,7 +6,7 @@
         "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder1.jpg",
         "porciones": "6",
-        "categorias": "fdsa"
+        "categorias": "categoriaA"
     },
     {
         "id": 2,
@@ -15,11 +15,11 @@
         "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder2.jpg",
         "porciones": "6",
-        "categorias": "fdsa"
+        "categorias": "categoriaA"
     },
     {
         "id": 3,
-        "categorias": "fdsa",
+        "categorias": "categoriaA",
         "titulo": "Torta3",
         "miniDesc": "ingrediente-ingrediente-ingrediente",
         "precio": "300",
@@ -33,7 +33,7 @@
         "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder4.jpg",
         "porciones": "6",
-        "categorias": "fdsa"
+        "categorias": "categoriaA"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder5.jpg",
         "porciones": "6",
-        "categorias": "fdsa"
+        "categorias": "categoriaB"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder6.jpg",
         "porciones": "6",
-        "categorias": "fdsa"
+        "categorias": "categoriaB"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder7.jpg",
         "porciones": "6",
-        "categorias": "fdsa"
+        "categorias": "categoriaB"
     },
     {
         "id": 8,
@@ -69,6 +69,6 @@
         "miniDesc": "ingrediente-ingrediente-ingrediente",
         "img": "placeholder8.jpg",
         "porciones": "6",
-        "categorias": "fdsa"
+        "categorias": "categoriaB"
     }
 ]

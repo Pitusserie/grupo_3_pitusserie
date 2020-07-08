@@ -2,3 +2,8 @@
     font-family: great-vibes;
     src: url('../../fonts/GreatVibes-Regular.ttf');
 }
+
+@font-face {
+    font-family: sacramento;
+    src: url('../../fonts/Sacramento-Regular.ttf')
+}

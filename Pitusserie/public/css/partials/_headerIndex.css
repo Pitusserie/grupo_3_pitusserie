@@ -39,7 +39,7 @@ header.home div.container div.hamburguesa button.buttonHamburguesa i.barras {
 
 header.home div.container div.hamburguesa button.buttonHamburguesa i.barras:hover {
     font-size: 29px;
-    color: var(--grisItemsHeader-ml);
+    color: var(--grisItemsHeader);
 }
 
 header.home div.container div.hamburguesa div.collapse {
@@ -98,11 +98,11 @@ header.home div.container div.productsHeader {
     text-align: center;
     font-size: 30px;
     transition: color 0.1s ease-in-out;
-    font-family: great-vibes;
+    font-family: var(--fontTitulos);
 }
 
 header.home div.container div.productsHeader:hover {
-    color: var(--grisItemsHeader-ml);
+    color: var(--grisItemsHeader);
 }
 
 header.home div.container div.divLogo {
@@ -149,7 +149,7 @@ header.home div.container a.carrito i.fa-shopping-cart:before {
 
 header.home  div.container a.carrito i:hover {
     font-size: 24px;
-    color: var(--grisItemsHeader-ml);
+    color: var(--grisItemsHeader);
 }
 
 header.home div.container div.redes {
@@ -177,7 +177,7 @@ header.home div.container div.redes i.fa-instagram {
 
 
 header.home div.container div.redes i:hover {
-    color: var(--redes-ml);
+    color: var(--redes);
 }
 
 a.linkFondoHeader {
@@ -213,7 +213,7 @@ a.linkFondoHeader {
 
     header.home div.container div.productsHeader {
         width: 120px;
-        font-size: 32px;
+        font-size: 40px;
     }
 
     header.home div.container  div.divLogo {

@@ -39,7 +39,7 @@ header.general div.container div.hamburguesa button.buttonHamburguesa i.barras {
 
 header.general div.container div.hamburguesa button.buttonHamburguesa i.barras:hover {
     font-size: 29px;
-    color: var(--grisItemsHeader-ml);
+    color: var(--grisItemsHeader);
 }
 
 header.general div.container div.hamburguesa div.collapse {
@@ -92,11 +92,12 @@ header.general div.container div.hamburguesa div.collapse div.card ul a li .fa-s
 header.general div.container div.productsHeader {
     width: 100px;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: var(--fontTitulos);
 }
 
 header.general div.container div.productsHeader:hover {
-    color: var(--grisItemsHeader-ml);
+    color: var(--grisItemsHeader);
 }
 
 header.general div.container div.divLogo {
@@ -143,7 +144,7 @@ header.general div.container a.carrito i.fa-shopping-cart:before {
 
 header.general  div.container a.carrito i:hover {
     font-size: 24px;
-    color: var(--grisItemsHeader-ml);
+    color: var(--grisItemsHeader);
 }
 
 header.general div.container div.redes {
@@ -166,7 +167,7 @@ header.general div.container div.redes i:last-child {
 
 
 header.general div.container div.redes i:hover {
-    color: var(--redes-ml);
+    color: var(--redes);
 }
 
 @media (min-width: 768px){
@@ -193,7 +194,7 @@ header.general div.container div.redes i:hover {
 
     header.general div.container div.productsHeader {
         width: 120px;
-        font-size: 25px;
+        font-size: 40px;
     }
 
     header.general div.container  div.divLogo {

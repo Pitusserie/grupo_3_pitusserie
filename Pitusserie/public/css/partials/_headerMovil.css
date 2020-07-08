@@ -47,7 +47,7 @@ div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHambu
 
 div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesa i.barras:hover {
     font-size: 29px;
-    color: var(--grisItemsHeader-ml);
+    color: var(--grisItemsHeader);
 }
 
 div.headerMovil div.container div.recontainer div.hamburguesa div.collapse {
@@ -104,7 +104,8 @@ div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.c
 div.headerMovil div.container div.recontainer div.productsHeader {
     width: 100px;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: var(--fontTitulos);
     transition: color 0.1s ease-in-out;
 }
 
@@ -210,7 +211,7 @@ div.headerMovil div.container div.redes i.fa-instagram {
 
     div.headerMovil div.container div.recontainer div.productsHeader {
         width: 120px;
-        font-size: 25px;
+        font-size: 40px;
     }
 
     div.headerMovil div.container div.recontainer  div.divLogo {

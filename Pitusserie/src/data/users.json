@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "nombre1",
+        "apellido": "apellido1",
+        "dni": "123456789",
+        "telefono": "987654321",
+        "email": "1@gmail.com",
+        "contrasena": "contrasena1"
+    },
+    {
+        "id": 2,
+        "nombre": "nombre2",
+        "apellido": "apellido2",
+        "dni": "123456789",
+        "telefono": "987654321",
+        "email": "2@gmail.com",
+        "contrasena": "contrasena2"
+    },
+    {
+        "id": 3,
+        "nombre": "nombre3",
+        "dni": "123456789",
+        "apellido": "apellido3",
+        "telefono": "987654321",
+        "email": "3@gmail.com",
+        "contrasena": "contrasena3"
+    },
+    {
+        "id": 4,
+        "nombre": "nombre4",
+        "apellido": "apellido4",
+        "dni": "123456789",
+        "telefono": "987654321",
+        "email": "4@gmail.com",
+        "contrasena": "contrasena4"
+    },
+    {
+        "id": 5,
+        "nombre": "nombre5",
+        "apellido": "apellido5",
+        "dni": "123456789",
+        "telefono": "987654321",
+        "email": "5@gmail.com",
+        "contrasena": "contrasena5"
+    },
+    {
+        "id": 6,
+        "nombre": "nombre6",
+        "apellido": "apellido6",
+        "dni": "123456789",
+        "telefono": "987654321",
+        "email": "6@gmail.com",
+        "contrasena": "contrasena6"
+    },
+    {
+        "id": 7,
+        "nombre": "nombre7",
+        "apellido": "apellido7",
+        "dni": "123456789",
+        "telefono": "987654321",
+        "email": "7@gmail.com",
+        "contrasena": "contrasena7"
+    },
+    {
+        "id": 8,
+        "nombre": "nombre8",
+        "apellido": "apellido8",
+        "dni": "123456789",
+        "telefono": "987654321",
+        "email": "8@gmail.com",
+        "contrasena": "contrasena8"
+    }
+]

@@ -71,7 +71,7 @@
 }
   
 .botonComprar{
-    background-color: var(--celesteFormulario-ml);
+    background-color: var(--celesteFormulario);
     font-size: 1.6em;
     color:white;
     display: flex;
@@ -86,7 +86,7 @@
 }
   
 .botonCarrito {
-    background-color: var(--celesteFormulario-ml);
+    background-color: var(--celesteFormulario);
     border: none;
     border-radius: 8px;
     font-size: 48px;
@@ -101,12 +101,12 @@
 }
 
 .botonComprar:hover {
-    background-color: var(--celesteDetailHover-ml);
+    background-color: var(--celesteDetailHover);
     font-size: 24px;
 }
 
 .botonCarrito:hover {
-    background-color: var(--celesteDetailHover-ml);
+    background-color: var(--celesteDetailHover);
     font-size: 44px;
 }
   

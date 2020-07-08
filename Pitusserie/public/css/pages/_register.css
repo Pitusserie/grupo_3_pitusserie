@@ -36,13 +36,13 @@ section.registracion div.formRegistracion form div.contenedorForm div.labelInput
 section.registracion div.formRegistracion form div.contenedorForm div.labelInput input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--bordeFormulario-ml);
+    border-bottom: 1px solid var(--bordeFormulario);
     margin-bottom: 20px;
 }
 
 section.registracion div.formRegistracion form div.contenedorForm div.labelInput input:focus {
     outline: none;
-    border-bottom: 1px solid var(--bordeFormularioHover-ml);
+    border-bottom: 1px solid var(--bordeFormularioHover);
     border-radius: 8px;
 }
 
@@ -54,7 +54,7 @@ section.registracion div.formRegistracion form div.divsubmit {
 }
 
 section.registracion div.formRegistracion form div.divsubmit div.submit button {
-    background-color: var(--celesteFormularioClaro-ml);
+    background-color: var(--celesteFormularioClaro);
     border: none;
     border-radius: 8px;
     width: 112px;
@@ -64,7 +64,7 @@ section.registracion div.formRegistracion form div.divsubmit div.submit button {
 
 section.registracion div.formRegistracion form div.divsubmit div.submit button:hover {
     background: none;
-    border-bottom: 3px solid var(--celesteFormulario-ml);
+    border-bottom: 3px solid var(--celesteFormulario);
     border-radius: 0;
 }
 

@@ -3,7 +3,7 @@ section.registracion div.formRegistracion form div.contenedorForm div.inputImg i
 }
 
 section.registracion div.formRegistracion form div.divsubmit div.crearProducto button {
-    background-color: var(--celesteFormularioClaro-ml);
+    background-color: var(--celesteFormularioClaro);
     border: none;
     border-radius: 8px;
     width: 145px;
@@ -13,7 +13,7 @@ section.registracion div.formRegistracion form div.divsubmit div.crearProducto b
 
 section.registracion div.formRegistracion form div.divsubmit div.crearProducto button:hover {
     background: none;
-    border-bottom: 3px solid var(--celesteFormulario-ml);
+    border-bottom: 3px solid var(--celesteFormulario);
     border-radius: 0;
 }
 

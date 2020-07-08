@@ -13,12 +13,12 @@
                 <article class="productos">
                     <div class="producto">
                         <div class="productoImagen">
-                            <a href=""><img src="/img/<%= productos[i].img %>" alt=""></a>
+                            <a href=""><img src="/uploads/productos/<%= productos[i].img %>" alt=""></a>
                         </div>
                         <div class="texto">
-                            <a href=""><h3><%= productos[i].nombre %></h3></a>
+                            <a href=""><h3><%= productos[i].titulo %></h3></a>
                             <h4>$ <%= productos[i].precio %></h4>
-                            <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                            <h5><%= productos[i].miniDesc %></h5>
                             <div class="qtyDelete">
                                 <form action="">
                                     <div class="cantidad">
