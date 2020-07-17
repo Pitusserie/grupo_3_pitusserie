@@ -29,52 +29,68 @@ div.headerMovil div.container div.recontainer div.hamburguesa {
     transition: color 0.1s ease-in-out;
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesa, div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card button.buttonX {
+div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesaMovil, div.headerMovil div.container div.recontainer div.menuBarMovil button.cruzCollapseMovil {
     background-color: transparent;
     border: none;
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesa:focus, div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card button.buttonX:focus {
+div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesaMovil:focus, div.headerMovil div.container div.recontainer div.menuBarMovil button.cruzCollapseMovil:focus {
     outline: none;
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesa i.barras {
+div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesaMovil i.barras {
     font-size: 30px;
     margin-top: 2px;
     color: black;
     transition: color 0.1s ease-in-out;
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesa i.barras:hover {
+div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesaMovil i.barras:hover {
     font-size: 29px;
     color: var(--grisItemsHeader);
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa div.collapse {
+div.headerMovil div.divCierreMenuBarMovil {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+div.headerMovil div.divCierreMenuBarMovil.conBarAbiertoMovil {
+    display: block;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.headerMovil div.container div.recontainer div.menuBarMovil.widthMenuBarMovil {
+    width: 0;
+}
+
+div.headerMovil div.container div.recontainer div.menuBarMovil {
+    transition: all 0.3s ease-in-out;
     position: absolute;
     left: 0px;
     top: 0px;
-    height: 100vh;
     width: 70%;
-}
-
-div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card {
     height: 100vh;
     padding-top: 10px;
-    z-index: 50;
+    z-index: 100;
+    background-color: white;
+    overflow: hidden;
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card button.buttonX {
+div.headerMovil div.container div.recontainer div.menuBarMovil button.cruzCollapseMovil {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card ul {
+div.headerMovil div.container div.recontainer div.menuBarMovil ul {
     padding: 0;
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card ul a li {
+div.headerMovil div.container div.recontainer div.menuBarMovil ul a li {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
@@ -82,11 +98,11 @@ div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.c
     transition: color 0.1s ease-in-out;
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card ul a li:hover {
+div.headerMovil div.container div.recontainer div.menuBarMovil ul a li:hover {
     color: rgba(0, 0, 0, 0.7);
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card ul a li img {
+div.headerMovil div.container div.recontainer div.menuBarMovil ul a li img {
     width: 150px;
     margin: 0 auto;
 }
@@ -95,7 +111,7 @@ div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.c
     display: none;
 }
 
-div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card ul a li .fa-shopping-cart:before {
+div.headerMovil div.container div.recontainer div.menuBarMovil ul a li .fa-shopping-cart:before {
     display: inline-block;
     color: black;
     font-size: 30px;
@@ -185,7 +201,53 @@ div.headerMovil div.container div.redes {
 div.headerMovil div.container div.redes i.fa-instagram {
     margin-left: 30px;
 }
+.sesiones{
+    background-color: var(--celesteFormularioClaro);
+    border: none;
+    border-radius: 8px;
+    width: 145px;
+    height: 35px;
+    padding: 5px 0;
+}
 
+.sesiones:hover {
+    background: none;
+    border-bottom: 3px solid var(--celesteFormulario);
+    border-radius: 0;
+}
+
+.sesiones:focus {
+    outline: none;
+}
+
+div.derecha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    width: 80%;
+}
+div.izquierda{
+    
+    width: 20%;
+    
+}
+.sesionesDiv{
+    justify-content: center;
+    flex-wrap: wrap;
+    display:flex;
+    width:80%;
+    
+}
+.carritoDiv{
+    text-align: right;
+    flex-wrap: wrap;
+    display:inline-block;
+    width: 20%;
+    
+}
+.persona{
+    padding-right: 5px;
+}
 
 @media (min-width: 768px){
 
@@ -197,15 +259,15 @@ div.headerMovil div.container div.redes i.fa-instagram {
         height: 105px;
     }
     
-    div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesa i.barras:hover {
+    div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesaMovil i.barras:hover {
         font-size: 31px;
     }
 
-    div.headerMovil div.container div.recontainer div.hamburguesa div.collapse {
+    div.headerMovil div.container div.recontainer div.menuBarMovil {
         width: 40%;
     }
     
-    div.headerMovil div.container div.recontainer div.hamburguesa div.collapse div.card ul a li img {
+    div.headerMovil div.container div.recontainer div.menuBarMovil ul a li img {
         width: 210px;
     }
 
@@ -245,11 +307,115 @@ div.headerMovil div.container div.redes i.fa-instagram {
     div.headerMovil div.container div.recontainer div.redes i {
         margin-right: 8px;
     }
+    .sesiones{
+        background-color: var(--celesteFormularioClaro);
+        border: none;
+        border-radius: 8px;
+        width: 145px;
+        height: 35px;
+        padding: 5px 0;
+    }
     
+    .sesiones:hover {
+        background: none;
+        border-bottom: 3px solid var(--celesteFormulario);
+        border-radius: 0;
+    }
+    
+    .sesiones:focus {
+        outline: none;
+    }
+    .sesiones{
+        background-color: var(--celesteFormularioClaro);
+        border: none;
+        border-radius: 8px;
+        width: 145px;
+        height: 35px;
+        padding: 5px 0;
+    }
+    
+    .sesiones:hover {
+        background: none;
+        border-bottom: 3px solid var(--celesteFormulario);
+        border-radius: 0;
+    }
+    
+    .sesiones:focus {
+        outline: none;
+    }
+        div.derecha{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            
+            width: 35%;
+        }
+        div.izquierda{
+            
+            width: 35%;
+            
+        }
+        .sesionesDiv{
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            display:flex;
+            width:70%;
+            
+        }
+        .carritoDiv{
+            display: flex;
+            text-align: right;
+            flex-wrap: wrap;
+            display:inline-block;
+            width: 30%;
+            
+        }
+        
 }
 
 @media (min-width: 1024px) {
-    div.headerMovil div.container div.recontainer div.hamburguesa div.collapse {
+    div.headerMovil div.container div.recontainer div.menuBarMovil {
         width: 25%;
+    }
+    div.derecha{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        
+        width: 40%;
+    }
+    div.izquierda{
+        
+        width: 40%;
+        
+    }
+    .carritoDiv{
+        text-align: right;
+        flex-wrap: wrap;
+        display:inline-block;
+        width: 50%;
+        
+    }
+    .sesionesDiv{
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        display:flex;
+        width:50%;
+        
+    }
+    .sesionesDiv{
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        display:flex;
+        width:70%;
+        
+    }
+    .carritoDiv{
+        display: flex;
+        text-align: right;
+        flex-wrap: wrap;
+        display:inline-block;
+        width: 30%;
+        
     }
 }

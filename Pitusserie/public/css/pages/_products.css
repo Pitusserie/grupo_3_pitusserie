@@ -55,9 +55,10 @@ section.barraDeBusqueda div.container div.divForm form button.submit:focus {
 
 section.productos div.container h2 {
     margin: 10px 0;
-    background-color: rgba(101, 200, 207, 0.3);
+    background-color: none;
     border-radius: 5px;
     padding: 0 5px;
+    text-align: center;
 }
 
 section.productos div.container div.row article {

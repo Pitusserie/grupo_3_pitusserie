@@ -1,34 +1,46 @@
 <div class="headerMovil" id="headerMovil">
+
+    <div class="divCierreMenuBarMovil" id="divCierreMenuBarMovil"></div>
+
     <div class="container">
+
         <div class="recontainer">
+          <div class="izquierda">
             <div class="hamburguesa">
-                <button class="buttonHamburguesa" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                <i class="fas fa-bars barras"></i>
+                <button class="buttonHamburguesaMovil" id="buttonHamburguesaMovil">
+                  <i class="fas fa-bars barras"></i>
                 </button>
-                <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    <button class="buttonX" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              </div>
+          
+              <div class="menuBarMovil widthMenuBarMovil" id="menuBarMovil">
+                  <button class="cruzCollapseMovil" id="buttonCruzMovil">
                     <i class="fas fa-times x"></i>
-                    </button>
-                    <ul>
+                  </button>
+                  <ul>
                     <a href="/"><li><img src="/img/logo.jpeg" alt="logo"></li></a>
                     <a href="/"><li>Inicio</li></a>
                     <a href="/products"><li>Productos</li></a>
                     <a href="/login"><li>Ingresá</li></a>
-                    <a href="/register"><li>Creá una cuenta</li></a>                    
+                    <a href="/register"><li>Creá una cuenta</li></a>
                     <a href="/cart"><li><i class="fas fa-shopping-cart"></i></li></a>
                     <a href="/products/carga"><li>Carga de productos (solo visible para administradores)</li></a>
-                    </ul>
-                </div>
-                </div>
+                  </ul>
+              </div>
+          
             </div>
-        
-            <a href="/products"><div class="productsHeader">Productos</div></a>
-            <div class="divLogo">
+              <div class="divLogo">
                 <a href="/" class="logo"><img src="/img/logo.jpeg" alt="logo"></a>
+              </div>
+              <div class="derecha">
+                <div class="sesionesDiv">
+                    <a href="/login"><button class="sesiones"><i class="fas fa-user persona"></i class="letras iniciar">Iniciar Sesion
+                        </button></a>
+                </div>
+                <div class="carritoDiv">
+                    <a href="/cart" class="carrito"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+
             </div>
-            <a href="/cart"class="carrito"><i class="fas fa-shopping-cart"></i></a>
-            <div class="redes"> <a href="https://www.instagram.com/pitusserietortas/"><i class="fab fa-instagram"></i></a> <a href="https://www.facebook.com/pitusserietortas/"><i class="fab fa-facebook"></i></a> </div>
         </div>
     </div>
 </div>

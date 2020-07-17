@@ -21,12 +21,12 @@ header.general div.container div.hamburguesa {
     transition: color 0.1s ease-in-out;
 }
 
-header.general div.container div.hamburguesa button.buttonHamburguesa, header.general div.container div.hamburguesa div.collapse div.card button.buttonX {
+header.general div.container div.hamburguesa button.buttonHamburguesa, header.general div.container button.cruzCollapse {
     background-color: transparent;
     border: none;
 }
 
-header.general div.container div.hamburguesa button.buttonHamburguesa:focus, header.general div.container div.hamburguesa div.collapse div.card button.buttonX:focus {
+header.general div.container div.hamburguesa button.buttonHamburguesa:focus, header.general div.container button.cruzCollapse:focus {
     outline: none;
 }
 
@@ -42,31 +42,48 @@ header.general div.container div.hamburguesa button.buttonHamburguesa i.barras:h
     color: var(--grisItemsHeader);
 }
 
-header.general div.container div.hamburguesa div.collapse {
+header.general div.divCierreMenuBar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+header.general div.divCierreMenuBar.conBarAbierto {
+    display: block;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header.general div.container div.menuBar.widthMenuBar {
+    width: 0;
+}
+
+header.general div.container div.menuBar {
+    transition: all 0.3s ease-in-out;
     position: absolute;
     left: 0px;
     top: 0px;
     height: 100vh;
     width: 70%;
-}
-
-header.general div.container div.hamburguesa div.collapse div.card {
     height: 100vh;
     padding-top: 10px;
-    z-index: 50;
+    z-index: 100;
+    background-color: white;
+    overflow: hidden;
 }
 
-header.general div.container div.hamburguesa div.collapse div.card button.buttonX {
+header.general div.container div.menuBar button.cruzCollapse {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-header.general div.container div.hamburguesa div.collapse div.card ul {
+header.general div.container div.menuBar ul {
     padding: 0;
 }
 
-header.general div.container div.hamburguesa div.collapse div.card ul a li {
+header.general div.container div.menuBar ul a li {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
@@ -74,16 +91,16 @@ header.general div.container div.hamburguesa div.collapse div.card ul a li {
     transition: color 0.1s ease-in-out;
 }
 
-header.general div.container div.hamburguesa div.collapse div.card ul a li:hover {
+header.general div.container div.menuBar ul a li:hover {
     color: rgba(0, 0, 0, 0.7);
 }
 
-header.general div.container div.hamburguesa div.collapse div.card ul a li img {
+header.general div.container div.menuBar ul a li img {
     width: 150px;
     margin: 0 auto;
 }
 
-header.general div.container div.hamburguesa div.collapse div.card ul a li .fa-shopping-cart:before {
+header.general div.container div.menuBar ul a li .fa-shopping-cart:before {
     display: inline-block;
     color: black;
     font-size: 30px;
@@ -169,7 +186,53 @@ header.general div.container div.redes i:last-child {
 header.general div.container div.redes i:hover {
     color: var(--redes);
 }
+header.general .sesiones{
+    background-color: var(--celesteFormularioClaro);
+    border: none;
+    border-radius: 8px;
+    width: 145px;
+    height: 35px;
+    padding: 5px 0;
+}
 
+header.general .sesiones:hover {
+    background: none;
+    border-bottom: 3px solid var(--celesteFormulario);
+    border-radius: 0;
+}
+
+header.general .sesiones:focus {
+    outline: none;
+}
+
+header.general div.derecha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    width: 80%;
+}
+header.general div.izquierda{
+    
+    width: 20%;
+    
+}
+.sesionesDiv{
+    justify-content: center;
+    flex-wrap: wrap;
+    display:flex;
+    width:80%;
+    
+}
+.carritoDiv{
+    text-align: right;
+    flex-wrap: wrap;
+    display:inline-block;
+    width: 20%;
+    
+}
+.persona{
+    padding-right: 5px;
+}
 @media (min-width: 768px){
 
     header.general {
@@ -184,11 +247,11 @@ header.general div.container div.redes i:hover {
         font-size: 31px;
     }
 
-    header.general div.container div.hamburguesa div.collapse {
+    header.general div.container div.menuBar {
         width: 40%;
     }
     
-    header.general div.container div.hamburguesa div.collapse div.card ul a li img {
+    header.general div.container div.menuBar ul a li img {
         width: 210px;
     }
 
@@ -233,11 +296,114 @@ header.general div.container div.redes i:hover {
         margin-right: 8px;
         font-size: 20px;
     }
+    header.general .sesiones{
+        background-color: var(--celesteFormularioClaro);
+        border: none;
+        border-radius: 8px;
+        width: 145px;
+        height: 35px;
+        padding: 5px 0;
+    }
     
+    header.general .sesiones:hover {
+        background: none;
+        border-bottom: 3px solid var(--celesteFormulario);
+        border-radius: 0;
+    }
+    
+    header.general .sesiones:focus {
+        outline: none;
+    }
+    header.general .sesiones{
+        background-color: var(--celesteFormularioClaro);
+        border: none;
+        border-radius: 8px;
+        width: 145px;
+        height: 35px;
+        padding: 5px 0;
+    }
+    
+    header.general .sesiones:hover {
+        background: none;
+        border-bottom: 3px solid var(--celesteFormulario);
+        border-radius: 0;
+    }
+    
+    header.general .sesiones:focus {
+        outline: none;
+    }
+        header.general div.derecha{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            
+            width: 35%;
+        }
+        header.general div.izquierda{
+            
+            width: 35%;
+            
+        }
+        .sesionesDiv{
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            display:flex;
+            width:70%;
+            
+        }
+        .carritoDiv{
+            display: flex;
+            text-align: right;
+            flex-wrap: wrap;
+            display:inline-block;
+            width: 30%;
+            
+        }
 }
 
 @media (min-width: 1024px) {
-    header.general div.container div.hamburguesa div.collapse {
+    header.general div.container div.menuBar {
         width: 25%;
+    }
+    header.general div.derecha{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        
+        width: 40%;
+    }
+    header.general div.izquierda{
+        
+        width: 40%;
+        
+    }
+    .carritoDiv{
+        text-align: right;
+        flex-wrap: wrap;
+        display:inline-block;
+        width: 50%;
+        
+    }
+    .sesionesDiv{
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        display:flex;
+        width:50%;
+        
+    }
+    .sesionesDiv{
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        display:flex;
+        width:70%;
+        
+    }
+    .carritoDiv{
+        display: flex;
+        text-align: right;
+        flex-wrap: wrap;
+        display:inline-block;
+        width: 30%;
+        
     }
 }

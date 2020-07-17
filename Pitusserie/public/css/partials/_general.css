@@ -6,13 +6,17 @@
     list-style-type: none;
 }
 
+body {
+    width: 100%;
+}
+
 h1 {
     display: none;
 }
 
 h2 {
     font-family: var(--fontTitulos);
-    font-size: 40px;
+    font-size: 45px;
 }
 
 a {
