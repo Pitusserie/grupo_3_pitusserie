@@ -22,12 +22,6 @@ module.exports = {
             id:req.params.id
         });
     },
-    cart: function(req, res) {
-        res.render('cart', {
-            productos:productos,
-            id:req.params.id
-        });
-    },
     carga: function(req, res) {
         res.render('cargaProducts');
     },
@@ -49,7 +43,7 @@ module.exports = {
     edit: (req, res) => {
 		for(let i = 0; i < productos.length; i++) {
 			if(productos[i].id == req.params.id) {
-				res.render('edit', {
+				res.render('editProducts', {
 					producto: productos[i]
 				})
 			}

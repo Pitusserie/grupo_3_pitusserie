@@ -1,12 +1,12 @@
 [
     {
         "id": 1,
+        "categorias": "categoriaA",
         "titulo": "Torta1",
-        "precio": "100",
         "miniDesc": "ingrediente-ingrediente-ingrediente",
+        "precio": "100",
         "img": "placeholder1.jpg",
-        "porciones": "6",
-        "categorias": "categoriaA"
+        "porciones": "6"
     },
     {
         "id": 2,

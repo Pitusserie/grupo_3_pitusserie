@@ -17,18 +17,6 @@ var upload = multer({ storage: storage })
   
 router.get('/', productsController.index);
 
-router.get('/login', userController.login);
-router.post('/login', function(req, res) {
-    res.redirect('/login')
-});
-
-router.get('/register', userController.register);
-router.post('/register', function(req, res) {
-    res.redirect('/register')
-});
-
-router.get('/cart', productsController.cart);
-
 router.get('/error', function(req, res) {
     res.render('error')
 })

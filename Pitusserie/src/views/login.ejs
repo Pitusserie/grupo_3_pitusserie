@@ -13,25 +13,25 @@
                     <div class="contenedorForm">
                         <div class="labelInput">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
-                            <% if(true) { %>
-                                <p>Introduzca un email registrado</p>
+                            <input type="email" id="email" name="email" value="<%= (typeof old != 'undefined' && !errors.email) ? old.email : '' %>">
+                            <% if(typeof errors!='undefined' && errors.email) { %>
+                                <p><%= errors.email.msg %></p>
                             <% } %> 
                         </div>
                     
                         <div class="labelInput">
                             <label for="contrasena">Contraseña</label>
                             <input type="password" id="contrasena" name="contrasena">
-                            <% if(true) { %>
-                                <p>Contraseña incorrecta</p>
-                            <% } %> 
+                            <% if(typeof errors!='undefined' && errors.contrasena) { %>
+                                <p><%= errors.contrasena.msg %></p>
+                            <% } %>  
                         </div>
                         
                     </div>
                     <div class="submitRegister">
                         <div></div>
                         <div class="submit"><button type="submit">Ingresá</button></div>
-                        <a href="/register"><div class="register">Crear cuenta</div></a>
+                        <a href="/users/register"><div class="register">Crear cuenta</div></a>
                         <div></div>
                     </div>
                 </form>

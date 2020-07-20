@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./partials/head') %>
+<body>
+
+    <%- include('./partials/header') %>
+
+    <div class="container">
+        <section class="infoUsuario">
+            <div class="campoInfoUsuario">
+                <label>Nombre: </label>
+                <p><%= usuario.nombre %></p>
+            </div>
+            <div class="campoInfoUsuario">
+                <label>Apellido: </label>
+                <p><%= usuario.apellido %></p>
+            </div>
+            <div class="campoInfoUsuario">
+                <label>DNI: </label>
+                <p><%= usuario.dni %></p>
+            </div>
+            <div class="campoInfoUsuario">
+                <label>Telefono: </label>
+                <p><%= usuario.telefono %></p>
+            </div>
+            <div class="campoInfoUsuario">
+                <label>Email: </label>
+                <p><%= usuario.email %></p>
+            </div>
+        </section>
+    </div>
+
+    <%- include('./partials/whatsappLogo') %>
+          
+    <%- include('./partials/footer') %>
+
+    <%- include('./partials/scripts') %>
+</body>
+</html>

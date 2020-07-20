@@ -9,50 +9,63 @@
         <div class="container">
             <h2>Registrate</h2>
             <div class="formRegistracion">
-                <form action="" method="POST">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="contenedorForm">
                         <div class="labelInput">
                             <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre">
+                            <input type="text" id="nombre" name="nombre" value="<%= (typeof old != 'undefined' && !errors.nombre) ? old.nombre : '' %>">
+                            <% if(typeof errors!='undefined' && errors.nombre) { %>
+                                <p><%= errors.nombre.msg %></p>
+                            <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="apellido">Apellido</label>
-                            <input type="text" id="apellido" name="apellido">
+                            <input type="text" id="apellido" name="apellido" value="<%= (typeof old != 'undefined' && !errors.apellido) ? old.apellido : '' %>">
+                            <% if(typeof errors!='undefined' && errors.apellido) { %>
+                                <p><%= errors.apellido.msg %></p>
+                            <% } %>
                         </div>
                         <div class="labelInput">        
                             <label for="dni">DNI</label>
-                            <input type="number" id="dni" name="dni">
-                            <% if(true) { %>
-                                <p>Introduzca un DNI válido</p>
+                            <input type="number" id="dni" name="dni" value="<%= (typeof old != 'undefined' && !errors.dni) ? old.dni : '' %>">
+                            <% if(typeof errors!='undefined'&& errors.dni) { %>
+                                <p><%= errors.dni.msg %></p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="telefono">Telefono</label>
-                            <input type="number" id="telefono" name="telefono">
-                            <% if(true) { %>
-                                <p>Introduzca un telefono válido</p>
+                            <input type="number" id="telefono" name="telefono" value="<%= (typeof old != 'undefined' && !errors.telefono) ? old.telefono : '' %>">
+                            <% if(typeof errors!='undefined' && errors.telefono) { %>
+                                <p><%= errors.telefono.msg %> </p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email">
-                            <% if(true) { %>
-                                <p>Introduzca un email válido</p>
+                            <input type="email" id="email" name="email" value="<%= (typeof old != 'undefined' && !errors.email) ? old.email : '' %>">
+                            <% if(typeof errors!='undefined' && errors.email) { %>
+                                <p><%= errors.email.msg %> </p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="contrasena1">Contraseña</label>
-                            <input type="password" id="contrasena1" placeholder="Entre 6 y 20 caracteres" name="contrasena">
-                            <% if(true) { %>
-                                <p>Introduzca una contraseña que contenga entre 6 y 20 caracteres</p>
+                            <input type="password" id="contrasena1" placeholder="Entre 6 y 16 caracteres" name="contrasena1">
+                            <% if(typeof errors!='undefined' && errors.contrasena1) { %>
+                                <p><%= errors.contrasena1.msg %> </p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="contrasena2">Repita su contraseña</label>
-                            <input type="password" id="contrasena2" name="contrasena">
-                            <% if(true) { %>
-                                <p>Sus dos contraseñas no coinciden</p>
+                            <input type="password" id="contrasena2" name="contrasena2">
+                            <% if(false) { %>
+                                <p><%= errors.contrasena2.msg %> </p>
                             <% } %>
+                        </div>
+                        <div class="labelInput inputImg">
+                            <label for="imagen">Foto de perfil</label>
+                            <input type="file" name="imagen" id="imagen"/>
+                            <% if(false) { %>
+                                <p>Introduzca una imagen</p>
+                            <% } %> 
                         </div>
                     </div>
                     <div class="divsubmit">

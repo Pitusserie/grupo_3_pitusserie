@@ -54,6 +54,10 @@
 
 @import 'pages/_cart.css';
 
+/*====== Cart ======*/
+
+@import 'pages/_perfil.css';
+
 /*====== whatsapp logo ======*/
 
 @import 'partials/_whatsappLogo.css';

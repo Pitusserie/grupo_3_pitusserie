@@ -1,0 +1,15 @@
+section.infoUsuario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.infoUsuario div.campoInfoUsuario {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+section.infoUsuario div.campoInfoUsuario label {
+    margin-right: 5px;
+}
