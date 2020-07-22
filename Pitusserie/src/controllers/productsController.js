@@ -7,23 +7,28 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = {
     index: function(req, res) {
         res.render('index', {
-            productos: productos
+            productos: productos,
+            session: req.session.usuario
         });
     },
     products: function(req, res) {
         res.render('products', {
             productos:productos,
-            id:req.params.id
+            id:req.params.id,
+            session: req.session.usuario
         });
     },
     detail: function(req, res) {
         res.render('detailProducts',{
             productos:productos,
-            id:req.params.id
+            id:req.params.id,
+            session: req.session.usuario
         });
     },
     carga: function(req, res) {
-        res.render('cargaProducts');
+        res.render('cargaProducts', {
+            session: req.session.usuario
+        });
     },
     store: (req, res) => {
 		let nuevoProducto = {
@@ -44,7 +49,8 @@ module.exports = {
 		for(let i = 0; i < productos.length; i++) {
 			if(productos[i].id == req.params.id) {
 				res.render('editProducts', {
-					producto: productos[i]
+                    producto: productos[i],
+                    session: req.session.usuario
 				})
 			}
 		}

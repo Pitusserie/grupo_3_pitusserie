@@ -45,6 +45,11 @@ section.containerImgIndex img.imgIndex {
     height: 100%;
     border-radius: 0;
 }
+#usuarioLogueado{
+    width: fit-content;
+    background-color: transparent;
+     border: none;
+}
 
 @media (min-width: 426px) {
     section.containerImgIndex div.sobreNosotros p {

@@ -9,25 +9,37 @@
         <section class="infoUsuario">
             <div class="campoInfoUsuario">
                 <label>Nombre: </label>
-                <p><%= usuario.nombre %></p>
+                <p><%= session.nombre %></p>
             </div>
             <div class="campoInfoUsuario">
                 <label>Apellido: </label>
-                <p><%= usuario.apellido %></p>
+                <p><%= session.apellido %></p>
             </div>
             <div class="campoInfoUsuario">
                 <label>DNI: </label>
-                <p><%= usuario.dni %></p>
+                <p><%= session.dni %></p>
             </div>
             <div class="campoInfoUsuario">
                 <label>Telefono: </label>
-                <p><%= usuario.telefono %></p>
+                <p><%= session.telefono %></p>
             </div>
             <div class="campoInfoUsuario">
                 <label>Email: </label>
-                <p><%= usuario.email %></p>
+                <p><%= session.email %></p>
             </div>
         </section>
+        <div>
+            <a href="/users/edit">
+                <div class="sesiones">
+                    Cambiar información
+                </div>
+            </a>
+            <a href="/users/cerrarSession">
+                <div class="botonEliminar">
+                    Cerrar sesión
+                </div>
+            </a>
+        </div>
     </div>
 
     <%- include('./partials/whatsappLogo') %>

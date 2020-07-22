@@ -10,24 +10,25 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 module.exports = {
     login: function(req, res) {
-        res.render('login')
+        res.render('login', {
+            session: req.session.usuario
+        })
     },
     register: function(req, res) {
-        res.render('register');
+        res.render('register', {
+            session: req.session.usuario
+        });
     },
     perfil: function(req, res) {
-        for(let i = 0; i < users.length; i++) {
-			if(users[i].id == req.params.id) {
-				res.render('perfil', {
-					usuario: users[i]
-				})
-			}
-		}
+		res.render('perfil', {
+            session: req.session.usuario
+        });
     },
     cart: function(req, res) {
         res.render('cart', {
             productos:productos,
-            id:req.params.id
+            id:req.params.id,
+            session: req.session.usuario
         });
     },
     verify: function(req, res) {
@@ -35,7 +36,15 @@ module.exports = {
         if(errors.isEmpty()) {
             for(let i = 0; i < users.length; i++) {
                 if(users[i].email == req.body.email && bcrypt.compareSync(req.body.contrasena, users[i].contrasena)) {
-                    req.session.idUsuario = users[i].id
+                    req.session.usuario = {
+                        id: users[i].id,
+                        nombre: users[i].nombre,
+                        apellido: users[i].apellido,
+                        dni: users[i].dni,
+                        telefono: users[i].telefono,
+                        email: users[i].email,
+                        img: users[i].img
+                    }
                     // la session se puede pedir en cualquier lado escribiendo req.session.idUsuario
                     return res.redirect('/')
                 }
@@ -51,7 +60,8 @@ module.exports = {
         } else {
             res.render('login', {
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                session: req.session.usuario
             })
         }
     },
@@ -75,86 +85,52 @@ module.exports = {
         } else{
         res.render('register', {
             errors: errors.mapped(),
-            old: req.body
+            old: req.body,
+            session: req.session.usuario
         })
         }
     },
-    edit: (req, res) => {
-		for(let i = 0; i < users.length; i++) {
-			if(users[i].id == req.params.id) {
-				res.render('editUsers', {
-					usuario: users[i]
-				})
-			}
-		}
-    },
     update: function(req, res) {
-		let usersActualizado = {
-			id: Number(req.params.id),
-			nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            dni: req.body.dni,
-            telefono: req.body.telefono,
-            email: req.body.email,
-            contrasena: req.body.contrasena1
-        }
+        let errors = validationResult(req);
         if(errors.isEmpty()){
-            let nuevoUsuario = {
-                id: users[users.length - 1].id + 1,
-                nombre: req.body.nombre,
-                apellido: req.body.apellido,
-                dni: req.body.dni,
-                telefono: req.body.telefono,
-                email: req.body.email,
-                contrasena: bcrypt.hashSync(req.body.contrasena1, 10),
-                img: req.files[0].filename
-            };
-		users.push(nuevoUsuario);
-		let listaActualizada = JSON.stringify(users);
-		fs.writeFileSync(usersFilePath, listaActualizada);
-        res.redirect('/');  
+            for(let i = 0; i < users.length; i++) {
+                if(users[i].id == req.session.usuario.id) {
+                        users[i].nombre = req.body.nombre
+                        users[i].apellido = req.body.apellido
+                        users[i].dni = req.body.dni
+                        users[i].telefono = req.body.telefono
+                        users[i].email = req.body.email
+
+                        fs.writeFileSync(usersFilePath, JSON.stringify(users));
+                        req.session.destroy();
+                        res.redirect('/users/login');
+                }
+            }
         } else{
-        res.render('register', {
+        res.render('editUsers', {
             errors: errors.mapped(),
-            old: req.body
+            session: req.session.usuario
         })
         }
     },
     edit: (req, res) => {
-		for(let i = 0; i < users.length; i++) {
-			if(users[i].id == req.params.id) {
-				res.render('editUsers', {
-					usuario: users[i]
-				})
-			}
-		}
+		res.render('editUsers', {
+			session: req.session.usuario
+		});
     },
-    update: function(req, res) {
-		let usersActualizado = {
-			id: Number(req.params.id),
-			nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            dni: req.body.dni,
-            telefono: req.body.telefono,
-            email: req.body.email,
-            contrasena: req.body.contrasena1,
-		}
-		for(let i = 0; i < users.length; i++) {
-			if(users[i].id == usersActualizado.id) {
-				users[i] = usersActualizado;
-				fs.writeFileSync(usersFilePath, JSON.stringify(users));
-				res.redirect('/')
-			}
-		}
-    },
-    destroy : (req, res) => {
+    destroy: (req, res) => {
 	 	for(let i = 0; i < users.length; i++) {
-	 		if(users[i].id == req.params.id) {
+	 		if(users[i].id == req.session.usuario.id) {
 	 			let index = users.indexOf(users[i]);
 	 			users.splice(index, 1);
-	 			fs.writeFileSync(usersFilePath, JSON.stringify(users));
-				res.redirect('/')
+                fs.writeFileSync(usersFilePath, JSON.stringify(users));
+                req.session.destroy();
+				res.redirect('/');
 			}
 		}
-	}
+    },
+    cerrarSession: function(req, res) {
+        req.session.destroy();
+        res.redirect('/');
+    }
 }

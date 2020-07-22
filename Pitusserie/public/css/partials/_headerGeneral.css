@@ -190,9 +190,9 @@ header.general .sesiones{
     background-color: var(--celesteFormularioClaro);
     border: none;
     border-radius: 8px;
-    width: 145px;
+    width: fit-content;
     height: 35px;
-    padding: 5px 0;
+    padding: 5px 10px;
 }
 
 header.general .sesiones:hover {
@@ -300,9 +300,9 @@ header.general div.izquierda{
         background-color: var(--celesteFormularioClaro);
         border: none;
         border-radius: 8px;
-        width: 145px;
+        width: fit-content;
         height: 35px;
-        padding: 5px 0;
+        padding: 5px 10px;
     }
     
     header.general .sesiones:hover {

@@ -31,8 +31,16 @@
     </div>
     <div class="derecha">
       <div class="sesionesDiv">
-        <a href="/users/login"><button class="sesiones"><i class="fas fa-user persona"></i class="letras iniciar">Iniciar Sesion </button></a>
-        </div>
+        <% if(session == undefined) { %> 
+          <a href="/users/login"><button class="sesiones"><i class="fas fa-user persona"></i>
+              Iniciar Sesion
+            <% } else { %>
+              <a href="/users/user"><button class="sesiones" id="usuarioLogueado">
+              <i class="fas fa-user-circle"></i>
+              Hola, <%= session.nombre %> 
+            <% } %> 
+          </button></a>
+      </div>
       <div class="carritoDiv"> 
         <a href="/users/cart"class="carrito"><i class="fas fa-shopping-cart"></i></a>
       </div>

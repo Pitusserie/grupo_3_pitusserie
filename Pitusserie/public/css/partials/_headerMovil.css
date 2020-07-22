@@ -205,9 +205,9 @@ div.headerMovil div.container div.redes i.fa-instagram {
     background-color: var(--celesteFormularioClaro);
     border: none;
     border-radius: 8px;
-    width: 145px;
+    width: fit-content;
     height: 35px;
-    padding: 5px 0;
+    padding: 5px 10px;
 }
 
 .sesiones:hover {
@@ -329,9 +329,9 @@ div.izquierda{
         background-color: var(--celesteFormularioClaro);
         border: none;
         border-radius: 8px;
-        width: 145px;
+        width: fit-content;
         height: 35px;
-        padding: 5px 0;
+        padding: 5px 10px;
     }
     
     .sesiones:hover {

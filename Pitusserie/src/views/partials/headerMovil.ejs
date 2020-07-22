@@ -1,17 +1,13 @@
 <div class="headerMovil" id="headerMovil">
-
     <div class="divCierreMenuBarMovil" id="divCierreMenuBarMovil"></div>
-
     <div class="container">
-
-        <div class="recontainer">
+      <div class="recontainer">
           <div class="izquierda">
             <div class="hamburguesa">
                 <button class="buttonHamburguesaMovil" id="buttonHamburguesaMovil">
                   <i class="fas fa-bars barras"></i>
                 </button>
-              </div>
-          
+              </div>          
               <div class="menuBarMovil widthMenuBarMovil" id="menuBarMovil">
                   <button class="cruzCollapseMovil" id="buttonCruzMovil">
                     <i class="fas fa-times x"></i>
@@ -25,21 +21,26 @@
                     <a href="/users/cart"><li><i class="fas fa-shopping-cart"></i></li></a>
                     <a href="/products/carga"><li>Carga de productos (solo visible para administradores)</li></a>
                   </ul>
-              </div>
-          
+              </div>          
             </div>
               <div class="divLogo">
                 <a href="/" class="logo"><img src="/img/logo.jpeg" alt="logo"></a>
               </div>
               <div class="derecha">
                 <div class="sesionesDiv">
-                    <a href="/users/login"><button class="sesiones"><i class="fas fa-user persona"></i class="letras iniciar">Iniciar Sesion
-                        </button></a>
+                  <% if(session == undefined) { %> 
+                    <a href="/users/login"><button class="sesiones"><i class="fas fa-user persona"></i>
+                        Iniciar Sesion
+                      <% } else { %>
+                        <a href="/users/user"><button class="sesiones" id="usuarioLogueado">
+                        <i class="fas fa-user-circle"></i>
+                        Hola, <%= session.nombre %> 
+                      <% } %> 
+                    </button></a>
                 </div>
                 <div class="carritoDiv">
                     <a href="/users/cart" class="carrito"><i class="fas fa-shopping-cart"></i></a>
                 </div>
-
             </div>
         </div>
     </div>
