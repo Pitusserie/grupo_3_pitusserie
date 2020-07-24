@@ -41,13 +41,13 @@
 							<a href="">
 								<button class="botonCarrito"><i class="fas fa-cart-plus"></i></button>
 							</a>
-							<a href="/products/edit/<%= productos[i].id %> ">
-								<button class="botonComprar">Editar</button>
-							</a>
+							<% if(session && session.id == 1) { %> 
+								<a href="/products/edit/<%= productos[i].id %> ">
+									<button class="botonComprar">Editar</button>
+								</a>
+							<% } %>
 						</div>
 							
-						
-						
 					</article>
 				</div>
 			</div>

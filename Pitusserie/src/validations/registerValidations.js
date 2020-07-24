@@ -13,13 +13,11 @@ module.exports= [
         .isLength({min: 1})
         .withMessage('Este campo es obligatorio'),
     check('dni')
-        .isLength({min: 1})
-        .isNumeric()
-        .withMessage('Este campo es obligatorio y debe ser numerico'),
+        .isLength({min: 1}).withMessage('Este campo es obligatorio')
+        .isNumeric().withMessage('Este campo debe ser numerico'),
     check('telefono')
-        .isLength({min: 1})
-        .isNumeric()
-        .withMessage('Este campo es obligatorio y debe ser numerico'),
+        .isLength({min: 1}).withMessage('Este campo es obligatorio')
+        .isNumeric().withMessage('Este campo debe ser numerico'),
     check('email')
         .isEmail().withMessage('Inserte un mail valido.'),
     body('email')

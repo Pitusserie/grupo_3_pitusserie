@@ -14,14 +14,14 @@ module.exports= [
         .withMessage('Este campo es obligatorio'),
     check('dni')
         .isLength({min: 1})
-        .withMessage('Este campo es obligatorio y debe ser numerico')
+        .withMessage('Este campo es obligatorio')
         .isNumeric()
-        .withMessage('Este campo es obligatorio y debe ser numerico'),
+        .withMessage('Este campo debe ser numerico'),
     check('telefono')
         .isLength({min: 1})
-        .withMessage('Este campo es obligatorio y debe ser numerico')
+        .withMessage('Este campo es obligatorio')
         .isNumeric()
-        .withMessage('Este campo es obligatorio y debe ser numerico'),
+        .withMessage('Este campo debe ser numerico'),
     check('email')
         .isEmail()
         .withMessage('Inserte un mail valido.'),

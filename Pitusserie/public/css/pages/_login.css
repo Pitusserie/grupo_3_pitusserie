@@ -97,6 +97,10 @@ section.login div.formLogin form div.submitRegister a div.register:hover {
     color: black;
 }
 
+.divCheckbox {
+    width: 100%;
+}
+
 @media (min-width: 1024px) {
     section.login div.container h2 {
         width: 100%;

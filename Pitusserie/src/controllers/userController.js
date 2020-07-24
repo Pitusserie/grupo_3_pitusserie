@@ -45,7 +45,11 @@ module.exports = {
                         email: users[i].email,
                         img: users[i].img
                     }
-                    // la session se puede pedir en cualquier lado escribiendo req.session.idUsuario
+
+                    if(req.body.recordarme == 'on') {
+                        res.cookie('authRemember', users[i].email, {maxAge: 60000 * 60 * 24 * 90})
+                    }
+                    
                     return res.redirect('/')
                 }
             }
@@ -78,15 +82,15 @@ module.exports = {
                 contrasena: bcrypt.hashSync(req.body.contrasena1, 10),
                 img: req.files[0].filename
             };
-		users.push(nuevoUsuario);
-		let listaActualizada = JSON.stringify(users);
-		fs.writeFileSync(usersFilePath, listaActualizada);
-        res.redirect('/');  
+            users.push(nuevoUsuario);
+            let listaActualizada = JSON.stringify(users);
+            fs.writeFileSync(usersFilePath, listaActualizada);
+            res.redirect('/');  
         } else{
-        res.render('register', {
-            errors: errors.mapped(),
-            old: req.body,
-            session: req.session.usuario
+            res.render('register', {
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session.usuario
         })
         }
     },
@@ -131,6 +135,7 @@ module.exports = {
     },
     cerrarSession: function(req, res) {
         req.session.destroy();
+        res.cookie('authRemember', '', {maxAge: -1})
         res.redirect('/');
     }
 }

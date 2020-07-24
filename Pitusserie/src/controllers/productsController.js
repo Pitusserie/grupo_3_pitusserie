@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -31,19 +32,28 @@ module.exports = {
         });
     },
     store: (req, res) => {
-		let nuevoProducto = {
-			id: productos[productos.length - 1].id + 1,
-            categorias: req.body.categorias,
-            titulo: req.body.titulo,
-            miniDesc: req.body.descripcion,
-            precio: req.body.precio,
-            img: req.files[0].filename,
-            porciones: req.body.porciones
-        };
-		productos.push(nuevoProducto);
-		let listaActualizada = JSON.stringify(productos);
-		fs.writeFileSync(productsFilePath, listaActualizada);
-        res.redirect('/products');
+        let errors = validationResult(req);
+        if(errors.isEmpty()) {
+            let nuevoProducto = {
+                id: productos[productos.length - 1].id + 1,
+                categorias: req.body.categorias,
+                titulo: req.body.titulo,
+                miniDesc: req.body.descripcion,
+                precio: req.body.precio,
+                img: req.files[0].filename,
+                porciones: req.body.porciones
+            };
+            productos.push(nuevoProducto);
+            let listaActualizada = JSON.stringify(productos);
+            fs.writeFileSync(productsFilePath, listaActualizada);
+            res.redirect('/products');
+        } else {
+            res.render('cargaProducts', {
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session.usuario
+            })
+        }
     },
     edit: (req, res) => {
 		for(let i = 0; i < productos.length; i++) {

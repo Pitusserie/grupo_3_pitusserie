@@ -6,6 +6,8 @@ const methodOverride =  require('method-override');
 const session= require('express-session')
 const cookieParser= require('cookie-parser')
 const {check, validationResult, body} = require('express-validator');
+const authCookieMiddleware = require('./middlewares/authCookieMiddleware');
+
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.set('view engine', 'ejs');
@@ -15,6 +17,8 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(cookieParser());
+
+app.use(authCookieMiddleware);
 
 const indexRouter = require('./routes/index');
 const productsRouter = require('./routes/products');

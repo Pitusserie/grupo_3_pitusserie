@@ -1,12 +1,13 @@
 [
     {
         "id": 1,
-        "nombre": "nombre1",
-        "apellido": "apellido1",
-        "dni": "123456789",
-        "telefono": "987654321",
-        "email": "1@gmail.com",
-        "contrasena": "contrasena1"
+        "nombre": "administrador",
+        "apellido": "administrador",
+        "dni": "11111111",
+        "telefono": "11111111",
+        "email": "administrador@administrador.com",
+        "contrasena": "$2b$10$ut3Is.YmzMdzzQ48ObDUju5.8dmkrtf15fMqMJISGLTqrq5nlzBGO",
+        "img": "1595597946487.png"
     },
     {
         "id": 2,
