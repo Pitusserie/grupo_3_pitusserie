@@ -14,43 +14,48 @@
                         <div class="labelInput">
                             <label for="categorias">Categorias</label>
                             <input type="text" id="categorias" name="categorias">
+                            <p id="errCategorias"></p>
                             <% if(typeof errors!='undefined' && errors.categorias) { %>
-                                <p><%= errors.categorias.msg %></p>
+                                <p class="errorBack"><%= errors.categorias.msg %></p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="titulo">Titulo</label>
                             <input type="text" id="titulo" name="titulo">
+                            <p id="errTitulo"></p>
                             <% if(typeof errors!='undefined' && errors.titulo) { %>
-                                <p><%= errors.titulo.msg %></p>
+                                <p class="errorBack"><%= errors.titulo.msg %></p>
                             <% } %>
                         </div>
                         <div class="labelInput">        
                             <label for="descripcion">Descripcion</label>
                             <input type="text" id="descripcion" name="descripcion">
+                            <p id="errDescripcion"></p>
                             <% if(typeof errors!='undefined' && errors.descripcion) { %>
-                                <p><%= errors.descripcion.msg %></p>
+                                <p class="errorBack"><%= errors.descripcion.msg %></p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="precio">Precio</label>
                             <input type="number" id="precio" name="precio">
+                            <p id="errPrecio"></p>
                             <% if(typeof errors!='undefined' && errors.precio) { %>
-                                <p><%= errors.precio.msg %></p>
+                                <p class="errorBack"><%= errors.precio.msg %></p>
                             <% } %> 
                         </div>
                         <div class="labelInput inputImg">
                             <label for="imagenes">Agregar imagenes</label>
                             <input type="file" name="imagen" />
                             <% if(false) { %>
-                                <p>Introduzca una imagen</p>
+                                <p class="errorBack">Introduzca una imagen</p>
                             <% } %> 
                         </div>
                         <div class="labelInput">
                             <label for="porciones">Porciones</label>
                             <input type="number" id="porciones" name="porciones">
+                            <p id="errPorciones"></p>
                             <% if(typeof errors!='undefined' && errors.porciones) { %>
-                                <p><%= errors.porciones.msg %></p>
+                                <p class="errorBack"><%= errors.porciones.msg %></p>
                             <% } %>
                         </div>
                     <div class="divsubmit">
@@ -66,5 +71,6 @@
     <%- include('./partials/footer') %>
 
     <%- include('./partials/scripts') %>
+    <script src="/js/validationsCargaProducts.js"></script>
 </body>
 </html>

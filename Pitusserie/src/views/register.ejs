@@ -14,57 +14,64 @@
                         <div class="labelInput">
                             <label for="nombre">Nombre</label>
                             <input type="text" id="nombre" name="nombre" value="<%= (typeof old != 'undefined' && !errors.nombre) ? old.nombre : '' %>">
+                            <p id='errNombre'></p>
                             <% if(typeof errors!='undefined' && errors.nombre) { %>
-                                <p><%= errors.nombre.msg %></p>
+                               <p class='errorsBack'><%= errors.nombre.msg %></p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="apellido">Apellido</label>
                             <input type="text" id="apellido" name="apellido" value="<%= (typeof old != 'undefined' && !errors.apellido) ? old.apellido : '' %>">
+                            <p id="errApellido"></p>
                             <% if(typeof errors!='undefined' && errors.apellido) { %>
-                                <p><%= errors.apellido.msg %></p>
+                                <p class='errorsBack'><%= errors.apellido.msg %></p>
                             <% } %>
                         </div>
                         <div class="labelInput">        
                             <label for="dni">DNI</label>
                             <input type="number" id="dni" name="dni" value="<%= (typeof old != 'undefined' && !errors.dni) ? old.dni : '' %>">
+                            <p id="errDni"></p>
                             <% if(typeof errors!='undefined'&& errors.dni) { %>
-                                <p><%= errors.dni.msg %></p>
+                                <p class='errorsBack'><%= errors.dni.msg %></p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="telefono">Telefono</label>
                             <input type="number" id="telefono" name="telefono" value="<%= (typeof old != 'undefined' && !errors.telefono) ? old.telefono : '' %>">
+                            <p id="errTelefono"></p>
                             <% if(typeof errors!='undefined' && errors.telefono) { %>
-                                <p><%= errors.telefono.msg %> </p>
+                                <p class='errorsBack'><%= errors.telefono.msg %> </p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" value="<%= (typeof old != 'undefined' && !errors.email) ? old.email : '' %>">
-                            <% if(typeof errors!='undefined' && errors.email) { %>
-                                <p><%= errors.email.msg %> </p>
+                            <p id="errEmail"></p>
+                            <% if(typeof errors!='undefined' && errors.email) { %>  
+                                <p class='errorsBack'><%= errors.email.msg %> </p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="contrasena1">Contraseña</label>
                             <input type="password" id="contrasena1" placeholder="Entre 6 y 16 caracteres" name="contrasena1">
+                            <p id="errContrasena1"></p>
                             <% if(typeof errors!='undefined' && errors.contrasena1) { %>
-                                <p><%= errors.contrasena1.msg %> </p>
+                                <p class='errorsBack'><%= errors.contrasena1.msg %> </p>
                             <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="contrasena2">Repita su contraseña</label>
                             <input type="password" id="contrasena2" name="contrasena2">
+                            <p id="errContrasena2"></p>
                             <% if(false) { %>
-                                <p><%= errors.contrasena2.msg %> </p>
+                                <p class='errorsBack'><%= errors.contrasena2.msg %> </p>
                             <% } %>
                         </div>
                         <div class="labelInput inputImg">
                             <label for="imagen">Foto de perfil</label>
                             <input type="file" name="imagen" id="imagen"/>
                             <% if(false) { %>
-                                <p>Introduzca una imagen</p>
+                                <p class='errorsBack'>Introduzca una imagen</p>
                             <% } %> 
                         </div>
                     </div>
@@ -81,5 +88,6 @@
     <%- include('./partials/footer') %>
 
     <%- include('./partials/scripts') %>
+    <script src="/js/validationsRegister.js"></script>
 </body>
 </html>

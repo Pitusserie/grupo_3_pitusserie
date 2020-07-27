@@ -85,7 +85,7 @@ module.exports = {
             users.push(nuevoUsuario);
             let listaActualizada = JSON.stringify(users);
             fs.writeFileSync(usersFilePath, listaActualizada);
-            res.redirect('/');  
+            res.redirect('/users/login');
         } else{
             res.render('register', {
                 errors: errors.mapped(),
