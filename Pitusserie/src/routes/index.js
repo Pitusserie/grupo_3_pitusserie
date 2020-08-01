@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const userController = require('../controllers/userController');
-const productsController = require('../controllers/productsController');
+const indexController = require('../controllers/indexController');
 const path= require('path');
+const db = require('../database/models/index.js');
+
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.join(__dirname, '../../public/uploads/avatars'))
@@ -15,10 +16,22 @@ var storage = multer.diskStorage({
    
 var upload = multer({ storage: storage })
   
-router.get('/', productsController.index);
+router.get('/', indexController.index);
 
-router.get('/error', function(req, res) {
-    res.render('error')
+router.get('/error', indexController.error)
+
+router.get('/probando/all', function(req, res) {
+    db.Producto.findAll()
+    .then(function(producto) {
+        res.send(producto)
+    })
+})
+
+router.get('/probando/:id', function(req, res) {
+    db.Producto.findByPk(req.params.id)
+    .then(function(producto) {
+        res.send(producto)
+    })
 })
 
 module.exports = router;

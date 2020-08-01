@@ -6,22 +6,16 @@ const productsFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 module.exports = {
-    index: function(req, res) {
-        res.render('index', {
-            productos: productos,
-            session: req.session.usuario
-        });
-    },
     products: function(req, res) {
         res.render('products', {
-            productos:productos,
+            productos: productos,
             id:req.params.id,
             session: req.session.usuario
         });
     },
     detail: function(req, res) {
         res.render('detailProducts',{
-            productos:productos,
+            productos: productos,
             id:req.params.id,
             session: req.session.usuario
         });
