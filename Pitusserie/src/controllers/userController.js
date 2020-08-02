@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
-const {check, validationResult, body, cookie} = require('express-validator'); 
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const {check, validationResult, body, cookie} = require('express-validator');
+
+const db = require('../database/models/index.js');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -25,11 +25,14 @@ module.exports = {
         });
     },
     cart: function(req, res) {
-        res.render('cart', {
-            productos:productos,
-            id:req.params.id,
-            session: req.session.usuario
-        });
+        db.Producto.findAll()
+        .then(function (productos) {
+            res.render('cart', {
+                productos:productos,
+                id:req.params.id,
+                session: req.session.usuario
+            });
+        })
     },
     verify: function(req, res) {
         let errors = validationResult(req);

@@ -6,30 +6,26 @@
 <body class="body-detail">
 
 	<%- include('./partials/header') %>
-	
-	<% for(i = 0; i < productos.length; i++) { %>
-		<% if(id==productos[i].id){ %>
-
 		
 	<div class="container products-wrapper" id="detaill">
 		<div class="row">			
 		<div class="product-detail">
 			<div class="row">
 				<div class="col-12 col-lg-8">
-					<img src="/uploads/productos/<%= productos[i].img %>" alt="product image" class="product-detail-img">
+					<img src="/uploads/productos/<%= producto.img %>" alt="product image" class="product-detail-img">
 				</div>
 				<div class="col-12 col-lg-4">
 					<article class="product-detail-info">
-						<h2 class="product-detail-title"><%= productos[i].nombre %></h2>
+						<h2 class="product-detail-title"><%= producto.nombre %></h2>
 
 						<p class="product-detail-price small">
-							Precio: $<%= productos[i].precio %>
+							Precio: $<%= producto.precio %>
 						</p>
 						
 						<ul class="actions-list">
 							<li>
 								<p class="product-detail-description">
-									<%= productos[i].miniDesc %>
+									<%= producto.descripcion %>
 								</p>
 							</li>
 	
@@ -42,7 +38,7 @@
 								<button class="botonCarrito"><i class="fas fa-cart-plus"></i></button>
 							</a>
 							<% if(session && session.id == 1) { %> 
-								<a href="/products/edit/<%= productos[i].id %> ">
+								<a href="/products/edit/<%= producto.id %> ">
 									<button class="botonComprar">Editar</button>
 								</a>
 							<% } %>
@@ -53,8 +49,7 @@
 			</div>
 		</div>
 	</div>
-	<% }%>
-	<% }%>
+
 	<div class="container agregar-productos" id="agregar">
 		<h2>Agregar Productos</h2>
 		<div class="agregar-productos-img">

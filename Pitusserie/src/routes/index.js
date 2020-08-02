@@ -20,18 +20,4 @@ router.get('/', indexController.index);
 
 router.get('/error', indexController.error)
 
-router.get('/probando/all', function(req, res) {
-    db.Producto.findAll()
-    .then(function(producto) {
-        res.send(producto)
-    })
-})
-
-router.get('/probando/:id', function(req, res) {
-    db.Producto.findByPk(req.params.id)
-    .then(function(producto) {
-        res.send(producto)
-    })
-})
-
 module.exports = router;
