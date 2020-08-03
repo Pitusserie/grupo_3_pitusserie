@@ -5,8 +5,9 @@ const path = require('path');
 const userController = require('../controllers/userController');
 const registerValidations = require('../validations/registerValidations');
 const loginValidations = require('../validations/loginValidations');
-const userValidations = require('../validations/userValidations')
+const userValidations = require('../validations/userValidations');
 const authMiddleware = require('../middlewares/authMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {

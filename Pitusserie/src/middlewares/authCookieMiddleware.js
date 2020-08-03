@@ -1,26 +1,26 @@
-const fs = require('fs');
-const path = require('path');
-
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require('../database/models/index.js');
 
 function authCookieMiddleware(req, res, next) {
-    if(req.cookies.authRemember != undefined && req.session.usuario == undefined) {
-        for(let i = 0; i < users.length; i++) {
-            if(req.cookies.authRemember == users[i].email) {
-                req.session.usuario = {
-                    id: users[i].id,
-                    nombre: users[i].nombre,
-                    apellido: users[i].apellido,
-                    dni: users[i].dni,
-                    telefono: users[i].telefono,
-                    email: users[i].email,
-                    img: users[i].img
+    db.Usuario.findAll()
+    .then(function(usuarios) {
+        if(req.cookies.authRemember != undefined && req.session.usuario == undefined) {
+            for(let i = 0; i < usuarios.length; i++) {
+                if(req.cookies.authRemember == usuarios[i].email) {
+                    req.session.usuario = {
+                        id: usuarios[i].id,
+                        nombre: usuarios[i].nombre,
+                        apellido: usuarios[i].apellido,
+                        dni: usuarios[i].dni,
+                        telefono: usuarios[i].telefono,
+                        email: usuarios[i].email,
+                        img: usuarios[i].img,
+                        administrador: usuarios[i].administrador
+                    }
                 }
             }
         }
-    }
-    next();
+        next();
+    })
 }
 
 module.exports = authCookieMiddleware;

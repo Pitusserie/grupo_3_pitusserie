@@ -1,9 +1,5 @@
-const fs = require('fs');
 const {check,validationResult,body} = require('express-validator');
-const path = require('path');
-const bcrypt = require('bcrypt');
-let usuarios = fs.readFileSync(path.join(__dirname, '../data/users.json'), 'utf8');
-usuarios = JSON.parse(usuarios)
+const db = require('../database/models/index.js');
 
 module.exports= [
     check('nombre')
@@ -20,15 +16,6 @@ module.exports= [
         .isNumeric().withMessage('Este campo debe ser numerico'),
     check('email')
         .isEmail().withMessage('Inserte un mail valido.'),
-    body('email')
-        .custom( function(value) {       
-            for(let i = 0; i < usuarios.length; i++){
-                if(usuarios[i].email == value) {
-                    return false;
-                    }
-            } 
-            return true
-         }).withMessage('Este mail ya se encuentra registrado en Pitusserie'),
     check('contrasena1')
         .isLength({min:6,max:16}).withMessage('Tiene que tener minimo 6 caracteres y máximo 16.'),
     // check('contrasena2')

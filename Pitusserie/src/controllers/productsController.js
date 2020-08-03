@@ -1,5 +1,3 @@
-const fs = require('fs');
-const path = require('path');
 const { validationResult } = require('express-validator');
 const db = require('../database/models/index.js');
 
@@ -75,14 +73,14 @@ module.exports = {
             res.redirect('/products');
         })
     },
-    destroy: function(req, res) {
-		db.Producto.destroy({
-              where: {
+    destroy: function (req, res) {
+        db.Producto.destroy({
+            where: {
                 id: req.params.id
-              }
-            })
-            .then(function(resultado) {
-              res.redirect('/products')
+            }
+        })
+            .then(function (resultado) {
+                res.redirect('/products')
             })
     }
 }
