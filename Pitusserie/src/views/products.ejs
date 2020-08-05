@@ -39,11 +39,16 @@
                                 </div>
                                 <div class="texto">
                                 <div class="precioCarrito">
-                                    <h3><%= productos[i].titulo %></h3>
-                                    <h4>$<%= productos[i].precio %></h4>
-                                    <a href="#"><span class="carritoMas"><i class="fas fa-cart-plus"></i></span></a>
+                                    <h3><%= productos[i].title %></h3>
+                                    <h4>$<%= productos[i].price %></h4>
+                                    
+                                    <% if(session == undefined) { %> 
+                                        <a href="/users/login"><span class="carritoMas"><i class="fas fa-cart-plus"></i></span></a>
+                                      <% } else { %>
+                                        <a href="#"><span class="carritoMas"><i class="fas fa-cart-plus"></i></span></a>
+                                      <% } %> 
                                 </div>
-                                <h5><%= productos[i].descripcion %></h5>
+                                <h5><%= productos[i].description %></h5>
                                 </div>
                             </div>
                         </a>

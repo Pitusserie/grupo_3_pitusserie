@@ -20,7 +20,7 @@ module.exports = {
         });
     },
     cart: function(req, res) {
-        db.Producto.findAll()
+        db.Product.findAll()
         .then(function (productos) {
             res.render('cart', {
                 productos:productos,
@@ -32,19 +32,19 @@ module.exports = {
     verify: function (req, res) {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            db.Usuario.findAll()
+            db.User.findAll()
             .then(function (usuarios) {
                 for (let i = 0; i < usuarios.length; i++) {
-                    if (usuarios[i].email == req.body.email && bcrypt.compareSync(req.body.contrasena, usuarios[i].contrasena)) {
+                    if (usuarios[i].email == req.body.email && bcrypt.compareSync(req.body.contrasena, usuarios[i].password)) {
                         req.session.usuario = {
                             id: usuarios[i].id,
-                            nombre: usuarios[i].nombre,
-                            apellido: usuarios[i].apellido,
+                            nombre: usuarios[i].name,
+                            apellido: usuarios[i].surname,
                             dni: usuarios[i].dni,
-                            telefono: usuarios[i].telefono,
+                            telefono: usuarios[i].phone,
                             email: usuarios[i].email,
                             img: usuarios[i].img,
-                            administrador: usuarios[i].administrador
+                            administrador: usuarios[i].admin
                         }
                         if (req.body.recordarme == 'on') {
                             res.cookie('authRemember', usuarios[i].email, { maxAge: 60000 * 60 * 24 * 90 })
@@ -72,7 +72,7 @@ module.exports = {
     store: (req, res) => {
         let errors = validationResult(req)
         if(errors.isEmpty()){
-            db.Usuario.findAll()
+            db.User.findAll()
             .then(function(usuarios) {
                 for(i = 0; i < usuarios.length; i++) {
                     if(usuarios[i].email == req.body.email) {
@@ -88,12 +88,12 @@ module.exports = {
                     }
                 }
                 db.Usuario.create({
-                    nombre: req.body.nombre,
-                    apellido: req.body.apellido,
+                    name: req.body.nombre,
+                    surname: req.body.apellido,
                     dni: req.body.dni,
-                    telefono: req.body.telefono,
+                    phone: req.body.telefono,
                     email: req.body.email,
-                    contrasena: bcrypt.hashSync(req.body.contrasena1, 10),
+                    password: bcrypt.hashSync(req.body.contrasena1, 10),
                     img: req.files[0].filename
                 })
                 res.redirect('/users/login');
@@ -103,27 +103,42 @@ module.exports = {
                 errors: errors.mapped(),
                 old: req.body,
                 session: req.session.usuario
-        })
+            })
         }
     },
     update: function(req, res) {
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            db.Usuario.update({
-                nombre: req.body.nombre,
-                apellido: req.body.apellido,
-                dni: req.body.dni,
-                telefono: req.body.telefono,
-                email: req.body.email
-            },
-            {
-                where: {
-                    id: req.session.usuario.id
+            db.User.findAll()
+            .then(function(usuarios) {
+                for(i = 0; i < usuarios.length; i++) {
+                    if(usuarios[i].email == req.body.email) {
+                        return res.render('editUsers', {
+                            errors: {
+                                email: {
+                                    msg: 'Este email ya se encuentra registrado en pitusserie'
+                                }
+                            },
+                            session: req.session.usuario
+                        })
+                    }
                 }
+                db.User.update({
+                    name: req.body.nombre,
+                    surname: req.body.apellido,
+                    dni: req.body.dni,
+                    phone: req.body.telefono,
+                    email: req.body.email
+                },
+                {
+                    where: {
+                        id: req.session.usuario.id
+                    }
+                })
+                req.session.destroy();
+                res.cookie('authRemember', '', {maxAge: -1})
+                res.redirect('/users/login');
             })
-            req.session.destroy();
-            res.cookie('authRemember', '', {maxAge: -1})
-            res.redirect('/users/login');
         } else {
             res.render('editUsers', {
                 errors: errors.mapped(),
@@ -137,7 +152,7 @@ module.exports = {
 		});
     },
     destroy: function (req, res) {
-        db.Usuario.destroy({
+        db.User.destroy({
             where: {
                 id: req.session.usuario.id
             }

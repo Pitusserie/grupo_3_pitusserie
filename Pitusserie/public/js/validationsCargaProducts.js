@@ -26,8 +26,8 @@ window.addEventListener('load', function() {
         
         let errores = {};
 
-        if(inputCategorias.value.length <= 2) {
-            errores.categorias = 'Como minimo 2 caracteres';
+        if(inputCategorias.value.length <= 0) {
+            errores.categorias = 'Como minimo 1 caracteres';
         }
         if(inputTitulo.value.length <= 2) {
             errores.titulo = 'Como minimo 2 caracteres';

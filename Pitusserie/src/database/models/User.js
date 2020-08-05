@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes) {
-    let alias = "Usuario";
+    let alias = "User";
 
     let cols = {
         id: {
@@ -8,27 +8,30 @@ module.exports = function(sequelize, dataTypes) {
             autoIncrement: true,
             allowNull: false,
         },
-        nombre: {
+        name: {
             type: dataTypes.STRING,
             allowNull: false,
         },
-        apellido: {
+        surname: {
             type: dataTypes.STRING,
             allowNull: false,
         },
         dni: {
             type: dataTypes.INTEGER(11),
             allowNull: false,
+            unique:true,
         },
-        telefono: {
+        phone: {
             type: dataTypes.INTEGER(11),
             allowNull: false,
+
         },
         email: {
             type: dataTypes.STRING,
             allowNull: false,
+            unique:true,
         },
-        contrasena: {
+        password: {
             type: dataTypes.STRING,
             allowNull: false,
         },
@@ -36,17 +39,27 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.STRING,
             allowNull: false,
         },
-        administrador: {
+        admin: {
             type: dataTypes.BOOLEAN
         }
     }
 
     let config = {
-        tableName: "usuarios",
+        tableName: "users",
         timestamps: false
     }
 
-    let Usuario = sequelize.define(alias, cols, config);
+    let User = sequelize.define(alias, cols, config);
 
-    return Usuario;
+    User.associate = function(models){
+        User.belongsToMany(models.Product, {
+            as: 'product',
+            through: 'product_user',
+            foreignKey: 'id_users',
+            otherKey: 'id_products',
+            timestamps: false
+        });
+    }
+
+    return User;
 }

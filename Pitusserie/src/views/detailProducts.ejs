@@ -16,16 +16,16 @@
 				</div>
 				<div class="col-12 col-lg-4">
 					<article class="product-detail-info">
-						<h2 class="product-detail-title"><%= producto.nombre %></h2>
+						<h2 class="product-detail-title"><%= producto.name %></h2>
 
 						<p class="product-detail-price small">
-							Precio: $<%= producto.precio %>
+							Precio: $<%= producto.price %>
 						</p>
 						
 						<ul class="actions-list">
 							<li>
 								<p class="product-detail-description">
-									<%= producto.descripcion %>
+									<%= producto.description %>
 								</p>
 							</li>
 	
@@ -34,9 +34,16 @@
 							<a href="">
 								<button class="botonComprar">Comprar</button>
 							</a>
-							<a href="">
-								<button class="botonCarrito"><i class="fas fa-cart-plus"></i></button>
-							</a>
+							
+							<% if(session == undefined) { %> 
+								<a href="/users/login">
+									<button class="botonCarrito"><i class="fas fa-cart-plus"></i></button>
+								</a>
+							  <% } else { %>
+								<a href="">
+									<button class="botonCarrito"><i class="fas fa-cart-plus"></i></button>
+								</a> 
+							  <% } %> 
 							<% if(session && session.id == 1) { %> 
 								<a href="/products/edit/<%= producto.id %> ">
 									<button class="botonComprar">Editar</button>

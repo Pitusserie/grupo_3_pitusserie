@@ -13,7 +13,5 @@ module.exports= [
     check('precio')
         .isLength({min: 1}).withMessage('Este campo es obligatorio')
         .isNumeric().withMessage('Este campo debe ser numerico'),
-    check('porciones')
-        .isLength({min: 1}).withMessage('Este campo es obligatorio')
-        .isNumeric().withMessage('Este campo debe ser numerico'),
+      
 ]

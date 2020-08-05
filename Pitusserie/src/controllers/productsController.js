@@ -3,7 +3,7 @@ const db = require('../database/models/index.js');
 
 module.exports = {
     products: function (req, res) {
-        db.Producto.findAll()
+        db.Product.findAll()
         .then(function (productos) {
             res.render('products', {
                 productos: productos,
@@ -13,7 +13,7 @@ module.exports = {
         })
     },
     detail: function(req, res) {
-        db.Producto.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id)
         .then(function(productos) {
             res.render('detailProducts',{
                 producto: productos,
@@ -30,13 +30,13 @@ module.exports = {
     store: function(req, res) {
         let errors = validationResult(req);
         if(errors.isEmpty()) {
-            db.Producto.create({
-                categorias: req.body.categorias,
-                titulo: req.body.titulo,
-                descripcion: req.body.descripcion,
-                precio: req.body.precio,
+            db.Product.create({
+                categorie_id: req.body.categorias,
+                title: req.body.titulo,
+                description: req.body.descripcion,
+                price: req.body.precio,
                 img: req.files[0].filename,
-                porciones: req.body.porciones
+                slices: req.body.porciones
             })
             res.redirect('/products');
         } else {
@@ -48,7 +48,7 @@ module.exports = {
         }
     },
     edit: (req, res) => {
-        db.Producto.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id)
         .then(function(producto) {
             res.render('editProducts', {
                 producto: producto,
@@ -57,12 +57,12 @@ module.exports = {
         })
     },
     update: function(req, res) {
-		db.Producto.update({
-			categorias: req.body.categorias,
-            titulo: req.body.titulo,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            porciones: req.body.porciones
+		db.Product.update({
+			categorie_id: req.body.categorias,
+            title: req.body.titulo,
+            description: req.body.descripcion,
+            price: req.body.precio,
+            slices: req.body.porciones
         },
         {
             where: {
@@ -74,7 +74,7 @@ module.exports = {
         })
     },
     destroy: function (req, res) {
-        db.Producto.destroy({
+        db.Product.destroy({
             where: {
                 id: req.params.id
             }

@@ -18,7 +18,11 @@
                     <a href="/products"><li>Productos</li></a>
                     <a href="/users/login"><li>Ingresá</li></a>
                     <a href="/users/register"><li>Creá una cuenta</li></a>
-                    <a href="/users/cart"><li><i class="fas fa-shopping-cart"></i></li></a>
+                    <% if(session == undefined) { %> 
+                      <a href="/users/login"><li><i class="fas fa-shopping-cart"></i></li></a>
+                    <% } else { %>
+                      <a href="/users/cart"><li><i class="fas fa-shopping-cart"></i></li></a> 
+                    <% } %> 
                     <% if(session && session.administrador == true) { %> 
                       <a href="/products/carga"><li>Carga de productos</li></a>
                         
@@ -42,8 +46,12 @@
                       <% } %> 
                     </button></a>
                 </div>
-                <div class="carritoDiv">
-                    <a href="/users/cart" class="carrito"><i class="fas fa-shopping-cart"></i></a>
+                <div class="carritoDiv"> 
+                  <% if(session == undefined) { %> 
+                      <a href="/users/login"class="carrito"><i class="fas fa-shopping-cart"></i></a>
+                  <% } else { %>
+                      <a href="/users/cart"class="carrito"><i class="fas fa-shopping-cart"></i></a>
+                  <% } %>
                 </div>
             </div>
         </div>

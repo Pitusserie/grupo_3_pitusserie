@@ -1,20 +1,20 @@
 const db = require('../database/models/index.js');
 
 function authCookieMiddleware(req, res, next) {
-    db.Usuario.findAll()
-    .then(function(usuarios) {
+    db.User.findAll()
+    .then(function(users) {
         if(req.cookies.authRemember != undefined && req.session.usuario == undefined) {
-            for(let i = 0; i < usuarios.length; i++) {
-                if(req.cookies.authRemember == usuarios[i].email) {
+            for(let i = 0; i < users.length; i++) {
+                if(req.cookies.authRemember == users[i].email) {
                     req.session.usuario = {
-                        id: usuarios[i].id,
-                        nombre: usuarios[i].nombre,
-                        apellido: usuarios[i].apellido,
-                        dni: usuarios[i].dni,
-                        telefono: usuarios[i].telefono,
-                        email: usuarios[i].email,
-                        img: usuarios[i].img,
-                        administrador: usuarios[i].administrador
+                        id: users[i].id,
+                        nombre: users[i].name,
+                        apellido: users[i].surname,
+                        dni: users[i].dni,
+                        telefono: users[i].phone,
+                        email: users[i].email,
+                        img: users[i].img,
+                        administrador: users[i].admin
                     }
                 }
             }
