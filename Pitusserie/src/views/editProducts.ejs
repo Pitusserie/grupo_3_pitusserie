@@ -7,13 +7,18 @@
 
       <section class="registracion">
         <div class="container">
-            <h2>Carga Producto</h2>
+            <h2>Editar Producto</h2>
             <div class="formRegistracion">
                 <form action="?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="contenedorForm">
                         <div class="labelInput">
                             <label for="categorias">Categorias</label>
-                            <input type="text" id="categorias" name="categorias" value=<%= producto.categorie_id %>>
+                            <select name="categorie" id="categorie">
+                                <option value=<%= producto.categorie_id %>> <%= categorias[producto.categorie_id].categorie %> </option>
+                                <% for(i = 0; i < categorias.length; i++) { %>
+                                    <option value=<%= categorias[i].id %>> <%= categorias[i].categorie %> </option>
+                                <% } %>
+                            </select>
                         </div>
                         <div class="labelInput">
                             <label for="titulo">Titulo</label>

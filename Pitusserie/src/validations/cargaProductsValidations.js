@@ -1,9 +1,6 @@
 const {check,validationResult,body} = require('express-validator');
 
 module.exports= [
-    check('categorias')
-        .isLength({min: 1})
-        .withMessage('Este campo es obligatorio'),
     check('titulo')
         .isLength({min: 1})
         .withMessage('Este campo es obligatorio'),

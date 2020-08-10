@@ -1,3 +1,7 @@
+label {
+    width: 100%;
+}
+
 section.registracion div.formRegistracion form div.contenedorForm div.inputImg input, section.registracion div.formRegistracion form div.contenedorForm div.inputImg input:focus {
     border-bottom: none;
 }

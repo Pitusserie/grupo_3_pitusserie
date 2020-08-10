@@ -22,7 +22,7 @@ router.get('/error', indexController.error);
 
 router.get('/probandoProducts', function(req, res) {
   db.Product.findAll({
-    include: [{association: 'user'}, {association: 'categorie'}]
+    include: [{association: 'user'}, {association: 'categorie'}, {association: 'subCategorie'}]
   })
     .then(function(resultado) {
       res.send(resultado);
@@ -50,6 +50,15 @@ router.get('/probandoUsers', function(req, res) {
 router.get('/probandoUsers/:id', function(req, res) {
   db.User.findByPk(req.params.id, {
     include: [{association: 'product'}]
+  })
+    .then(function(resultado) {
+      res.send(resultado);
+    })
+})
+
+router.get('/probandoCategories', function(req, res) {
+  db.Categorie.findAll({
+    include: [{association: 'subCategorie'}]
   })
     .then(function(resultado) {
       res.send(resultado);

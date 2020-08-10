@@ -16,6 +16,9 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.INTEGER(11),
             allowNull: false
         },
+        sub_categorie_id: {
+            type: dataTypes.INTEGER(11)
+        },
         description: {
             type: dataTypes.STRING,
             allowNull: false,
@@ -44,6 +47,10 @@ module.exports = function(sequelize, dataTypes) {
         Product.belongsTo(models.Categorie, {
             as: 'categorie',
             foreignKey: 'categorie_id'
+        });
+        Product.belongsTo(models.SubCategorie, {
+            as: 'subCategorie',
+            foreignKey: 'sub_categorie_id'
         });
         Product.belongsToMany(models.User, {
             as: 'user',

@@ -13,7 +13,12 @@
                     <div class="contenedorForm">
                         <div class="labelInput">
                             <label for="categorias">Categorias</label>
-                            <input type="text" id="categorias" name="categorias">
+                            <select name="categorie" id="categorie">
+                                <option value="0" hidden>Elija una categoria</option>
+                                <% for(i = 0; i < categorias.length; i++) { %>
+                                    <option value=<%= categorias[i].id %>> <%= categorias[i].categorie %> </option>
+                                <% } %>
+                            </select>
                             <p id="errCategorias"></p>
                             <% if(typeof errors!='undefined' && errors.categorias) { %>
                                 <p class="errorBack"><%= errors.categorias.msg %></p>
@@ -68,5 +73,6 @@
 
     <%- include('./partials/scripts') %>
     <script src="/js/validationsCargaProducts.js"></script>
+    <script src="/js/subCategories.js"></script>
 </body>
 </html>

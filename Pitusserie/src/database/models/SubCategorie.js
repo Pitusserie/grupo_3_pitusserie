@@ -1,5 +1,5 @@
 module.exports = function(sequelize, dataTypes) {
-    let alias = "Categorie";
+    let alias = "SubCategorie";
 
     let cols = {
         id: {
@@ -8,25 +8,22 @@ module.exports = function(sequelize, dataTypes) {
             autoIncrement: true,
             allowNull: false,
         },
-        categorie: {
+        sub_categorie: {
             type: dataTypes.STRING,
+            allowNull: false,
+        },
+        categorie_id: {
+            type: dataTypes.INTEGER(11),
             allowNull: false,
         }
     }
 
     let config = {
-        tableName: "categories",
+        tableName: "subcategories",
         timestamps: false
     }
 
-    let Categorie = sequelize.define(alias, cols, config);
+    let SubCategorie = sequelize.define(alias, cols, config);
 
-    Categorie.associate = function(models){
-        Categorie.hasMany(models.SubCategorie, {
-            as: 'subCategorie',
-            foreignKey: 'categorie_id'
-        });
-    }
-
-    return Categorie;
+    return SubCategorie;
 }

@@ -26,7 +26,7 @@ CREATE TABLE `categories` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `categorie` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'tortas'),(2,'cookies'),(3,'cakepops'),(4,'caja de regalo'),(5,'opcionales');
+INSERT INTO `categories` VALUES (1,'tortas'),(2,'cookies'),(3,'cakepops'),(4,'caja de regalo'),(5,'opcionales'),(6,'cupCakes');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,8 +79,9 @@ CREATE TABLE `products` (
   `img` varchar(255) NOT NULL,
   `slices` int(11) unsigned DEFAULT NULL,
   `title` varchar(255) NOT NULL,
+  `sub_categorie_id` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,8 +90,33 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,1,'ingrediente-ingrediente-ingrediente',100,'placeholder1.jpg',6,'torta1'),(2,2,'ingrediente-ingrediente-ingrediente',200,'placeholder2.jpg',6,'torta2'),(3,3,'ingrediente-ingrediente-ingrediente',300,'placeholder3.jpg',6,'torta3'),(4,5,'ingrediente-ingrediente-ingrediente',400,'placeholder4.jpg',8,'torta4'),(5,4,'ingrediente-ingrediente-ingrediente',500,'placeholder5.jpg',8,'torta5'),(6,2,'ingrediente-ingrediente-ingrediente',600,'placeholder6.jpg',8,'torta6'),(7,2,'ingrediente-ingrediente-ingrediente',700,'placeholder7.jpg',10,'torta7'),(8,4,'ingrediente-ingrediente-ingrediente',800,'placeholder8.jpg',12,'torta8');
+INSERT INTO `products` VALUES (1,1,'ingrediente-ingrediente-ingrediente',100,'placeholder1.jpg',6,'torta1',7),(2,2,'ingrediente-ingrediente-ingrediente',200,'placeholder2.jpg',6,'torta2',2),(3,3,'ingrediente-ingrediente-ingrediente',300,'placeholder3.jpg',6,'torta3',NULL),(4,5,'ingrediente-ingrediente-ingrediente',400,'placeholder4.jpg',8,'torta4',NULL),(5,4,'ingrediente-ingrediente-ingrediente',500,'placeholder5.jpg',8,'torta5',NULL),(6,2,'ingrediente-ingrediente-ingrediente',600,'placeholder6.jpg',8,'torta6',3),(7,2,'ingrediente-ingrediente-ingrediente',700,'placeholder7.jpg',10,'torta7',1),(8,4,'ingrediente-ingrediente-ingrediente',800,'placeholder8.jpg',12,'torta8',NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `subcategories`
+--
+
+DROP TABLE IF EXISTS `subcategories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `subcategories` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `sub_categorie` varchar(255) NOT NULL,
+  `categorie_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `subcategories`
+--
+
+LOCK TABLES `subcategories` WRITE;
+/*!40000 ALTER TABLE `subcategories` DISABLE KEYS */;
+INSERT INTO `subcategories` VALUES (1,'cookiesChips',2),(2,'cookiesDecoradas',2),(3,'oreosBañadas',2),(4,'brownies',1),(5,'buttercream',1),(6,'cookieCakes',1),(7,'fondant',1);
+/*!40000 ALTER TABLE `subcategories` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -135,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-05 15:44:33
+-- Dump completed on 2020-08-10 15:12:36

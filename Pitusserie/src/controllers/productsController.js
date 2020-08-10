@@ -3,7 +3,31 @@ const db = require('../database/models/index.js');
 
 module.exports = {
     products: function (req, res) {
-        db.Product.findAll()
+        // let condiciones
+        // if(req.query == {}) {
+        //     condiciones = {}
+        // } else if( typeof(req.query.filtro) == 'number') {
+        //     condiciones = {
+        //         where: {
+        //             categorie_id: req.query.filtro
+        //         }
+        //     }
+        // }
+        let stringBusqueda = ''
+        if(typeof(req.query.busqueda) == 'undefined' || req.query.busqueda == '') {
+            stringBusqueda = '%%'
+        } else {
+            for(let i = 0; i < req.query.busqueda.length; i++) {
+                    stringBusqueda += `%${req.query.busqueda[i]}%`
+            }
+        }
+        db.Product.findAll({
+            where: {
+                title: {
+                  [db.Sequelize.Op.like]: stringBusqueda
+                }      
+              }
+        })
         .then(function (productos) {
             res.render('products', {
                 productos: productos,
@@ -23,15 +47,21 @@ module.exports = {
         })
     },
     carga: function(req, res) {
-        res.render('cargaProducts', {
-            session: req.session.usuario
-        });
+        db.Categorie.findAll({
+            include: [{association: 'subCategorie'}]
+        })
+        .then(function(categorias) {
+            res.render('cargaProducts', {
+                session: req.session.usuario,
+                categorias: categorias
+            });
+        })
     },
     store: function(req, res) {
         let errors = validationResult(req);
         if(errors.isEmpty()) {
             db.Product.create({
-                categorie_id: req.body.categorias,
+                categorie_id: req.body.categorie,
                 title: req.body.titulo,
                 description: req.body.descripcion,
                 price: req.body.precio,
@@ -40,25 +70,33 @@ module.exports = {
             })
             res.redirect('/products');
         } else {
-            res.render('cargaProducts', {
-                errors: errors.mapped(),
-                old: req.body,
-                session: req.session.usuario
+            db.Categorie.findAll()
+            .then(function(categorias) {
+                res.render('cargaProducts', {
+                    errors: errors.mapped(),
+                    old: req.body,
+                    session: req.session.usuario,
+                    categorias: categorias
+                })
             })
         }
     },
     edit: (req, res) => {
-        db.Product.findByPk(req.params.id)
-        .then(function(producto) {
+        db.Categorie.findAll()
+        .then(function(categorias) {
+            db.Product.findByPk(req.params.id)
+            .then(function(producto) {
             res.render('editProducts', {
                 producto: producto,
-                session: req.session.usuario
+                session: req.session.usuario,
+                categorias: categorias
             })
+        })
         })
     },
     update: function(req, res) {
 		db.Product.update({
-			categorie_id: req.body.categorias,
+			categorie_id: req.body.categorie,
             title: req.body.titulo,
             description: req.body.descripcion,
             price: req.body.precio,

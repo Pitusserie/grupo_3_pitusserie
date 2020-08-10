@@ -26,9 +26,6 @@ window.addEventListener('load', function() {
         
         let errores = {};
 
-        if(inputCategorias.value.length <= 0) {
-            errores.categorias = 'Como minimo 1 caracteres';
-        }
         if(inputTitulo.value.length <= 2) {
             errores.titulo = 'Como minimo 2 caracteres';
         }
@@ -43,7 +40,6 @@ window.addEventListener('load', function() {
         }
         if(Object.keys(errores).length != 0) {
             e.preventDefault();
-            (errorCategorias.innerText) = (errores.categorias) ? errores.categorias : '';
             (errorTitulo.innerText) = (errores.titulo) ? errores.titulo : '';
             (errorDesc.innerText) = (errores.desc) ? errores.desc : '';
             (errorPrecio.innerText) = (errores.precio) ? errores.precio : '';
