@@ -9,11 +9,11 @@
     <div class="container carritoCelular">
         <div class="carrito">
             <section class="cart">
-                <% for(i = 0; i < 3; i++) { %> 
+                <% for(i = 0; i < productos.length; i++) { %> 
                 <article class="productos">
                     <div class="producto">
                         <div class="productoImagen">
-                            <a href=""><img src="/uploads/productos/<%= productos[i].img %>" alt=""></a>
+                            <a href="/products/<%= productos[i].id %>"><img src="/uploads/productos/<%= productos[i].img %>" alt=""></a>
                         </div>
                         <div class="texto">
                             <a href=""><h3><%= productos[i].title %></h3></a>
@@ -31,8 +31,8 @@
                                             <option value="5">5</option>
                                         </select>
                                     </div>
-                                    <button class="delete">Borrar</button>
                                 </form>
+                            <a href="/users/cart/destroy/<%= productos[i].id %>"><button class="delete">Borrar</button></a>
                             </div>
                         </div>
                     </div>
@@ -44,8 +44,12 @@
                     <div class="sub">
                         <div class="texto">
                             <a href=""><h3>SubTotal</h3></a>
-                            <h4>$ 600</h4>
-                            <h5>3 Items</h5>
+                            <% let precioFinal = 0 %>
+                            <% for(let i = 0; i < productos.length; i++) { %>
+                                <% precioFinal += productos[i].price %> 
+                            <% } %> 
+                            <h4>$ <%= precioFinal %> </h4>
+                            <h5><%= productos.length %>  Items</h5>
                             <div class="botonCompra">
                                 <button class="botonComprar">Continuar Compra</button>
                             </div>

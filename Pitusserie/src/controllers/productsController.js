@@ -57,18 +57,29 @@ module.exports = {
             });
         })
     },
+    categoriesFront: function(req, res) {
+        db.Categorie.findAll({
+            include: [{association: 'subCategorie'}]
+        })
+        .then(function(categorias) {
+            res.json(categorias);
+        })
+    },
     store: function(req, res) {
         let errors = validationResult(req);
         if(errors.isEmpty()) {
             db.Product.create({
                 categorie_id: req.body.categorie,
+                sub_categorie_id: req.body.subCategorie,
                 title: req.body.titulo,
                 description: req.body.descripcion,
                 price: req.body.precio,
                 img: req.files[0].filename,
                 slices: req.body.porciones
             })
-            res.redirect('/products');
+            .then(function() {
+                res.redirect('/products');
+            })
         } else {
             db.Categorie.findAll()
             .then(function(categorias) {
@@ -82,9 +93,13 @@ module.exports = {
         }
     },
     edit: (req, res) => {
-        db.Categorie.findAll()
+        db.Categorie.findAll({
+            include: [{association: 'subCategorie'}]
+        })
         .then(function(categorias) {
-            db.Product.findByPk(req.params.id)
+            db.Product.findByPk(req.params.id, {
+                include: [{association: 'subCategorie'}, {association: 'categorie'}]
+            })
             .then(function(producto) {
             res.render('editProducts', {
                 producto: producto,
@@ -96,7 +111,8 @@ module.exports = {
     },
     update: function(req, res) {
 		db.Product.update({
-			categorie_id: req.body.categorie,
+            categorie_id: req.body.categorie,
+            sub_categorie_id: req.body.subCategorie,
             title: req.body.titulo,
             description: req.body.descripcion,
             price: req.body.precio,

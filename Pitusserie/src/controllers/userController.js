@@ -20,13 +20,35 @@ module.exports = {
         });
     },
     cart: function(req, res) {
-        db.Product.findAll()
-        .then(function (productos) {
+        db.User.findByPk(req.session.usuario.id , {
+            include: [{association: 'product'}]
+          })
+        .then(function (usuario) {
             res.render('cart', {
-                productos:productos,
+                productos: usuario.product,
                 id:req.params.id,
                 session: req.session.usuario
             });
+        })
+    },
+    cartAdd: function(req, res) {
+        db.Product_User.create({
+            id_users: req.session.usuario.id,
+            id_products: req.params.id
+        })
+        .then(function() {
+            res.redirect('/users/cart');
+        })
+    },
+    cartDestroy: function (req, res) {
+        db.Product_User.destroy({
+            where: {
+                id_users: req.session.usuario.id,
+                id_products: req.params.id
+            }
+        })
+        .then(function () {
+            res.redirect('/users/cart')
         })
     },
     verify: function (req, res) {

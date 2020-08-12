@@ -6,6 +6,7 @@ let categorieSelect = qs('#categorie');
 let subCategorieSelect = qs('#subCategorie');
 let categories
 let optionsSubCategories = ''
+let optionSubCategorieOld = subCategorieSelect.innerHTML.split('</option>', 1)[0] + '</option>'
 
 fetch('http://localhost:3000/products/categoriesFront')
 .then(function(response) {
@@ -13,10 +14,18 @@ fetch('http://localhost:3000/products/categoriesFront')
 })
 .then(function(categorias) {
     categories = categorias
+    optionsSubCategories += optionSubCategorieOld
+    categories.forEach(function(categoria) {
+        if(categoria.id == categorieSelect.value) {
+            categoria.subCategorie.forEach(function(subCategoria) {
+                optionsSubCategories += `<option value=${subCategoria.id}>${subCategoria.sub_categorie}</option>`
+            })
+        }
+    });
+    subCategorieSelect.innerHTML = optionsSubCategories
 })
 
 categorieSelect.addEventListener('blur', function() {
-    subCategorieSelect.removeAttribute('disabled')
     optionsSubCategories = ''
     categories.forEach(function(categoria) {
         if(categoria.id == categorieSelect.value) {

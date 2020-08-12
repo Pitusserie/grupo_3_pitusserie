@@ -21,6 +21,7 @@ router.get('/', productsController.products);
 
 router.get('/carga', adminMiddleware, productsController.carga);
 router.post('/carga', upload.any(), cargaProductsValidations, productsController.store);
+router.get('/categoriesFront', productsController.categoriesFront)
 
 router.get('/edit/:id', adminMiddleware, productsController.edit);
 router.put('/edit/:id', upload.any(), productsController.update);

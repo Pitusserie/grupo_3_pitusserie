@@ -45,7 +45,7 @@
                                     <% if(session == undefined) { %> 
                                         <a href="/users/login"><span class="carritoMas"><i class="fas fa-cart-plus"></i></span></a>
                                       <% } else { %>
-                                        <a href="#"><span class="carritoMas"><i class="fas fa-cart-plus"></i></span></a>
+                                        <a href="/users/cart/add/<%= productos[i].id %>"><span class="carritoMas"><i class="fas fa-cart-plus"></i></span></a>
                                       <% } %> 
                                 </div>
                                 <h5><%= productos[i].description %></h5>

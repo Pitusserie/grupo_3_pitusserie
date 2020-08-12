@@ -39,7 +39,7 @@ article.productos div.producto div.texto {
     justify-content: space-between;
 }
 
-article.productos div.producto div.texto div.qtyDelete form {
+article.productos div.producto div.texto div.qtyDelete {
     display: flex;
     flex-wrap: wrap;
 }
@@ -65,7 +65,7 @@ article.productos div.producto div.texto div.qtyDelete button.delete {
     border: none;
     background: rgba(255, 0, 0, 0.2);
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 22px;
     margin-left: 20px;
 }
 
@@ -117,7 +117,7 @@ div.carrito aside.subtotal article.sub div.sub div.texto div.botonCompra button.
         text-align: center;
     }
 
-    article.productos div.producto div.texto div.qtyDelete form {
+    article.productos div.producto div.texto div.qtyDelete {
         display: flex;
         justify-content: center;
     }

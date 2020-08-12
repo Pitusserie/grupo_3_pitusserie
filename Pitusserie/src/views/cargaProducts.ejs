@@ -19,10 +19,12 @@
                                     <option value=<%= categorias[i].id %>> <%= categorias[i].categorie %> </option>
                                 <% } %>
                             </select>
-                            <p id="errCategorias"></p>
-                            <% if(typeof errors!='undefined' && errors.categorias) { %>
-                                <p class="errorBack"><%= errors.categorias.msg %></p>
-                            <% } %>
+                        </div>
+                        <div class="labelInput">
+                            <label for="subCategorie">Sub Categorias</label>
+                            <select name="subCategorie" id="subCategorie" disabled>
+                                
+                            </select>
                         </div>
                         <div class="labelInput">
                             <label for="titulo">Titulo</label>
