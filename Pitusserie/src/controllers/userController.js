@@ -32,12 +32,24 @@ module.exports = {
         })
     },
     cartAdd: function(req, res) {
-        db.Product_User.create({
-            id_users: req.session.usuario.id,
-            id_products: req.params.id
+        db.Product_User.findAll({
+            where: {
+                id_users: req.session.usuario.id,
+                id_products: req.params.id
+            }
         })
-        .then(function() {
-            res.redirect('/users/cart');
+        .then(function(productos) {
+            if(productos.length == 0) {
+                db.Product_User.create({
+                    id_users: req.session.usuario.id,
+                    id_products: req.params.id
+                })
+                .then(function() {
+                    res.redirect('/users/cart');
+                })
+            } else {
+                res.redirect('/users/cart');
+            }
         })
     },
     cartDestroy: function (req, res) {

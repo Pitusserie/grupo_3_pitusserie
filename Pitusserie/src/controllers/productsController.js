@@ -3,16 +3,40 @@ const db = require('../database/models/index.js');
 
 module.exports = {
     products: function (req, res) {
-        // let condiciones
-        // if(req.query == {}) {
-        //     condiciones = {}
-        // } else if( typeof(req.query.filtro) == 'number') {
-        //     condiciones = {
-        //         where: {
-        //             categorie_id: req.query.filtro
-        //         }
-        //     }
-        // }
+        let categorias
+        let subCategorias
+        let filtroGeneral
+        let filtroClases
+        switch (req.query.filtro) {
+            case undefined:
+            case 'todos':
+                filtroGeneral = {}
+                break
+            case '- a +':
+                filtroGeneral = {
+                    order: [
+                        ['price', 'ASC']
+                    ]
+                }
+                break
+            case '+ a -':
+                filtroGeneral = {
+                    order: [
+                        ['price', 'DESC']
+                    ]
+                }
+                break
+            default:
+                if(req.query.filtro.startsWith('C')) {
+                    filtroClases = {
+                        categorie_id: req.query.filtro.replace('C', '')
+                    }
+                } else if(req.query.filtro.startsWith('S')) {
+                    filtroClases = {
+                        sub_categorie_id: req.query.filtro.replace('S', '')
+                    }
+                }
+        }
         let stringBusqueda = ''
         if(typeof(req.query.busqueda) == 'undefined' || req.query.busqueda == '') {
             stringBusqueda = '%%'
@@ -21,19 +45,31 @@ module.exports = {
                     stringBusqueda += `%${req.query.busqueda[i]}%`
             }
         }
-        db.Product.findAll({
-            where: {
-                title: {
-                  [db.Sequelize.Op.like]: stringBusqueda
-                }      
-              }
-        })
-        .then(function (productos) {
-            res.render('products', {
-                productos: productos,
-                id: req.params.id,
-                session: req.session.usuario
-            });
+        db.Categorie.findAll()
+        .then(function(categories) {
+            categorias = categories
+            db.SubCategorie.findAll()
+            .then(function(subCategories) {
+                subCategorias = subCategories
+                db.Product.findAll({
+                    where: {
+                        title: {
+                          [db.Sequelize.Op.like]: stringBusqueda
+                        },
+                        ...filtroClases
+                    },
+                    ...filtroGeneral 
+                })
+                .then(function (productos) {
+                    res.render('products', {
+                        productos: productos,
+                        categorias: categorias,
+                        subCategorias: subCategorias,
+                        id: req.params.id,
+                        session: req.session.usuario
+                    });
+                })
+            })
         })
     },
     detail: function(req, res) {

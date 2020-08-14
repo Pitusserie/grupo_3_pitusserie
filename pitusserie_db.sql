@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `pitusserie_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `pitusserie_db`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: pitusserie_db
@@ -35,7 +37,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'tortas'),(2,'cookies'),(3,'cakepops'),(4,'caja de regalo'),(5,'opcionales'),(6,'cupCakes');
+INSERT INTO `categories` VALUES (1,'Tortas'),(2,'Cookies'),(3,'Cakepops'),(4,'Caja de Regalo'),(5,'Opcionales'),(6,'Cup Cakes');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,7 +53,7 @@ CREATE TABLE `product_user` (
   `id_products` int(11) unsigned NOT NULL,
   `id_users` int(11) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -60,7 +62,7 @@ CREATE TABLE `product_user` (
 
 LOCK TABLES `product_user` WRITE;
 /*!40000 ALTER TABLE `product_user` DISABLE KEYS */;
-INSERT INTO `product_user` VALUES (1,3,2),(2,7,2);
+INSERT INTO `product_user` VALUES (10,1,2),(11,3,2),(14,6,2);
 /*!40000 ALTER TABLE `product_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,7 +83,7 @@ CREATE TABLE `products` (
   `title` varchar(255) NOT NULL,
   `sub_categorie_id` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +92,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,1,'ingrediente-ingrediente-ingrediente',100,'placeholder1.jpg',6,'torta1',7),(2,2,'ingrediente-ingrediente-ingrediente',200,'placeholder2.jpg',6,'torta2',2),(3,3,'ingrediente-ingrediente-ingrediente',300,'placeholder3.jpg',6,'torta3',NULL),(4,5,'ingrediente-ingrediente-ingrediente',400,'placeholder4.jpg',8,'torta4',NULL),(5,4,'ingrediente-ingrediente-ingrediente',500,'placeholder5.jpg',8,'torta5',NULL),(6,2,'ingrediente-ingrediente-ingrediente',600,'placeholder6.jpg',8,'torta6',3),(7,2,'ingrediente-ingrediente-ingrediente',700,'placeholder7.jpg',10,'torta7',1),(8,4,'ingrediente-ingrediente-ingrediente',800,'placeholder8.jpg',12,'torta8',NULL);
+INSERT INTO `products` VALUES (1,1,'ingrediente-ingrediente-ingrediente',100,'placeholder1.jpg',6,'torta1',7),(2,2,'ingrediente-ingrediente-ingrediente',200,'placeholder2.jpg',6,'torta2',2),(3,3,'ingrediente-ingrediente-ingrediente',300,'placeholder3.jpg',6,'torta3',0),(4,5,'ingrediente-ingrediente-ingrediente',400,'placeholder4.jpg',8,'torta4',0),(5,4,'ingrediente-ingrediente-ingrediente',500,'placeholder5.jpg',8,'torta5',0),(6,2,'ingrediente-ingrediente-ingrediente',600,'placeholder6.jpg',8,'torta6',3),(7,2,'ingrediente-ingrediente-ingrediente',700,'placeholder7.jpg',10,'torta7',1),(8,4,'ingrediente-ingrediente-ingrediente',800,'placeholder8.jpg',12,'torta8',0);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,7 +117,7 @@ CREATE TABLE `subcategories` (
 
 LOCK TABLES `subcategories` WRITE;
 /*!40000 ALTER TABLE `subcategories` DISABLE KEYS */;
-INSERT INTO `subcategories` VALUES (1,'cookiesChips',2),(2,'cookiesDecoradas',2),(3,'oreosBañadas',2),(4,'brownies',1),(5,'buttercream',1),(6,'cookieCakes',1),(7,'fondant',1);
+INSERT INTO `subcategories` VALUES (1,'Cookies Chips',2),(2,'Cookies Decoradas',2),(3,'Oreos Bañadas',2),(4,'Brownies',1),(5,'Buttercream',1),(6,'Cookie Cakes',1),(7,'Fondant',1);
 /*!40000 ALTER TABLE `subcategories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-10 15:12:36
+-- Dump completed on 2020-08-14 14:33:27

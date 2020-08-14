@@ -16,14 +16,14 @@
                             <a href="/products/<%= productos[i].id %>"><img src="/uploads/productos/<%= productos[i].img %>" alt=""></a>
                         </div>
                         <div class="texto">
-                            <a href=""><h3><%= productos[i].title %></h3></a>
-                            <h4>$ <%= productos[i].price %></h4>
+                            <h3><%= productos[i].title %></h3>
+                            <h4 id=<%= `precio${i}` %> class="precio">$ <%= productos[i].price %></h4>
                             <h5><%= productos[i].description %></h5>
                             <div class="qtyDelete">
                                 <form action="">
                                     <div class="cantidad">
                                         <span>Cantidad</span>
-                                        <select class="qty" name="qty">
+                                        <select id=<%= `select${i}` %>  class="qty" name="qty">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -43,13 +43,13 @@
                 <article class="sub">
                     <div class="sub">
                         <div class="texto">
-                            <a href=""><h3>SubTotal</h3></a>
+                            <h3>SubTotal</h3>
                             <% let precioFinal = 0 %>
                             <% for(let i = 0; i < productos.length; i++) { %>
                                 <% precioFinal += productos[i].price %> 
                             <% } %> 
-                            <h4>$ <%= precioFinal %> </h4>
-                            <h5><%= productos.length %>  Items</h5>
+                            <h4 id="subTotal">$ <%= precioFinal %> </h4>
+                            <h5 id="items"><%= productos.length %>  Items</h5>
                             <div class="botonCompra">
                                 <button class="botonComprar">Continuar Compra</button>
                             </div>
@@ -66,6 +66,8 @@
     <%- include('./partials/footer') %>
 
     <%- include('./partials/scripts') %>
+    <span id="cantidadProducts" hidden><%= productos.length %> </span>
+    <script src="/js/precioCantidadCart.js"></script>
 </body>
 
 </html>

@@ -12,11 +12,15 @@
             <div class="divForm">
                 <form action="" method="get">
                     <select class="filtro" name="filtro">
-                        <option value="Todos">Todos</option>
-                        <option value="A-Z">A-Z</option>
-                        <option value="Z-A">Z-A</option>
-                        <option value="Precio - A +">Precio - A +</option>
-                        <option value="Precio + A -">Precio + A -</option>
+                        <option value="todos">Todos</option>
+                        <option value="- a +">Precio - A +</option>
+                        <option value="+ a -">Precio + A -</option>
+                        <% for(let i = 0; i < categorias.length; i++) { %>
+                            <option value=<%= `C${categorias[i].id}` %> ><%= categorias[i].categorie %> </option>
+                        <% } %>
+                        <% for(let i = 0; i < subCategorias.length; i++) { %>
+                            <option value=<%= `S${subCategorias[i].id}` %> ><%= subCategorias[i].sub_categorie %> </option>
+                        <% } %>
                     </select>
                     <input class="barraDeBusqueda" name="busqueda" type="text" placeholder="Buscar delicias">
                     <button class="submit" type="submit"><i class="fas fa-search"></i></button>
