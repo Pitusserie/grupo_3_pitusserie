@@ -1,3 +1,7 @@
+#productoConfirmarCompra:hover {
+    border: none;
+}
+
 div.carrito {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +33,7 @@ article.productos div.producto div.productoImagen {
 
 article.productos div.producto div.productoImagen img {
     height: 250px;
+    width: 200px;
 }
 
 article.productos div.producto div.texto {
@@ -67,6 +72,22 @@ article.productos div.producto div.texto div.qtyDelete button.delete {
     border-radius: 5px;
     font-size: 22px;
     margin-left: 20px;
+}
+
+a.delete {
+    border: none;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 22px;
+    margin-left: 20px;
+    padding: 0 5px;
+    height: 34px;
+}
+
+a.delete:hover {
+    background: none;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.5);
+    border-radius: 0;
 }
 
 div.carrito aside.subtotal {

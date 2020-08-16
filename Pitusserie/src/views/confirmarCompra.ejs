@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('./partials/head') %>
+
+<body>
+
+    <%- include('./partials/header') %>
+    
+    <div class="container">
+        <section class="infoUsuario">
+            <div class="campoInfoUsuario">
+                <label>Nombre: </label>
+                <p><%= session.nombre %></p>
+            </div>
+            <div class="campoInfoUsuario">
+                <label>Apellido: </label>
+                <p><%= session.apellido %></p>
+            </div>
+            <div class="campoInfoUsuario">
+                <label>Email: </label>
+                <p><%= session.email %></p>
+            </div>
+            <div class="campoInfoUsuario">
+                <label>Total: </label>
+                <p><%= precioFinal %></p>
+            </div>
+        </section>
+
+        <section class="productos">
+            <div class="container">
+              <h2>Productos</h2>
+              <div class="row">
+    
+                <% for(i = 0; i < productos.length; i++) { %> 
+                    <article class="col-12 col-md-6 col-lg-3">
+                        <div class="producto" id="productoConfirmarCompra">
+                            <div class="productoImagen">
+                            <img src="/uploads/productos/<%= productos[i].producto.img %>" alt="">
+                            </div>
+                            <div class="texto">
+                            <div class="precioCarrito">
+                                <h3><%= productos[i].producto.title %></h3>
+                                <h4>$<%= productos[i].producto.price %></h4>
+                            </div>
+                            <h5>cantidad: <%= productos[i].cantidad %></h5>
+                            </div>
+                        </div>
+                    </article>
+                  <% } %> 
+    
+              </div>
+            </div>
+        </section>
+
+    </div>
+    <%- include('./partials/whatsappLogo') %>
+
+	<%- include('./partials/footer') %>
+
+	<%- include('./partials/scripts') %>
+</body>
+</html>

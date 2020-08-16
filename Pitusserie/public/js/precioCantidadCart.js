@@ -14,19 +14,19 @@ window.addEventListener('load', function() {
 
     for(let i = 0; i < cantidadProducts; i++) {
         
-        precioPorProduct.push(qs(`#select${i}`).value * qs(`#precio${i}`).innerText.replace('$ ', ''));
-        cantidadDeCadaProduct.push(qs(`#select${i}`).value);
+        precioPorProduct.push(qs(`#select${i}`).value.split('-')[0] * qs(`#precio${i}`).innerText.replace('$ ', ''));
+        cantidadDeCadaProduct.push(qs(`#select${i}`).value.split('-')[0]);
 
         qs(`#select${i}`).addEventListener('change', function() {
 
-            cantidadDeCadaProduct.splice(i, 1, this.value);
+            cantidadDeCadaProduct.splice(i, 1, this.value.split('-')[0]);
             cantidadItems = 0;
             cantidadDeCadaProduct.forEach(function(elemento) {
                 cantidadItems += Number(elemento)
             })
             items.innerText = `${cantidadItems} Items`
 
-            precioPorProduct.splice(i, 1, this.value * qs(`#precio${i}`).innerText.replace('$ ', ''));
+            precioPorProduct.splice(i, 1, this.value.split('-')[0] * qs(`#precio${i}`).innerText.replace('$ ', ''));
             cantidadSubTotal = 0;
             precioPorProduct.forEach(function(elemento) {
                 cantidadSubTotal += elemento

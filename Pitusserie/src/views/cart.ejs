@@ -7,6 +7,7 @@
     <%- include('./partials/header') %>
 
     <div class="container carritoCelular">
+    <form action="" method="POST">
         <div class="carrito">
             <section class="cart">
                 <% for(i = 0; i < productos.length; i++) { %> 
@@ -20,19 +21,17 @@
                             <h4 id=<%= `precio${i}` %> class="precio">$ <%= productos[i].price %></h4>
                             <h5><%= productos[i].description %></h5>
                             <div class="qtyDelete">
-                                <form action="">
                                     <div class="cantidad">
                                         <span>Cantidad</span>
                                         <select id=<%= `select${i}` %>  class="qty" name="qty">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
+                                            <option value="1-<%= productos[i].id %>">1</option>
+                                            <option value="2-<%= productos[i].id %>">2</option>
+                                            <option value="3-<%= productos[i].id %>">3</option>
+                                            <option value="4-<%= productos[i].id %>">4</option>
+                                            <option value="5-<%= productos[i].id %>">5</option>
                                         </select>
                                     </div>
-                                </form>
-                            <a href="/users/cart/destroy/<%= productos[i].id %>"><button class="delete">Borrar</button></a>
+                            <a href="/users/cart/destroy/<%= productos[i].id %>" class="delete">Borrar</a>
                             </div>
                         </div>
                     </div>
@@ -58,6 +57,7 @@
                 </article>
             </aside>
         </div>
+    </form>
     </div>
 
 

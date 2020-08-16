@@ -15,7 +15,7 @@ fetch('http://localhost:3000/products/categoriesFront')
     categories = categorias
 })
 
-categorieSelect.addEventListener('blur', function() {
+categorieSelect.addEventListener('change', function() {
     subCategorieSelect.removeAttribute('disabled')
     optionsSubCategories = ''
     categories.forEach(function(categoria) {

@@ -25,7 +25,7 @@ fetch('http://localhost:3000/products/categoriesFront')
     subCategorieSelect.innerHTML = optionsSubCategories
 })
 
-categorieSelect.addEventListener('blur', function() {
+categorieSelect.addEventListener('change', function() {
     optionsSubCategories = ''
     categories.forEach(function(categoria) {
         if(categoria.id == categorieSelect.value) {

@@ -31,6 +31,41 @@ module.exports = {
             });
         })
     },
+    confirmarCompra: function(req, res) {
+        let filtroIds = []
+        let productosCartYCantidad = []
+        let precioFinal = 0
+        if(typeof(req.body.qty) != 'object') {
+            req.body.qty = [req.body.qty]
+        }
+        req.body.qty.forEach(function(elemento) {
+            filtroIds.push({id: elemento.split('-')[1]})
+        });
+        db.Product.findAll({
+            where: {
+                [db.Sequelize.Op.or]: filtroIds
+            }
+        })
+        .then(function(productosCart) {
+            req.body.qty.forEach(function(elemento) {
+                productosCartYCantidad.push({
+                    cantidad: elemento.split('-')[0],
+                    producto: productosCart.filter(producto => producto.id == elemento.split('-')[1])[0]
+                });
+                filtroIds.push({id: elemento.split('-')[1]})
+            });
+            productosCartYCantidad.forEach(function(elemento) {
+                precioFinal += (elemento.cantidad * elemento.producto.price);
+            })
+        })
+        .then(function() {
+            res.render('confirmarCompra', {
+                session: req.session.usuario,
+                productos: productosCartYCantidad,
+                precioFinal: precioFinal
+            });
+        })
+    },
     cartAdd: function(req, res) {
         db.Product_User.findAll({
             where: {
@@ -121,7 +156,7 @@ module.exports = {
                         })
                     }
                 }
-                db.Usuario.create({
+                db.User.create({
                     name: req.body.nombre,
                     surname: req.body.apellido,
                     dni: req.body.dni,

@@ -31,6 +31,7 @@ router.get('/register', userController.register);
 router.post('/register', upload.any(), registerValidations, userController.store);
 
 router.get('/cart', userController.cart);
+router.post('/cart', userController.confirmarCompra)
 router.get('/cart/add/:id', userController.cartAdd);
 router.get('/cart/destroy/:id', userController.cartDestroy);
 
