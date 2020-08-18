@@ -1,3 +1,7 @@
+function qs (elemento) {
+    return document.querySelector(elemento);
+}
+
 let headerMovil = document.querySelector('#headerMovil');
 
 window.addEventListener('scroll', function() {
@@ -90,3 +94,39 @@ divCierreMenuBarMovil.addEventListener("click", function() {
     divCierreMenuBarMovil.classList.toggle('conBarAbiertoMovil');
     bloquearScrollMovil();
 });
+
+fetch('http://localhost:3000/users/cart/cCart')
+.then(function(response) {
+    return response.json()
+})
+.then(function(cCart) {
+    if(cCart != 0) {
+        if(qs('.cCartIndex')) {
+            qs('.cCartIndex').innerText = cCart
+        }
+        if(qs('.cCartHeader')) {
+            qs('.cCartHeader').innerText = cCart
+        }
+        qs('.cCartHeaderMovil').innerText = cCart
+    }
+})
+
+if(qs('.botonCarrito')) {
+    qs('.botonCarrito').addEventListener("click", function () {
+        fetch('http://localhost:3000/users/cart/cCart')
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (cCart) {
+                if (cCart != 0) {
+                    if (qs('.cCartIndex')) {
+                        qs('.cCartIndex').innerText = cCart
+                    }
+                    if (qs('.cCartHeader')) {
+                        qs('.cCartHeader').innerText = cCart
+                    }
+                    qs('.cCartHeaderMovil').innerText = cCart
+                }
+            })
+    })
+}

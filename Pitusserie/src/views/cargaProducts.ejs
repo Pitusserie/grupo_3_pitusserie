@@ -12,13 +12,17 @@
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="contenedorForm">
                         <div class="labelInput">
-                            <label for="categorias">Categorias</label>
+                            <label for="categorie">Categorias</label>
                             <select name="categorie" id="categorie">
                                 <option value="0" hidden>Elija una categoria</option>
                                 <% for(i = 0; i < categorias.length; i++) { %>
                                     <option value=<%= categorias[i].id %>> <%= categorias[i].categorie %> </option>
                                 <% } %>
                             </select>
+                            <p id="errCategorias"></p>
+                            <% if(typeof errors!='undefined' && errors.categorie) { %>
+                                <p class="errorBack"><%= errors.categorie.msg %></p>
+                            <% } %>
                         </div>
                         <div class="labelInput">
                             <label for="subCategorie">Sub Categorias</label>

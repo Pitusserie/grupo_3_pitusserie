@@ -31,9 +31,16 @@
 	
 						</ul>
 						<div id="botonera">
-							<a href="">
-								<button class="botonComprar">Comprar</button>
-							</a>
+
+							<% if(session == undefined) { %> 
+								<a href="/users/login">
+									<button class="botonComprar">Comprar</button>
+								</a>
+							  <% } else { %>
+								<a href="/users/cart/addIr/<%= producto.id %>">
+									<button class="botonComprar">Comprar</button>
+								</a>
+							  <% } %>
 							
 							<% if(session == undefined) { %> 
 								<a href="/users/login">

@@ -65,3 +65,11 @@
 /*====== footer ======*/
  
 @import 'partials/_footer.css';
+
+/*====== error ======*/
+ 
+@import 'pages/_error.css';
+
+/*====== error ======*/
+ 
+@import 'pages/_confirmarCompra.css';

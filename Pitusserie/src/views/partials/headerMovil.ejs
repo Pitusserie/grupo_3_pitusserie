@@ -16,13 +16,17 @@
                     <a href="/"><li><img src="/img/logo.jpeg" alt="logo"></li></a>
                     <a href="/"><li>Inicio</li></a>
                     <a href="/products"><li>Productos</li></a>
-                    <a href="/users/login"><li>Ingresá</li></a>
-                    <a href="/users/register"><li>Creá una cuenta</li></a>
-                    <% if(session == undefined) { %> 
+                    <% if(session == undefined) { %>
+                      <a href="/users/login"><li>Ingresá</li></a>
+                      <a href="/users/register"><li>Creá una cuenta</li></a>
+                    <% } else { %>
+                      <a href="/users/user"><li>Mi perfil</li></a>
+                    <% } %>
+                    <% if(session == undefined) { %>
                       <a href="/users/login"><li><i class="fas fa-shopping-cart"></i></li></a>
                     <% } else { %>
                       <a href="/users/cart"><li><i class="fas fa-shopping-cart"></i></li></a> 
-                    <% } %> 
+                    <% } %>
                     <% if(session && session.administrador == true) { %> 
                       <a href="/products/carga"><li>Carga de productos</li></a>
                         
@@ -50,7 +54,7 @@
                   <% if(session == undefined) { %> 
                       <a href="/users/login"class="carrito"><i class="fas fa-shopping-cart"></i></a>
                   <% } else { %>
-                      <a href="/users/cart"class="carrito"><i class="fas fa-shopping-cart"></i></a>
+                      <a href="/users/cart"class="carrito"><i class="fas fa-shopping-cart"></i><span class="cCartHeaderMovil cCart"></span></a>
                   <% } %>
                 </div>
             </div>

@@ -46,10 +46,10 @@ window.addEventListener('load', function() {
         if(inputPassword.value != inputRepassword.value) {
             errores.repassword = 'Las contrasenas son diferentes';
         }
-        if(inputDni.value.length < 6){
+        if(inputDni.value.length < 6 || inputDni.value.length > 9){
             errores.dni = 'Dni invalido';
         }
-        if(inputTelefono.value.length < 8){
+        if(inputTelefono.value.length < 8 || inputDni.value.length > 12){
             errores.telefono = 'Telefono invalido';
         }
         if(Object.keys(errores).length != 0) {

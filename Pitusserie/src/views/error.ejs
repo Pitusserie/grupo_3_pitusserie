@@ -1,58 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Error 404</title>
-    <link rel="stylesheet" href="css/errorcss/error.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-</head>
-
-<body>
-
-    <div class="tateti">
-        <div class="container">
-            <div class="tatetiTitulo">
-                <div class=containerTitulo>
-                    <img src="img/errorimg/4ta.png" alt="">
-                    <img src="img/errorimg/0te.png" alt="">
-                    <img src="img/errorimg/4ti.png" alt="">
-                </div>
-            </div>
-            <div class="play-area">
-    
-            </div>
-            <h2 id="winner"></h2>
-            <div class="buttons">
-                <button onclick="reset_board()">REINICIAR</button>
-                <a href="/"><button >HOME</button></a>
-            </div>
-        </div>
-    </div>
-
-    <div class='buscaErrores'>
-        <div class="flex-container">
-            <div class="game-board">
-                <br>
-                <table id="board"></table>
-            </div>
-        </div>
-        <section id="footer">
-            <a href="/"><div id="start"><img src="img/errorimg/start.png"></div></a>
-            <div id="size-btns">
-                <div id="size-btns"><button id="size-9"><img src="img/errorimg/easy.png"> Fácil</button></div>
-                <div id="size-btns"><button id="size-16"><img src="img/errorimg/medium.png"> Intermedio</button></div>
-                <div id="size-btns"><button id="size-30"><img src="img/errorimg/hard.png"> Difícil</button></div>
-            </div>
-            <div id="clock"><em>"Shift + Click"</em></strong> para poner <img src="img/errorimg/flag.png"></div>
-        </section>
-    </div>
-    <script src="js/errorjs/cell.js"></script>
-    <script src="js/errorjs/main.js"></script>
-    <script src="js/errorjs/tateti.js"></script>
+    <%- include('./partials/head') %>
+<body id="error">
+    <a href="/" class="a">
+        <div class="a"></div>
+    </a>
 </body>
-
 </html>

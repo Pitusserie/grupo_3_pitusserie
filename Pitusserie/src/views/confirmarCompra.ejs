@@ -9,20 +9,20 @@
     
     <div class="container">
         <section class="infoUsuario">
-            <div class="campoInfoUsuario">
-                <label>Nombre: </label>
+            <div class="campoInfoUsuario  confirmarCompra">
+                <p>Nombre: </p>
                 <p><%= session.nombre %></p>
             </div>
-            <div class="campoInfoUsuario">
-                <label>Apellido: </label>
+            <div class="campoInfoUsuario  confirmarCompra">
+                <p>Apellido: </p>
                 <p><%= session.apellido %></p>
             </div>
-            <div class="campoInfoUsuario">
-                <label>Email: </label>
+            <div class="campoInfoUsuario  confirmarCompra">
+                <p>Email: </p>
                 <p><%= session.email %></p>
             </div>
-            <div class="campoInfoUsuario">
-                <label>Total: </label>
+            <div class="campoInfoUsuario  confirmarCompra">
+                <p>Total: </p>
                 <p><%= precioFinal %></p>
             </div>
         </section>
@@ -52,6 +52,10 @@
               </div>
             </div>
         </section>
+
+        <div class="divComprar">
+            <button class="botonComprar">Ir al pago</button>
+        </div>
 
     </div>
     <%- include('./partials/whatsappLogo') %>

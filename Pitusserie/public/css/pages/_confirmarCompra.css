@@ -1,0 +1,15 @@
+.campoInfoUsuario.confirmarCompra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.campoInfoUsuario.confirmarCompra p {
+    margin-right: 5px;
+}
+
+div.divComprar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}

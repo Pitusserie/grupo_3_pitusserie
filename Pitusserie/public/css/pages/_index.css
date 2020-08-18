@@ -51,8 +51,23 @@ section.containerImgIndex img.imgIndex {
      border: none;
 }
 
+span.cCart {
+    position: relative;
+    bottom: 9px;
+    right: 17px;
+    color: white;
+    font-weight: bold;
+}
+
 @media (min-width: 426px) {
     section.containerImgIndex div.sobreNosotros p {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 426px) {
+    span.cCart {
+        bottom: 7px;
+        right: 15px;
     }
 }

@@ -79,6 +79,25 @@ module.exports = {
                     id_users: req.session.usuario.id,
                     id_products: req.params.id
                 })
+            }
+        })
+        .then(function() {
+            res.redirect('back')
+        })
+    },
+    cartComprar: function(req, res) {
+        db.Product_User.findAll({
+            where: {
+                id_users: req.session.usuario.id,
+                id_products: req.params.id
+            }
+        })
+        .then(function(productos) {
+            if(productos.length == 0) {
+                db.Product_User.create({
+                    id_users: req.session.usuario.id,
+                    id_products: req.params.id
+                })
                 .then(function() {
                     res.redirect('/users/cart');
                 })
@@ -96,6 +115,16 @@ module.exports = {
         })
         .then(function () {
             res.redirect('/users/cart')
+        })
+    },
+    cantidadCart: function(req, res) {
+        db.Product_User.findAll({
+            where: {
+                id_users: req.session.usuario.id
+            }
+        })
+        .then(function(productos) {
+            res.json(productos.length)
         })
     },
     verify: function (req, res) {

@@ -11,6 +11,7 @@ window.addEventListener('load', function() {
     let cantidadSubTotal = 0;
     let cantidadDeCadaProduct = [];
     let precioPorProduct = [];
+    let continuarCompra = qs('.botonComprar');
 
     for(let i = 0; i < cantidadProducts; i++) {
         
@@ -34,5 +35,11 @@ window.addEventListener('load', function() {
             subTotal.innerText = `$ ${cantidadSubTotal}`
         })
     }
+
+    continuarCompra.addEventListener('click', function(e) {
+        if(items.innerText.split(' ')[0] == 0) {
+            e.preventDefault();
+        }
+    })
 
 });

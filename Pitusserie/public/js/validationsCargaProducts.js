@@ -3,7 +3,7 @@ function qs (elemento) {
 }
 
 window.addEventListener('load', function() {
-    let inputCategorias = qs('#categorias');
+    let inputCategorias = qs('#categorie');
     let errorCategorias = qs('#errCategorias');
     let inputTitulo = qs('#titulo');
     let errorTitulo = qs('#errTitulo');
@@ -11,8 +11,6 @@ window.addEventListener('load', function() {
     let errorDesc = qs('#errDescripcion');
     let inputPrecio = qs('#precio');
     let errorPrecio = qs('#errPrecio');
-    let inputPorciones = qs('#porciones');
-    let errorPorciones = qs('#errPorciones');
     let btnEnviar = qs("button[type='submit']");
     let errorsBack = document.querySelectorAll('.errorsBack');
 
@@ -26,6 +24,9 @@ window.addEventListener('load', function() {
         
         let errores = {};
 
+        if(inputCategorias.value == 0) {
+            errores.categorias = 'No se selecciono ninguna categoria';
+        }
         if(inputTitulo.value.length <= 2) {
             errores.titulo = 'Como minimo 2 caracteres';
         }
@@ -35,15 +36,12 @@ window.addEventListener('load', function() {
         if(inputPrecio.value.length == 0) {
             errores.precio = 'Este campo es obligatorio';
         }
-        if(inputPorciones.value.length == 0) {
-            errores.porciones = 'Este campo es obligatorio';
-        }
-        if(Object.keys(errores).length != 0) {
+        if(errores.length != 0) {
             e.preventDefault();
             (errorTitulo.innerText) = (errores.titulo) ? errores.titulo : '';
             (errorDesc.innerText) = (errores.desc) ? errores.desc : '';
             (errorPrecio.innerText) = (errores.precio) ? errores.precio : '';
-            (errorPorciones.innerText) = (errores.porciones) ? errores.porciones : '';
+            (errorCategorias.innerText) = (errores.categorias) ? errores.categorias : '';
         }
     })
 })
