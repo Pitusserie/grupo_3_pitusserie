@@ -36,7 +36,7 @@ window.addEventListener('load', function() {
         if(inputPrecio.value.length == 0) {
             errores.precio = 'Este campo es obligatorio';
         }
-        if(errores.length != 0) {
+        if(Object.keys(errores).length != 0) {
             e.preventDefault();
             (errorTitulo.innerText) = (errores.titulo) ? errores.titulo : '';
             (errorDesc.innerText) = (errores.desc) ? errores.desc : '';

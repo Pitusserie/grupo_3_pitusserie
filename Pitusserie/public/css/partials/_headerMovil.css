@@ -252,11 +252,11 @@ div.izquierda{
 @media (min-width: 768px){
 
     div.headerMovil {
-        height: 105px;
+        height: 115px;
     }
 
     div.headerMovil div.container div.recontainer {
-        height: 105px;
+        height: 115px;
     }
     
     div.headerMovil div.container div.recontainer div.hamburguesa button.buttonHamburguesaMovil i.barras:hover {

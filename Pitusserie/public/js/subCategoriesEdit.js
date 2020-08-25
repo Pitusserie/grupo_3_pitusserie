@@ -8,17 +8,19 @@ let categories
 let optionsSubCategories = ''
 let optionSubCategorieOld = subCategorieSelect.innerHTML.split('</option>', 1)[0] + '</option>'
 
+let optionSubCategorieOldValue = subCategorieSelect.value
+
 fetch('http://localhost:3000/products/categoriesFront')
 .then(function(response) {
     return response.json()
 })
 .then(function(categorias) {
     categories = categorias
-    optionsSubCategories += optionSubCategorieOld
+    // optionsSubCategories += optionSubCategorieOld
     categories.forEach(function(categoria) {
         if(categoria.id == categorieSelect.value) {
             categoria.subCategorie.forEach(function(subCategoria) {
-                optionsSubCategories += `<option value=${subCategoria.id}>${subCategoria.sub_categorie}</option>`
+                optionsSubCategories += `<option value=${subCategoria.id} ${(subCategoria.id == optionSubCategorieOldValue)? 'selected' : ''}>${subCategoria.sub_categorie}</option>`
             })
         }
     });

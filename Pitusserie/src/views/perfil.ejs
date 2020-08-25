@@ -7,25 +7,30 @@
 
     <div class="container">
         <section class="infoUsuario">
-            <div class="campoInfoUsuario">
-                <label>Nombre: </label>
-                <p><%= session.nombre %></p>
+            <div class="divInfoUsuario">
+                <div class="campoInfoUsuario">
+                    <label>Nombre: </label>
+                    <p><%= session.nombre %></p>
+                </div>
+                <div class="campoInfoUsuario">
+                    <label>Apellido: </label>
+                    <p><%= session.apellido %></p>
+                </div>
+                <div class="campoInfoUsuario">
+                    <label>DNI: </label>
+                    <p><%= session.dni %></p>
+                </div>
+                <div class="campoInfoUsuario">
+                    <label>Telefono: </label>
+                    <p><%= session.telefono %></p>
+                </div>
+                <div class="campoInfoUsuario">
+                    <label>Email: </label>
+                    <p><%= session.email %></p>
+                </div>
             </div>
-            <div class="campoInfoUsuario">
-                <label>Apellido: </label>
-                <p><%= session.apellido %></p>
-            </div>
-            <div class="campoInfoUsuario">
-                <label>DNI: </label>
-                <p><%= session.dni %></p>
-            </div>
-            <div class="campoInfoUsuario">
-                <label>Telefono: </label>
-                <p><%= session.telefono %></p>
-            </div>
-            <div class="campoInfoUsuario">
-                <label>Email: </label>
-                <p><%= session.email %></p>
+            <div class="img">
+                <img src="/uploads/avatars/<%= session.img %> " alt="imagen perfil">
             </div>
         </section>
         <div>

@@ -1,7 +1,19 @@
 section.infoUsuario {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+}
+
+section.infoUsuario div.img {
+    margin-bottom: 10px;
+}
+
+section.infoUsuario div.img img {
+    height: 350px;
+}
+
+section.infoUsuario div.divInfoUsuario {
+    width: 30%;
+    justify-self: center;
 }
 
 section.infoUsuario div.campoInfoUsuario {

@@ -13,9 +13,9 @@ module.exports= [
     check('categorie')
         .custom(function(value) {
             if (value == 0) {
-                return true
-            } else {
                 return false
+            } else {
+                return true
             }
         })
         .withMessage('Este campo es obligatorio')

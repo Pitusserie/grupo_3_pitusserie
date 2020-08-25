@@ -20,12 +20,12 @@ var upload = multer({ storage: storage })
 router.get('/', productsController.products);
 
 router.get('/carga', adminMiddleware, productsController.carga);
-router.post('/carga', upload.any(), cargaProductsValidations, productsController.store);
-router.get('/categoriesFront', productsController.categoriesFront)
+router.post('/carga', adminMiddleware, upload.any(), cargaProductsValidations, productsController.store);
+router.get('/categoriesFront', adminMiddleware, productsController.categoriesFront)
 
 router.get('/edit/:id', adminMiddleware, productsController.edit);
-router.put('/edit/:id', upload.any(), productsController.update);
-router.delete('/edit/:id', productsController.destroy);
+router.put('/edit/:id', adminMiddleware, upload.any(), productsController.update);
+router.delete('/edit/:id', adminMiddleware, productsController.destroy);
 
 router.get('/:id', productsController.detail);
 

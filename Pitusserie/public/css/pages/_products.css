@@ -87,7 +87,20 @@ section.productos div.container div.row article div.producto h3 {
     width: 100%;
 }
 
+section.productos div.container div.row article div.producto div.productoImagen {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 335px;
+}
+
+section.productos div.container div.row article div.producto div.productoImagen a {
+    height: 100%;
+    width: 100%;
+}
+
 section.productos div.container div.row article div.producto div.productoImagen img {
+    height: 100%;
     width: 100%;
 }
 
@@ -97,7 +110,7 @@ section.productos div.container div.row article div.producto div.texto {
 
 section.productos div.container div.row article div.producto div.texto div.precioCarrito {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin-top: 5px;
     width: 100%;
@@ -132,5 +145,13 @@ section.productos div.container div.row article div.producto div.texto div.preci
     section.barraDeBusqueda div.container div.divForm form button.submit {
         border-bottom-right-radius: 6px;
     }
+
+}
+
+@media (max-width: 991px) {
+    
+    /* section.productos div.container div.row article div.producto {
+        height: 575px;
+    } */
 
 }

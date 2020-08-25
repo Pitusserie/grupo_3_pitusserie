@@ -36,15 +36,18 @@
 
             <% for(i = 0; i < productos.length; i++) { %> 
                     <article class="col-12 col-md-6 col-lg-3">
-                        <a href="/products/<%= productos[i].id %>">
                             <div class="producto">
                                 <div class="productoImagen">
-                                <img src="/uploads/productos/<%= productos[i].img %>" alt="">
+                                    <a href="/products/<%= productos[i].id %>">
+                                        <img src="/uploads/productos/<%= productos[i].img %>" alt="">
+                                    </a>
                                 </div>
                                 <div class="texto">
                                 <div class="precioCarrito">
-                                    <h3><%= productos[i].title %></h3>
-                                    <h4>$<%= productos[i].price %></h4>
+                                    <div>
+                                        <a href="/products/<%= productos[i].id %>"><h3><%= productos[i].title %></h3></a>
+                                        <h4>$<%= productos[i].price %></h4>
+                                    </div>
                                     
                                     <% if(session == undefined) { %> 
                                         <a href="/users/login"><span class="carritoMas"><i class="fas fa-cart-plus"></i></span></a>
