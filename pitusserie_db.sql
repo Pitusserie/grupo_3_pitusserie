@@ -53,7 +53,7 @@ CREATE TABLE `product_user` (
   `id_products` int(11) unsigned NOT NULL,
   `id_users` int(11) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -82,7 +82,7 @@ CREATE TABLE `products` (
   `title` varchar(255) NOT NULL,
   `sub_categorie_id` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -149,7 +149,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (15,'administrador','administrador',11111111,11111111,'administrador@administrador.com','$2b$10$TC8lxteSDX4neHhDgRJGd.gcyBgkfwa5ZM7eXezYeAqMxjT03g/4a','1598385902116.jpg',1),(16,'usuario','usuario',222222222,22222222,'usuario@usuario.com','$2b$10$5bl08bzQTaelaDzDsqmGPuKtLQ0ZqVomjXdipjLhZSqlDmgXKaBcq','1598385979278.jpg',0);
+INSERT INTO `users` VALUES (15,'administrador','administrador',11111111,11111111,'administrador@administrador.com','$2b$10$TC8lxteSDX4neHhDgRJGd.gcyBgkfwa5ZM7eXezYeAqMxjT03g/4a','1598385902116.jpg',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -162,4 +162,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-25 18:00:38
+-- Dump completed on 2020-08-26 16:54:24

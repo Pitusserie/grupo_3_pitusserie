@@ -51,7 +51,7 @@
 									<button class="botonCarrito"><i class="fas fa-cart-plus"></i></button>
 								</a> 
 							  <% } %> 
-							<% if(session && session.id == 1) { %> 
+							<% if(session && session.administrador == true) { %> 
 								<a href="/products/edit/<%= producto.id %> ">
 									<button class="botonComprar">Editar</button>
 								</a>
@@ -64,27 +64,30 @@
 		</div>
 	</div>
 
-	<div class="container agregar-productos" id="agregar">
-		<h2>Agregar Productos</h2>
-		<div class="agregar-productos-img">
-			<img src="/img/velas.jpg" alt="" class="foto-agregar1">
-			<img src="/img/giftcard.jpg" alt="" class="foto-agregar2">
-			<img src="/img/globos.jpg" alt="" class="foto-agregar3">
+		<div class="container agregar-productos" id="agregar">
+			<h2>Agregar Productos</h2>
+			<div class="agregar-productos-img">
+				<a href="/products/61">
+					<div class="titulo">
+						<p>Adorno Porcelana</p>
+					</div>
+					<img src="/uploads/productos/1598381371688.jpeg" alt="">
+				</a>
+				<a href="/products/63">
+					<div class="titulo">
+						<p>Globos</p>
+					</div>
+					<img src="/uploads/productos/1598381444884.jpeg" alt="">
+				</a>
+				<a href="/products/68">
+					<div class="titulo">
+						<p>Tazas</p>
+					</div>
+					<img src="/uploads/productos/1598381623264.jpeg" alt="">
+				</a>
+			</div>
 		</div>
-	</div>
-	</div>
 
-	<div class="container productos-similares" id="similares">
-		<h2>Productos Similares</h2>
-		
-
-		
-		<div class="productos-similares-img">
-			<img src="/uploads/productos/placeholder2.jpg" alt="" class="foto-agregar1">
-			<img src="/uploads/productos/placeholder3.jpg" alt="" class="foto-agregar2">
-			<img src="/uploads/productos/placeholder4.jpg" alt="" class="foto-agregar3">
-		</div>
-		
 	</div>
 	</div>
 

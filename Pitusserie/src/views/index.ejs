@@ -78,21 +78,31 @@
   <h1>pitusserie</h1>
   <a class="linkFondoHeader" href="https://www.freepik.es/fotos/fondo">Foto de Fondo creado por www.freepik.es</a>
 
-  <% for(i = 0; i < 2; i++) { %>
         <section class="diapositivas">
+          <h2 class="h2diapositivas">Tortas</h2>
           <div class="carrusel">
             <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-              <div class="gallery-cell"><a href="/"><img src="img/1.jpg" alt=""></a></div>
-              <div class="gallery-cell"><img src="img/2.jpg" alt=""></div>
-              <div class="gallery-cell"><img src="img/3.jpg" alt=""></div>
-              <div class="gallery-cell"><img src="img/4.jpg" alt=""></div>
-              <div class="gallery-cell"><img src="img/5.jpg" alt=""></div>
-              <div class="gallery-cell"><img src="img/6.jpg" alt=""></div>
-              <div class="gallery-cell"><img src="img/7.jpg" alt=""></div>
+              <% for(let i = 0; i < productos.length; i++) { %>
+                <% if(productos[i].categorie_id == 1) { %> 
+                  <div class="gallery-cell"><a href="/products/<%= productos[i].id %>"><img src="/uploads/productos/<%= productos[i].img %>" alt=""></a></div>
+                <% } %> 
+              <% } %>  
             </div>
           </div>
         </section>
-      <% } %> 
+
+        <section class="diapositivas">
+          <h2 class="h2diapositivas">Cookies</h2>
+          <div class="carrusel">
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+              <% for(let i = 0; i < productos.length; i++) { %>
+                <% if(productos[i].categorie_id == 2) { %> 
+                  <div class="gallery-cell"><a href="/products/<%= productos[i].id %>"><img src="/uploads/productos/<%= productos[i].img %>" alt=""></a></div>
+                <% } %> 
+              <% } %> 
+            </div>
+          </div>
+        </section>
 
   <section class="containerImgIndex">
     <div class="sobreNosotros">
